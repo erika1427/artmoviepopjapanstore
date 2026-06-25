@@ -131,17 +131,55 @@ select {
 }
 
 .gnav {
+  display: flex;
+  flex-direction: column;
+  gap: 146px;
   position: absolute;
   top: 0;
   right: 0;
-  width: 500px;
-  height: 870px;
-  background: #343B4C;
-  opacity: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: linear-gradient(to right, #F36655, #E74C69);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
   pointer-events: none;
   transition: 0.5s;
-  border-radius: 50px;
 }
 .gnav__link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
   color: #343B4C;
+  text-decoration: none;
+}
+.gnav__sns {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.gnav__insta {
+  width: 24px;
+  height: 24px;
+}
+.gnav__x {
+  width: 24px;
+  height: 24px;
+}
+
+.box__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #343B4C;
+  text-decoration: none;
+}
+
+.box__thin {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #343B4C;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

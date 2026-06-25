@@ -3,18 +3,59 @@
 @use "../global" as *;
 
 .gnav {
+    display: flex;
+    flex-direction: column;
+    gap: 146px;
     position: absolute;
     top: 0;
     right: 0;
-    width: 500px;
-    height: 870px;
-    background: $black;
-    opacity: 0;
+    width: 100vw;
+    height: 100dvh;
+    background: linear-gradient(to right, #F36655, #E74C69);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
     pointer-events: none;
     transition: .5s;
-    border-radius: 50px;
 
     &__link {
+        font-family: $text;
+        font-weight: 700;
+        font-size: 30px;
         color: $black;
+        text-decoration: none;
     }
+
+    &__sns {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    &__insta {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__x {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.box__text {
+    font-family: $text;
+    font-weight: 700;
+    font-size: 30px;
+    color: $black;
+    text-decoration: none;
+}
+
+.box__thin {
+    font-family: $text;
+    font-weight: 400;
+    font-size: 20px;
+    color: $black;
+    text-decoration: none;
 }
