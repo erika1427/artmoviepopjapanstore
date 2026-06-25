@@ -1,3 +1,20 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.gnav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 870px;
+    background: $black;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+    border-radius: 50px;
+
+    &__link {
+        color: $black;
+    }
+}

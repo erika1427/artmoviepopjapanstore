@@ -1,3 +1,76 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.header {
+    padding: 15px 27px 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff0000;
+    position: fixed;
+    z-index: 2;
+
+    &__icon {
+        width: 42px;
+        height: 40px;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+
+    &__burger {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 25px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &__top,
+    &__middle,
+    &__bottom {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        transition: .4s;
+    }
+
+    &__top {
+        transform: translateY(-8px);
+        background: $black;
+    }
+
+    &__middle {
+        background: $black;
+    }
+
+    &__bottom {
+        transform: translateY(8px);
+        background: $black;
+    }
+}
+
+.cart {
+    width: 21px;
+    height: 21px;
+
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
