@@ -5,6 +5,7 @@
 body {
     background-color: $white;
     font-family: $text;
+    line-height: 1;
 }
 
 .totop {
@@ -14,6 +15,6 @@ body {
         position: fixed;
         bottom: 14px;
         right: 20px;
-        z-index: 2;
+        z-index: 3;
     }
 }

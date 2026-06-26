@@ -21,6 +21,15 @@
     .latest {
         position: relative;
 
+        &__ttl,
+        &__container,
+        &__all {
+            padding-left: 5%;
+            padding-right: 5%;
+            position: relative;
+            z-index: 2;
+        }
+
         &__bg {
             position: absolute;
             top: -27px;
@@ -29,6 +38,26 @@
                 width: 100vw;
                 height: 680px;
             }
+        }
+
+        &__ttl {
+            margin-bottom: 50px;
+            padding-top: 32px;
+            font-family: $head;
+            font-weight: 400;
+            font-size: 40px;
+            color: $white;
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 84px;
+            justify-content: space-between;
+        }
+
+        &__box {
+            width: 46%;
         }
     }
 }
