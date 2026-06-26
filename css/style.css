@@ -73,7 +73,6 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff0000;
   position: fixed;
   z-index: 2;
 }
@@ -83,11 +82,13 @@ select {
 }
 
 .btn {
+  height: 20px;
   display: flex;
   align-items: center;
   gap: 21px;
 }
 .btn__burger {
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -131,33 +132,25 @@ select {
 }
 
 .gnav {
+  width: 100vw;
+  height: 100dvh;
+  padding-top: 105px;
+  padding-left: 66px;
   display: flex;
   flex-direction: column;
   gap: 146px;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100dvh;
   background: linear-gradient(to right, #F36655, #E74C69);
-  position: fixed;
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: 0.5s;
 }
 .gnav__link {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
   color: #343B4C;
   text-decoration: none;
-}
-.gnav__sns {
-  display: flex;
-  align-items: center;
-  gap: 17px;
 }
 .gnav__insta {
   width: 24px;
@@ -169,11 +162,22 @@ select {
 }
 
 .box__text {
+  display: flex;
+  flex-direction: column;
+  gap: 69px;
+}
+
+.box__weight {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 30px;
   color: #343B4C;
   text-decoration: none;
+}
+.box__weight .gnav__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
 }
 
 .box__thin {
@@ -182,4 +186,34 @@ select {
   font-size: 20px;
   color: #343B4C;
   text-decoration: none;
+}
+.box__thin .gnav__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.box__sns {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.rotateTop {
+  transform: rotate(45deg);
+}
+
+.hideMiddle {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rotateBottom {
+  transform: rotate(-45deg);
+}
+
+.translateNav {
+  opacity: 1;
+  pointer-events: all;
 }/*# sourceMappingURL=style.css.map */
