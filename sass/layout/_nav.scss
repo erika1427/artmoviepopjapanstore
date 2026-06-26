@@ -16,9 +16,13 @@
     left: 0;
     opacity: 0;
     pointer-events: none;
-    transition: .5s;
+    
+    &__list {
+        width: fit-content;
+    }
 
     &__link {
+        display: block;
         font-family: $text;
         color: $black;
         text-decoration: none;
@@ -36,6 +40,7 @@
 }
 
 .box__text {
+    line-height: 1;
     display: flex;
     flex-direction: column;
     gap: 69px;
