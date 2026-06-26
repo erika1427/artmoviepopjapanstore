@@ -5,3 +5,13 @@
 body {
     background-color: $white;
 }
+
+.totop {
+    svg {
+        width: 64px;        
+        height: 64px;
+        position: absolute;
+        bottom: 14px;
+        right: 20px;
+    }
+}

@@ -71,6 +71,14 @@ body {
   background-color: #F6F7F8;
 }
 
+.totop svg {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 14px;
+  right: 20px;
+}
+
 .header {
   padding: 15px 27px 15px 20px;
   width: 100%;
