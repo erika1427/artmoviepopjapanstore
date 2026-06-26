@@ -74,7 +74,7 @@ body {
 .totop svg {
   width: 64px;
   height: 64px;
-  position: absolute;
+  position: fixed;
   bottom: 14px;
   right: 20px;
 }
