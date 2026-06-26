@@ -67,6 +67,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+body {
+  background-color: #F6F7F8;
+}
+
 .header {
   padding: 15px 27px 15px 20px;
   width: 100%;
@@ -201,6 +205,19 @@ select {
   display: flex;
   align-items: center;
   gap: 17px;
+}
+
+#top .mv {
+  height: 100dvh;
+  position: relative;
+}
+#top .mv svg {
+  width: 303px;
+  height: 295px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .rotateTop {

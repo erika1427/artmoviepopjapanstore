@@ -2,5 +2,18 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+#top {
+    .mv {
+        height: 100dvh;
+        position: relative;
 
-
+        svg {
+            width: 303px;
+            height: 295px;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
