@@ -3,6 +3,7 @@
 @use "../global" as *;
 
 #top {
+
     .mv {
         height: 100dvh;
         position: relative;
@@ -14,6 +15,20 @@
             top: 25%;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+
+    .latest {
+        position: relative;
+
+        &__bg {
+            position: absolute;
+            top: -27px;
+
+            svg {
+                width: 100vw;
+                height: 680px;
+            }
         }
     }
 }
