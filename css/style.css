@@ -295,9 +295,24 @@ body {
   width: 6px;
   height: 10px;
 }
+#top .flyers {
+  margin-top: 90px;
+  position: relative;
+}
+#top .flyers__bg {
+  position: absolute;
+  top: -19px;
+}
+#top .flyers__wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+  z-index: 2;
+}
 #top .flyers__video {
   width: 100%;
   height: 100%;
+  margin-bottom: 84px;
   position: relative;
 }
 #top .flyers__video video {
@@ -305,6 +320,65 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(60%);
+}
+#top .flyers__ttl {
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #F6F7F8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-text-stroke: 2px #343B4C;
+  paint-order: stroke;
+  white-space: nowrap;
+}
+#top .flyers__items {
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 84px;
+  justify-content: space-between;
+}
+#top .flyers__box {
+  width: 46%;
+  color: #343B4C;
+  text-decoration: none;
+}
+#top .flyers__image {
+  margin-bottom: 10px;
+}
+#top .flyers__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+#top .flyers__year {
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+}
+#top .flyers__all {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+#top .flyers__link {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #343B4C;
+  text-decoration: none;
+}
+#top .flyers__link svg {
+  width: 6px;
+  height: 10px;
 }
 
 .rotateTop {
