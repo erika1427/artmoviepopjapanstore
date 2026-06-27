@@ -386,6 +386,15 @@ body {
 }
 #top .tickets {
   margin-top: 90px;
+  position: relative;
+}
+#top .tickets__bg {
+  position: absolute;
+  top: 474px;
+}
+#top .tickets__bg svg {
+  width: 100vw;
+  height: 1240px;
 }
 #top .tickets__wrapper {
   padding-left: 5%;

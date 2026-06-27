@@ -204,6 +204,17 @@
 
     .tickets {
         margin-top: 90px;
+        position: relative;
+
+        &__bg {
+            position: absolute;
+            top: 474px;
+
+            svg {
+                width: 100vw;
+                height: 1240px;
+            }
+        }
 
         &__wrapper {
             padding-left: 5%;
