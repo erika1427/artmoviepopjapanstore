@@ -22,8 +22,8 @@
         position: relative;
 
         &__ttl,
-        &__container,
-        &__all {
+        &__items,
+        &__all{
             padding-left: 5%;
             padding-right: 5%;
             position: relative;
@@ -50,6 +50,7 @@
         }
 
         &__items {
+            margin-bottom: 60px;
             display: flex;
             flex-wrap: wrap;
             row-gap: 84px;
@@ -58,6 +59,58 @@
 
         &__box {
             width: 46%;
+            color: $black;
+            text-decoration: none;
+        }
+
+        &__image {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        &__year {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: .3em;
+        }
+
+        &__all {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        &__link {
+            width: fit-content;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            color: $black;
+            text-decoration: none;
+
+            svg {
+                width: 6px;
+                height: 10px;
+            }
+        }
+    }
+
+    .flyers {
+        &__video {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
