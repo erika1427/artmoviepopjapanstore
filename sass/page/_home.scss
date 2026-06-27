@@ -395,4 +395,13 @@
             }
         }
     }
+
+    .contact {
+        background: linear-gradient(to right, #10EBB4, #17E6D3);
+
+        &__txt {
+            font-family: $head;
+            font-size: 30px;
+        }
+    }
 }

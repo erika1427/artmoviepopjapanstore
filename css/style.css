@@ -71,6 +71,7 @@ body {
   background-color: #F6F7F8;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
+  color: #343B4C;
 }
 
 .totop svg {
@@ -553,6 +554,13 @@ body {
 #top .streetware__link svg {
   width: 6px;
   height: 10px;
+}
+#top .contact {
+  background: linear-gradient(to right, #10EBB4, #17E6D3);
+}
+#top .contact__txt {
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 30px;
 }
 
 .rotateTop {
