@@ -556,11 +556,28 @@ body {
   height: 10px;
 }
 #top .contact {
+  padding: 39px 36px;
   background: linear-gradient(to right, #10EBB4, #17E6D3);
 }
 #top .contact__txt {
+  margin-bottom: 23px;
   font-family: "Climate Crisis", sans-serif;
   font-size: 30px;
+  text-align: center;
+}
+#top .contact__btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border: 3px solid #343B4C;
+}
+#top .contact__link {
+  display: block;
+  padding: 17px 51px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #343B4C;
+  text-decoration: none;
 }
 
 .rotateTop {
