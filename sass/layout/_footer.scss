@@ -18,8 +18,8 @@
         height: 106px;
 
         svg {
-            width: 109px;
-            height: 106px;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -28,6 +28,45 @@
         flex-direction: column;
         gap: 48px;
         font-size: 14px;
+    }
+
+    &__sns {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+    }
+
+    &__insta {
+        width: 24px;
+        height: 24px;
+        display: block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__x {
+        width: 24px;
+        height: 22px;
+        display: block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__address {
+        margin-bottom: 36px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    &__copy {
+        width: fit-content;
+        font-size: 10px;
     }
 }
 
@@ -47,7 +86,6 @@
         flex-direction: column;
         gap: 17px;
     }
-
 
     &__link {
         text-decoration: none;
