@@ -129,9 +129,13 @@ body {
   position: fixed;
   z-index: 3;
 }
-.header__icon {
+.header__logo {
   width: 42px;
   height: 40px;
+}
+.header__logo svg {
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
@@ -672,6 +676,65 @@ body {
 #top .streetware__link svg {
   width: 6px;
   height: 10px;
+}
+
+#items .main {
+  padding-top: 100px;
+}
+#items .items__ttl,
+#items .filters__btn,
+#items .items {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#items .items__ttl {
+  margin-bottom: 20px;
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+#items .fliters__txt {
+  font-weight: 700;
+  font-size: 13px;
+}
+#items .filters__btn {
+  margin-left: 5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 9px 13px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
+  border: 2px solid #343B4C;
+}
+#items .filters__btn svg {
+  width: 13px;
+  height: 14px;
+  display: block;
+}
+#items .filters {
+  padding-top: 31px;
+  padding-left: 36px;
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
+  top: 0;
+  left: 0;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 3;
+}
+#items .filters__count {
+  margin-bottom: 49px;
+  font-size: 20px;
+  font-weight: 700;
+}
+#items .filters__item {
+  margin-bottom: 21px;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .rotateTop {

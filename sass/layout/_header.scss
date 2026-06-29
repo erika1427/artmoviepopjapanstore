@@ -11,9 +11,14 @@
     position: fixed;
     z-index: 3;
 
-    &__icon {
+    &__logo {
         width: 42px;
         height: 40px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
