@@ -86,13 +86,38 @@ body {
   bottom: 14px;
   right: 20px;
   z-index: 3;
-  border-radius: 100%;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 100%;
 }
 .totop__link svg {
   width: 100%;
   height: 100%;
   border-radius: 100%;
+}
+
+.contact {
+  padding: 39px 36px;
+  background: linear-gradient(to right, #10EBB4, #17E6D3);
+}
+.contact__txt {
+  margin-bottom: 23px;
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+.contact__btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border: 3px solid #343B4C;
+}
+.contact__link {
+  display: block;
+  padding: 17px 51px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #343B4C;
+  text-decoration: none;
 }
 
 .header {
@@ -647,30 +672,6 @@ body {
 #top .streetware__link svg {
   width: 6px;
   height: 10px;
-}
-#top .contact {
-  padding: 39px 36px;
-  background: linear-gradient(to right, #10EBB4, #17E6D3);
-}
-#top .contact__txt {
-  margin-bottom: 23px;
-  font-family: "Climate Crisis", sans-serif;
-  font-size: 30px;
-  text-align: center;
-}
-#top .contact__btn {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  border: 3px solid #343B4C;
-}
-#top .contact__link {
-  display: block;
-  padding: 17px 51px;
-  font-weight: 700;
-  font-size: 24px;
-  color: #343B4C;
-  text-decoration: none;
 }
 
 .rotateTop {
