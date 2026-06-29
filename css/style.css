@@ -74,6 +74,10 @@ body {
   color: #343B4C;
 }
 
+.wrapper {
+  overflow-x: hidden;
+}
+
 .totop svg {
   width: 64px;
   height: 64px;
@@ -147,7 +151,7 @@ body {
 }
 
 .gnav {
-  width: 100vw;
+  width: 100%;
   height: 100dvh;
   padding-top: 105px;
   padding-left: 66px;
@@ -215,6 +219,51 @@ body {
   gap: 17px;
 }
 
+.footer {
+  padding: 46px 46px 24px 20px;
+  background: #EDEEF0;
+}
+.footer__wrapper {
+  margin-bottom: 83px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.footer__logo {
+  width: 109px;
+  height: 106px;
+}
+.footer__logo svg {
+  width: 109px;
+  height: 106px;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  font-size: 14px;
+}
+
+.fnav {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.fnav__nav-main {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.fnav__nav-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+.fnav__link {
+  text-decoration: none;
+  color: #343B4C;
+}
+
 #top .mv {
   height: 100dvh;
   position: relative;
@@ -237,11 +286,12 @@ body {
   z-index: 2;
 }
 #top .latest__bg {
+  width: 100%;
   position: absolute;
   top: -27px;
 }
 #top .latest__bg svg {
-  width: 100vw;
+  width: 100%;
   height: 680px;
 }
 #top .latest__ttl {
@@ -301,11 +351,12 @@ body {
   position: relative;
 }
 #top .flyers__bg {
+  width: 100%;
   position: absolute;
   top: -19px;
 }
 #top .flyers__bg svg {
-  width: 100vw;
+  width: 100%;
   height: 1205px;
 }
 #top .flyers__wrapper {
@@ -390,11 +441,12 @@ body {
   position: relative;
 }
 #top .tickets__bg {
+  width: 100%;
   position: absolute;
   top: 474px;
 }
 #top .tickets__bg svg {
-  width: 100vw;
+  width: 100%;
   height: 1240px;
 }
 #top .tickets__wrapper {

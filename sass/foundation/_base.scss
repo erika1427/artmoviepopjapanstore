@@ -9,6 +9,10 @@ body {
     color: $black;
 }
 
+.wrapper {
+  overflow-x: hidden;
+}
+
 .totop {
     svg {
         width: 64px;        
