@@ -16,4 +16,13 @@ $(function () {
             $('#btn__bottom').removeClass('rotateBottom');
         }
     });
+
+    // filters
+    $('.filters__btn').on('click', function () {
+        $('#filters').addClass('translateNav');
+    })
+
+    $('.filters__close').on('click', function () {
+        $('#filters').removeClass('translateNav');
+    })
 })

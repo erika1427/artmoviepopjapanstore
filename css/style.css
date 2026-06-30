@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* A Modern CSS Reset */
 *,
 *::before,
@@ -693,7 +694,7 @@ body {
   font-weight: 400;
   font-size: 40px;
 }
-#items .fliters__txt {
+#items .filters__txt {
   font-weight: 700;
   font-size: 13px;
 }
@@ -722,19 +723,39 @@ body {
   background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   z-index: 3;
+  /* ここに「.translateNav」がついた時のスタイルを【入れ子】で書く */
+}
+#items .filters.translateNav {
+  opacity: 1;
+  pointer-events: auto;
 }
 #items .filters__count {
   margin-bottom: 49px;
   font-size: 20px;
   font-weight: 700;
 }
+#items .filters__list {
+  height: calc(100dvh - 130px);
+  overflow-y: auto;
+}
 #items .filters__item {
   margin-bottom: 21px;
   font-weight: 700;
   font-size: 16px;
+}
+#items .filters__close {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 25px;
+  right: 27px;
+}
+#items .filters__close svg {
+  width: 100%;
+  height: 100%;
 }
 
 .rotateTop {
