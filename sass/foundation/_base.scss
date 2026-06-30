@@ -13,6 +13,22 @@ body {
     overflow-x: hidden;
 }
 
+.main {
+    padding-top: 100px;
+
+    /* SVGをData URIとして読み込む（#を%23に変換済み） */
+    background-image: url('data:image/svg+xml;utf8,<svg width="375" height="1072" viewBox="0 0 375 1072" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M375 469L0 596.5V952L375 1071.5V469Z" fill="%23F6F7F8"/><path d="M375 119.5L0 0V596.501L375 469V119.5Z" fill="%23EDEEF0"/></svg>');
+
+    /* 縦（Y軸）方向にだけ無限リピートさせる */
+    background-repeat: repeat-y;
+
+    /* 横幅は画面に合わせ、縦幅は比率を保つ */
+    background-size: 100% auto;
+
+    /* 👇 これを追加！（横方向 縦方向 の順） */
+    background-position: 0 -340px;
+}
+
 .totop {
     &__link {
         width: 64px;

@@ -3,9 +3,6 @@
 @use "../global" as *;
 
 #items {
-    .main {
-        padding-top: 100px;
-    }
 
     .items__ttl,
     .filters__btn,
@@ -54,7 +51,7 @@
         top: 0;
         left: 0;
         opacity: 0;
-        pointer-events: none; 
+        pointer-events: none;
         z-index: 3;
 
         /* ここに「.translateNav」がついた時のスタイルを【入れ子】で書く */
@@ -97,7 +94,7 @@
 
     .items {
         margin-bottom: 90px;
-        
+
         &__items {
             margin-bottom: 60px;
             display: flex;
@@ -126,10 +123,6 @@
             font-weight: 600;
             font-size: 10px;
             letter-spacing: .3em;
-        }
-
-        &__all {
-
         }
 
         &__link {
