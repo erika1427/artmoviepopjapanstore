@@ -813,6 +813,135 @@ body {
   height: 14px;
 }
 
+#details .main > :not(.contact):not(.buy):not(.add):not(.shipping) {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#details .slider-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#details .slider-wrapper {
+  width: 247px;
+  margin: 0 auto 30px;
+  position: relative;
+  padding-bottom: 30px;
+  /* バーを置くための余白 */
+}
+#details .slider-wrapper .swiper-button-prev {
+  left: -50px;
+  color: #343B4C;
+}
+#details .slider-wrapper .swiper-button-next {
+  right: -50px;
+  color: #343B4C;
+}
+#details .slider-wrapper {
+  /* ページネーション（バー）のデザイン */
+}
+#details .slider-wrapper .swiper-pagination {
+  bottom: 0;
+}
+#details .slider-wrapper .swiper-pagination-bullet {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: #CED1E0;
+  opacity: 1;
+  margin: 0 4px !important;
+  transition: 0.3s;
+}
+#details .slider-wrapper .swiper-pagination-bullet-active {
+  background: #343B4C;
+  width: 32px;
+}
+#details {
+  /* 商品スライダー本体 */
+}
+#details .product-slider {
+  width: 100%;
+}
+#details .product-slider .swiper-slide img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#details .title {
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 30px;
+}
+#details .buy,
+#details .add {
+  margin-left: 5%;
+}
+#details .price {
+  margin-bottom: 23px;
+  font-weight: 700;
+  font-size: 20px;
+}
+#details .buy {
+  margin-bottom: 19px;
+  width: 241px;
+  padding: 18px 0;
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  color: #343B4C;
+  background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
+  text-decoration: none;
+  text-align: center;
+}
+#details .add {
+  margin-bottom: 47px;
+  width: 241px;
+  padding: 18px 0;
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  color: #343B4C;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid #343B4C;
+}
+#details .text {
+  margin-bottom: 38px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#details .shipping {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 29px 5% 22px 5%;
+  background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
+}
+#details .shipping__ttl {
+  margin-bottom: 21px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+}
+#details .shipping__txt {
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+#details .shipping__payments {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+#details .shipping__payments svg {
+  width: 50px;
+  height: 32px;
+  border: 1px solid #343B4C;
+}
+#details .shipping__payments-txt {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .rotateTop {
   transform: rotate(45deg);
 }

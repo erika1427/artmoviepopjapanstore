@@ -1,3 +1,153 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+#details {
+
+    .main> :not(.contact):not(.buy):not(.add):not(.shipping) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .slider-wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .slider-wrapper {
+        width: 247px;
+        margin: 0 auto 30px;
+        position: relative;
+        padding-bottom: 30px;
+        /* バーを置くための余白 */
+
+        .swiper-button-prev {
+            left: -50px;
+            color: $black;
+        }
+
+        .swiper-button-next {
+            right: -50px;
+            color: $black;
+        }
+
+        /* ページネーション（バー）のデザイン */
+        .swiper-pagination {
+            bottom: 0;
+        }
+
+        .swiper-pagination-bullet {
+            width: 24px;
+            height: 4px;
+            border-radius: 2px;
+            background: #CED1E0;
+            opacity: 1;
+            margin: 0 4px !important;
+            transition: 0.3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #343B4C;
+            width: 32px;
+        }
+    }
+
+    /* 商品スライダー本体 */
+    .product-slider {
+        width: 100%;
+
+        .swiper-slide {
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .title {
+        margin-bottom: 23px;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .buy,
+    .add {
+        margin-left: 5%;
+    }
+
+    .price {
+        margin-bottom: 23px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .buy {
+        margin-bottom: 19px;
+        width: 241px;
+        padding: 18px 0;
+        display: block;
+        font-weight: 700;
+        font-size: 24px;
+        color: $black;
+        background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .add {
+        margin-bottom: 47px;
+        width: 241px;
+        padding: 18px 0;
+        display: block;
+        font-weight: 700;
+        font-size: 24px;
+        color: $black;
+        text-decoration: none;
+        text-align: center;
+        border: 3px solid $black;
+    }
+
+    .text {
+        margin-bottom: 38px;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .shipping {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 29px 5% 22px 5%;
+        background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
+
+        &__ttl {
+            margin-bottom: 21px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        &__txt {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        &__payments {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+
+            svg {
+                width: 50px;
+                height: 32px;
+                border: 1px solid $black;
+            }
+        }
+
+        &__payments-txt {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+}

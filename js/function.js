@@ -25,4 +25,18 @@ $(function () {
     $('.filters__close').on('click', function () {
         $('#filters').removeClass('translateNav');
     })
+
+    // 商品画像のSwiper初期化
+    var productSlider = new Swiper('.product-slider', {
+        loop: false, // 最後までいったら最初に戻る
+        allowTouchMove: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // ドットをクリック可能にする
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 })
