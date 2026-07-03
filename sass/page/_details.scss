@@ -4,7 +4,7 @@
 
 #details {
 
-    .main> :not(.contact):not(.buy):not(.add):not(.shipping) {
+    .main> :not(.contact):not(.buy):not(.add):not(.shipping):not(.shipping-detail) {
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -115,6 +115,7 @@
     }
 
     .shipping {
+        margin-bottom: 38px;
         margin-left: 5%;
         margin-right: 5%;
         padding: 29px 5% 22px 5%;
@@ -124,13 +125,13 @@
             margin-bottom: 21px;
             font-weight: 700;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.9;
         }
 
         &__txt {
             margin-bottom: 6px;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.9;
         }
 
         &__payments {
@@ -147,7 +148,20 @@
 
         &__payments-txt {
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.9;
+        }
+
+        &-detail {
+            margin: 0 5% 97px 5%;
+            padding: 29px 5% 23px 5%;
+            font-size: 14px;
+            line-height: 1.9;
+            background: $white;
+            border: 1px solid $black;
+        }
+
+        &-detail__shipping {
+            margin-bottom: 27px;
         }
     }
 }

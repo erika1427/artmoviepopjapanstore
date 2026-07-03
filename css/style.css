@@ -319,7 +319,7 @@ body {
 .footer__address {
   margin-bottom: 36px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.9;
 }
 .footer__copy {
   width: -moz-fit-content;
@@ -813,7 +813,7 @@ body {
   height: 14px;
 }
 
-#details .main > :not(.contact):not(.buy):not(.add):not(.shipping) {
+#details .main > :not(.contact):not(.buy):not(.add):not(.shipping):not(.shipping-detail) {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -911,6 +911,7 @@ body {
   line-height: 1.9;
 }
 #details .shipping {
+  margin-bottom: 38px;
   margin-left: 5%;
   margin-right: 5%;
   padding: 29px 5% 22px 5%;
@@ -920,12 +921,12 @@ body {
   margin-bottom: 21px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.9;
 }
 #details .shipping__txt {
   margin-bottom: 6px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.9;
 }
 #details .shipping__payments {
   display: flex;
@@ -939,7 +940,18 @@ body {
 }
 #details .shipping__payments-txt {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.9;
+}
+#details .shipping-detail {
+  margin: 0 5% 97px 5%;
+  padding: 29px 5% 23px 5%;
+  font-size: 14px;
+  line-height: 1.9;
+  background: #F6F7F8;
+  border: 1px solid #343B4C;
+}
+#details .shipping-detail__shipping {
+  margin-bottom: 27px;
 }
 
 .rotateTop {
