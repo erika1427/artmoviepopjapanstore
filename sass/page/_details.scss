@@ -164,4 +164,163 @@
             margin-bottom: 27px;
         }
     }
+
+    .similar {
+        margin-bottom: 90px;
+
+        &__ttl {
+            margin-bottom: 50px;
+            font-family: $head;
+            font-weight: 400;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 84px;
+            justify-content: space-between;
+        }
+
+        &__box {
+            width: 46%;
+            color: $black;
+            text-decoration: none;
+        }
+
+        &__image {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        &__year {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: .3em;
+        }
+
+        // &__link {
+        //     width: fit-content;
+        //     margin: 0 auto;
+        //     font-size: 20px;
+        //     font-weight: 700;
+        //     color: $black;
+        //     text-decoration: none;
+        //     display: flex;
+        //     flex-direction: row-reverse;
+        //     align-items: center;
+        //     gap: 13px;
+
+        //     svg {
+        //         width: 8px;
+        //         height: 14px;
+        //     }
+        // }
+    }
+
+    .picks {
+        margin-bottom: 90px;
+
+        &__ttl {
+            margin-bottom: 50px;
+            font-family: $head;
+            font-weight: 400;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 84px;
+            justify-content: space-between;
+        }
+
+        &__box {
+            width: 46%;
+            color: $black;
+            text-decoration: none;
+        }
+
+        &__image {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        &__year {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: .3em;
+        }
+    }
+
+    .viewed {
+        margin-bottom: 60px;
+
+        &__ttl {
+            margin-bottom: 50px;
+            font-family: $head;
+            font-weight: 400;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 84px;
+            justify-content: space-between;
+        }
+
+        &__box {
+            width: 46%;
+            color: $black;
+            text-decoration: none;
+        }
+
+        &__image {
+            margin-bottom: 10px;
+        }
+
+        &__title {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        &__year {
+            font-weight: 600;
+            font-size: 10px;
+            letter-spacing: .3em;
+        }
+    }
+
+    .all__link {
+        width: fit-content;
+        margin: 0 auto 90px;
+        font-size: 20px;
+        font-weight: 700;
+        color: $black;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 13px;
+
+        svg {
+            width: 8px;
+            height: 14px;
+        }
+    }
 }
