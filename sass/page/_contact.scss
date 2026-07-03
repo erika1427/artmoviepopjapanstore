@@ -1,3 +1,42 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+#contact {
+    .main> :not(.contact) {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .ttl {
+        margin-bottom: 20px;
+        font-family: $head;
+        font-weight: 400;
+        font-size: 40px;
+    }
+
+    .txt {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .form {
+        padding: 50px 5%;
+        background: linear-gradient(270deg, #CED1E0 0%, #D0CAE1 100%);
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__label {
+            font-weight: 700;
+            font-size: 14px;
+
+            span {
+                color: #D7003A;
+            }
+        }
+    }
+}

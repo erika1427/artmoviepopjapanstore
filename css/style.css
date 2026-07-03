@@ -1073,6 +1073,37 @@ body {
   height: 14px;
 }
 
+#contact .main > :not(.contact) {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#contact .ttl {
+  margin-bottom: 20px;
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+#contact .txt {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#contact .form {
+  padding: 50px 5%;
+  background: linear-gradient(270deg, #CED1E0 0%, #D0CAE1 100%);
+}
+#contact .form__box {
+  display: flex;
+  flex-direction: column;
+}
+#contact .form__label {
+  font-weight: 700;
+  font-size: 14px;
+}
+#contact .form__label span {
+  color: #D7003A;
+}
+
 .rotateTop {
   transform: rotate(45deg);
 }
