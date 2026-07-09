@@ -1,3 +1,86 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+#shipping {
+    .main > :not(.contact) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .ttl {
+        margin-bottom: 46px;
+        font-family: $head;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .shipping {
+        margin-bottom: 67px;
+        
+        &__ttl {
+            margin-bottom: 38px;
+            font-weight: 700;
+            font-size: 18px;
+            color: $red;
+        }
+
+        &__txt {
+            margin-bottom: 27px;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        &__options {
+            margin-bottom: 27px;
+            font-size: 14px;
+            line-height: 1.9;
+
+            &-ttl {
+                font-weight: 700;
+            }
+
+            &-txt:nth-of-type(2) {
+                font-style: italic;
+            }
+
+            &-list {
+                margin-bottom: 27px;
+                padding-left: 5%;
+            }
+
+            &-item {
+                list-style-type: disc; 
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &__packaging {
+            font-size: 14px;
+            line-height: 1.9;
+
+            &-ttl {
+                font-weight: 700;
+            }
+
+            &-txt {
+                margin-bottom: 27px;
+            }
+        }
+
+        &__customs {
+            font-size: 14px;
+            line-height: 1.9;
+
+            &-ttl {
+                font-weight: 700;
+            }
+        }
+
+        
+    }
+}

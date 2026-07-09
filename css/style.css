@@ -1178,6 +1178,70 @@ body {
   height: 14px;
 }
 
+#shipping .main > :not(.contact) {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#shipping .ttl {
+  margin-bottom: 46px;
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+#shipping .shipping {
+  margin-bottom: 67px;
+}
+#shipping .shipping__ttl {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #F36658;
+}
+#shipping .shipping__txt {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .shipping__options {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .shipping__options-ttl {
+  font-weight: 700;
+}
+#shipping .shipping__options-txt:nth-of-type(2) {
+  font-style: italic;
+}
+#shipping .shipping__options-list {
+  margin-bottom: 27px;
+  padding-left: 5%;
+}
+#shipping .shipping__options-item {
+  list-style-type: disc;
+}
+#shipping .shipping__options-item span {
+  font-weight: 700;
+}
+#shipping .shipping__packaging {
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .shipping__packaging-ttl {
+  font-weight: 700;
+}
+#shipping .shipping__packaging-txt {
+  margin-bottom: 27px;
+}
+#shipping .shipping__customs {
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .shipping__customs-ttl {
+  font-weight: 700;
+}
+
 .rotateTop {
   transform: rotate(45deg);
 }
