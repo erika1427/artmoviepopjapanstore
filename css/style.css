@@ -1105,6 +1105,9 @@ body {
 #contact .form__box:nth-last-child(2) {
   margin-bottom: 50px;
 }
+#contact .form__box:nth-child(4) .form__input {
+  cursor: pointer;
+}
 #contact .form__box:nth-child(4) option {
   font-size: 14px;
   color: #343B4C;
@@ -1155,6 +1158,7 @@ body {
   font-size: 24px;
   color: #343B4C;
   background: #F6F7F8;
+  cursor: pointer;
 }
 #contact .top__link {
   width: -moz-fit-content;

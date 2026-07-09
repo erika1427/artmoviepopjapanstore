@@ -41,6 +41,10 @@
             }
 
             &:nth-child(4) {
+                .form__input {
+                    cursor: pointer;
+                }
+                
                 option {
                     font-size: 14px;
                     color: $black;
@@ -101,6 +105,7 @@
             font-size: 24px;
             color: $black;
             background: $white;
+            cursor: pointer;
         }
     }
 
