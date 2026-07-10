@@ -1,0 +1,99 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#faq {
+    .main> :not(.contact) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .ttl {
+        margin-bottom: 46px;
+        font-family: $head;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .item {
+        margin-bottom: 67px;
+
+        &__ttl {
+            margin-bottom: 38px;
+            font-weight: 700;
+            font-size: 18px;
+            color: $red;
+        }
+
+        &__box {
+            margin-bottom: 27px;
+            font-size: 14px;
+            line-height: 1.9;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .packaging {
+        margin-bottom: 67px;
+
+        &__ttl {
+            margin-bottom: 38px;
+            font-weight: 700;
+            font-size: 18px;
+            color: $red;
+        }
+
+        &__box {
+            margin-bottom: 27px;
+            font-size: 14px;
+            line-height: 1.9;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .orders {
+        margin-bottom: 60px;
+
+        &__ttl {
+            margin-bottom: 38px;
+            font-weight: 700;
+            font-size: 18px;
+            color: $red;
+        }
+
+        &__box {
+            margin-bottom: 27px;
+            font-size: 14px;
+            line-height: 1.9;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .top__link {
+        width: fit-content;
+        margin: 0 auto 90px;
+        font-size: 20px;
+        font-weight: 700;
+        color: $black;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 13px;
+
+        svg {
+            width: 8px;
+            height: 14px;
+        }
+    }
+}
