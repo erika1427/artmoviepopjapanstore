@@ -1241,6 +1241,85 @@ body {
 #shipping .shipping__customs-ttl {
   font-weight: 700;
 }
+#shipping .return {
+  margin-bottom: 60px;
+}
+#shipping .return__ttl {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #F36658;
+}
+#shipping .return__txt {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .return__confitions {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .return__confitions-ttl {
+  font-weight: 700;
+}
+#shipping .return__confitions-txt:nth-of-type(2) {
+  font-style: italic;
+}
+#shipping .return__confitions-list {
+  margin-bottom: 27px;
+  padding-left: 5%;
+}
+#shipping .return__confitions-item {
+  list-style-type: disc;
+}
+#shipping .return__confitions-item span {
+  font-weight: 700;
+}
+#shipping .return__howto {
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .return__howto-ttl {
+  font-weight: 700;
+}
+#shipping .return__howto-txt {
+  margin-bottom: 27px;
+}
+#shipping .return__refunds {
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .return__refunds-ttl {
+  font-weight: 700;
+}
+#shipping .return__refunds-txt {
+  margin-bottom: 27px;
+}
+#shipping .return__rts {
+  font-size: 14px;
+  line-height: 1.9;
+}
+#shipping .return__rts-ttl {
+  font-weight: 700;
+}
+#shipping .top__link {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 90px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #343B4C;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 13px;
+}
+#shipping .top__link svg {
+  width: 8px;
+  height: 14px;
+}
 
 .rotateTop {
   transform: rotate(45deg);
