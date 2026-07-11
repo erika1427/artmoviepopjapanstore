@@ -1561,6 +1561,86 @@ body {
   height: 14px;
 }
 
+#ligal .main > :not(.contact) {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#ligal .ttl {
+  margin-bottom: 46px;
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+}
+#ligal .item {
+  margin-bottom: 67px;
+}
+#ligal .item__ttl {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #F36658;
+}
+#ligal .item__box {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#ligal .item__box:last-child {
+  margin-bottom: 0;
+}
+#ligal .packaging {
+  margin-bottom: 67px;
+}
+#ligal .packaging__ttl {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #F36658;
+}
+#ligal .packaging__box {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#ligal .packaging__box:last-child {
+  margin-bottom: 0;
+}
+#ligal .orders {
+  margin-bottom: 60px;
+}
+#ligal .orders__ttl {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #F36658;
+}
+#ligal .orders__box {
+  margin-bottom: 27px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+#ligal .orders__box:last-child {
+  margin-bottom: 0;
+}
+#ligal .top__link {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 90px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #343B4C;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 13px;
+}
+#ligal .top__link svg {
+  width: 8px;
+  height: 14px;
+}
+
 .rotateTop {
   transform: rotate(45deg);
 }
