@@ -834,7 +834,7 @@ body:not(#home) .main {
   font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
-#details .all__link {
+#details .underlink {
   margin-bottom: 90px;
 }
 
@@ -1051,7 +1051,7 @@ body:not(#home) .main {
 #shipping .return__rts-ttl {
   font-weight: 700;
 }
-#shipping .top__link {
+#shipping .underlink {
   margin-bottom: 90px;
 }
 
@@ -1117,7 +1117,7 @@ body:not(#home) .main {
 #faq .orders__box:last-child {
   margin-bottom: 0;
 }
-#faq .top__link {
+#faq .underlink {
   margin-bottom: 90px;
 }
 
@@ -1183,7 +1183,7 @@ body:not(#home) .main {
 #policy .orders__box:last-child {
   margin-bottom: 0;
 }
-#policy .top__link {
+#policy .underlink {
   margin-bottom: 90px;
 }
 
@@ -1249,7 +1249,7 @@ body:not(#home) .main {
 #terms .orders__box:last-child {
   margin-bottom: 0;
 }
-#terms .top__link {
+#terms .underlink {
   margin-bottom: 90px;
 }
 
@@ -1315,7 +1315,7 @@ body:not(#home) .main {
 #ligal .orders__box:last-child {
   margin-bottom: 0;
 }
-#ligal .top__link {
+#ligal .underlink {
   margin-bottom: 90px;
 }
 
