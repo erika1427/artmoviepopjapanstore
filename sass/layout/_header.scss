@@ -11,6 +11,23 @@
     position: fixed;
     z-index: 3;
 
+    // background-color: rgba(255, 255, 255, 0.3); 
+    // backdrop-filter: blur(10px); 
+    // -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    // mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0; /* top, left, right, bottom を全て0にする指定 */
+        z-index: -1; /* ロゴやボタンの「後ろ」に配置 */
+        
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    }
+
     &__logo {
         width: 42px;
         height: 40px;
