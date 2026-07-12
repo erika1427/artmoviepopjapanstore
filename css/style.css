@@ -79,15 +79,11 @@ body {
   overflow-x: hidden;
 }
 
-.main {
+body:not(#home) .main {
   padding-top: 100px;
-  /* SVGをData URIとして読み込む（#を%23に変換済み） */
   background-image: url('data:image/svg+xml;utf8,<svg width="375" height="1072" viewBox="0 0 375 1072" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M375 469L0 596.5V952L375 1071.5V469Z" fill="%23F6F7F8"/><path d="M375 119.5L0 0V596.501L375 469V119.5Z" fill="%23EDEEF0"/></svg>');
-  /* 縦（Y軸）方向にだけ無限リピートさせる */
   background-repeat: repeat-y;
-  /* 横幅は画面に合わせ、縦幅は比率を保つ */
   background-size: 100% auto;
-  /* 👇 これを追加！（横方向 縦方向 の順） */
   background-position: 0 -340px;
 }
 
@@ -106,6 +102,13 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 84px;
+  justify-content: space-between;
 }
 
 .contact {
@@ -347,11 +350,11 @@ body {
   color: #343B4C;
 }
 
-#top .mv {
+#home .mv {
   height: 100dvh;
   position: relative;
 }
-#top .mv svg {
+#home .mv svg {
   width: 303px;
   height: 295px;
   position: absolute;
@@ -359,25 +362,65 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-#top .latest {
+#home .flex {
+  margin-bottom: 60px;
+}
+#home .box {
+  width: 46%;
+  color: #343B4C;
+  text-decoration: none;
+}
+#home .image {
+  margin-bottom: 10px;
+}
+#home .title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+#home .year {
+  font-weight: 600;
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+}
+#home .all {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+#home .all__link {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #343B4C;
+  text-decoration: none;
+}
+#home .all__link svg {
+  width: 6px;
+  height: 10px;
+}
+#home .latest {
   position: relative;
 }
-#top .latest__ttl, #top .latest__items, #top .latest__all {
+#home .latest__ttl, #home .latest__items {
   padding-left: 5%;
   padding-right: 5%;
   position: relative;
   z-index: 2;
 }
-#top .latest__bg {
+#home .latest__bg {
   width: 100%;
   position: absolute;
   top: -27px;
 }
-#top .latest__bg svg {
+#home .latest__bg svg {
   width: 100%;
   height: 680px;
 }
-#top .latest__ttl {
+#home .latest__ttl {
   margin-bottom: 50px;
   padding-top: 32px;
   font-family: "Climate Crisis", sans-serif;
@@ -385,310 +428,68 @@ body {
   font-size: 2.5rem;
   color: #F6F7F8;
 }
-#top .latest__items {
-  margin-bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
-}
-#top .latest__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .latest__image {
-  margin-bottom: 10px;
-}
-#top .latest__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-#top .latest__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
-#top .latest__all {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-#top .latest__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.9375rem;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .latest__link svg {
-  width: 6px;
-  height: 10px;
-}
-#top .flyers {
+#home .moviesection {
   margin-top: 90px;
+}
+#home .secwrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+  z-index: 2;
+}
+#home .video {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 84px;
   position: relative;
 }
-#top .flyers__bg {
+#home .video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(60%);
+}
+#home .moviettl {
+  font-family: "Climate Crisis", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #F6F7F8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-text-stroke: 2px #343B4C;
+  paint-order: stroke;
+  white-space: nowrap;
+}
+#home .flyers {
+  position: relative;
+}
+#home .flyers__bg {
   width: 100%;
   position: absolute;
   top: -19px;
 }
-#top .flyers__bg svg {
+#home .flyers__bg svg {
   width: 100%;
   height: 1205px;
 }
-#top .flyers__wrapper {
-  padding-left: 5%;
-  padding-right: 5%;
-  position: relative;
-  z-index: 2;
-}
-#top .flyers__video {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 84px;
+#home .tickets {
   position: relative;
 }
-#top .flyers__video video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: brightness(60%);
-}
-#top .flyers__ttl {
-  font-family: "Climate Crisis", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #F6F7F8;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  -webkit-text-stroke: 2px #343B4C;
-  paint-order: stroke;
-  white-space: nowrap;
-}
-#top .flyers__items {
-  margin-bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
-}
-#top .flyers__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .flyers__image {
-  margin-bottom: 10px;
-}
-#top .flyers__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-#top .flyers__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
-#top .flyers__all {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-#top .flyers__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.9375rem;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .flyers__link svg {
-  width: 6px;
-  height: 10px;
-}
-#top .tickets {
-  margin-top: 90px;
-  position: relative;
-}
-#top .tickets__bg {
+#home .tickets__bg {
   width: 100%;
   position: absolute;
   top: 474px;
 }
-#top .tickets__bg svg {
+#home .tickets__bg svg {
   width: 100%;
   height: 1240px;
 }
-#top .tickets__wrapper {
-  padding-left: 5%;
-  padding-right: 5%;
-  position: relative;
-  z-index: 2;
-}
-#top .tickets__video {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 84px;
-  position: relative;
-}
-#top .tickets__video video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: brightness(60%);
-}
-#top .tickets__ttl {
-  font-family: "Climate Crisis", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #F6F7F8;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  -webkit-text-stroke: 2px #343B4C;
-  paint-order: stroke;
-  white-space: nowrap;
-}
-#top .tickets__items {
-  margin-bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
-}
-#top .tickets__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .tickets__image {
-  margin-bottom: 10px;
-}
-#top .tickets__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-#top .tickets__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
-#top .tickets__all {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-#top .tickets__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.9375rem;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .tickets__link svg {
-  width: 6px;
-  height: 10px;
-}
-#top .streetware {
-  margin-top: 90px;
+#home .streetware {
   margin-bottom: 90px;
-}
-#top .streetware__wrapper {
-  padding-left: 5%;
-  padding-right: 5%;
-  position: relative;
-  z-index: 2;
-}
-#top .streetware__video {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 84px;
-  position: relative;
-}
-#top .streetware__video video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: brightness(60%);
-}
-#top .streetware__ttl {
-  font-family: "Climate Crisis", sans-serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: #F6F7F8;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  -webkit-text-stroke: 2px #343B4C;
-  paint-order: stroke;
-  white-space: nowrap;
-}
-#top .streetware__items {
-  margin-bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
-}
-#top .streetware__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .streetware__image {
-  margin-bottom: 10px;
-}
-#top .streetware__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-#top .streetware__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
-#top .streetware__all {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-#top .streetware__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.9375rem;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #343B4C;
-  text-decoration: none;
-}
-#top .streetware__link svg {
-  width: 6px;
-  height: 10px;
 }
 
 #items .items__ttl,
@@ -772,10 +573,6 @@ body {
 }
 #items .items__items {
   margin-bottom: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
 }
 #items .items__box {
   width: 46%;
@@ -963,12 +760,6 @@ body {
   font-size: 2.5rem;
   text-align: center;
 }
-#details .similar__items {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
-}
 #details .similar__box {
   width: 46%;
   color: #343B4C;
@@ -997,12 +788,6 @@ body {
   font-size: 2.5rem;
   text-align: center;
 }
-#details .picks__items {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
-}
 #details .picks__box {
   width: 46%;
   color: #343B4C;
@@ -1030,12 +815,6 @@ body {
   font-weight: 400;
   font-size: 2.5rem;
   text-align: center;
-}
-#details .viewed__items {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 84px;
-  justify-content: space-between;
 }
 #details .viewed__box {
   width: 46%;
