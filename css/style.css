@@ -96,10 +96,15 @@ body:not(#home) .main {
   display: block;
   position: fixed;
   bottom: 14px;
-  right: 20px;
+  right: 5%;
   z-index: 3;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
   border-radius: 100%;
+}
+@media screen and (min-width: 360px) {
+  .totop__link {
+    bottom: 30px;
+  }
 }
 .totop__link svg {
   width: 100%;
@@ -129,11 +134,21 @@ body:not(#home) .main {
   font-weight: 700;
   font-size: 0.9375rem;
 }
+@media screen and (min-width: 630px) {
+  .itemtitle {
+    font-size: 1.25rem;
+  }
+}
 
 .year {
   font-weight: 600;
   font-size: 0.625rem;
   letter-spacing: 0.3em;
+}
+@media screen and (min-width: 630px) {
+  .year {
+    font-size: 0.7rem;
+  }
 }
 
 .underlink {
@@ -180,13 +195,18 @@ body:not(#home) .main {
 }
 
 .header {
-  padding: 15px 27px 15px 20px;
+  padding: 15px 5%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 3;
+}
+@media screen and (min-width: 630px) {
+  .header {
+    padding: 24px 5%;
+  }
 }
 .header::before {
   content: "";
@@ -200,7 +220,12 @@ body:not(#home) .main {
 }
 .header__logo {
   width: 42px;
-  height: 40px;
+  height: auto;
+}
+@media screen and (min-width: 630px) {
+  .header__logo {
+    width: 60px;
+  }
 }
 .header__logo svg {
   width: 100%;
@@ -213,6 +238,11 @@ body:not(#home) .main {
   align-items: center;
   gap: 21px;
 }
+@media screen and (min-width: 630px) {
+  .btn {
+    gap: 30px;
+  }
+}
 .btn__burger {
   height: 100%;
   position: relative;
@@ -220,6 +250,13 @@ body:not(#home) .main {
   justify-content: space-between;
   align-items: center;
   width: 25px;
+}
+@media screen and (min-width: 630px) {
+  .btn__burger {
+    width: 35px;
+  }
+}
+.btn__burger {
   cursor: pointer;
   z-index: 1;
 }
@@ -233,6 +270,11 @@ body:not(#home) .main {
   transform: translateY(-8px);
   background: #343B4C;
 }
+@media screen and (min-width: 630px) {
+  .btn__top {
+    transform: translateY(-11px);
+  }
+}
 .btn__middle {
   background: #343B4C;
 }
@@ -240,10 +282,20 @@ body:not(#home) .main {
   transform: translateY(8px);
   background: #343B4C;
 }
+@media screen and (min-width: 630px) {
+  .btn__bottom {
+    transform: translateY(11px);
+  }
+}
 
 .cart {
   width: 21px;
-  height: 21px;
+  height: auto;
+}
+@media screen and (min-width: 630px) {
+  .cart {
+    width: 30px;
+  }
 }
 .cart__link {
   display: block;
@@ -284,9 +336,21 @@ body:not(#home) .main {
   width: 24px;
   height: 24px;
 }
+@media screen and (min-width: 630px) {
+  .gnav__insta {
+    width: 32px;
+    height: 32px;
+  }
+}
 .gnav__x {
   width: 24px;
-  height: 24px;
+  height: 22px;
+}
+@media screen and (min-width: 630px) {
+  .gnav__x {
+    width: 32px;
+    height: 29px;
+  }
 }
 
 .box__text {
@@ -326,7 +390,7 @@ body:not(#home) .main {
 }
 
 .footer {
-  padding: 46px 46px 24px 20px;
+  padding: 46px 10% 24px 5%;
   background: #EDEEF0;
 }
 .footer__wrapper {
@@ -339,6 +403,12 @@ body:not(#home) .main {
   width: 109px;
   height: 106px;
 }
+@media screen and (min-width: 630px) {
+  .footer__logo {
+    width: 130px;
+    height: 126px;
+  }
+}
 .footer__logo svg {
   width: 100%;
   height: 100%;
@@ -348,6 +418,11 @@ body:not(#home) .main {
   flex-direction: column;
   gap: 48px;
   font-size: 0.875rem;
+}
+@media screen and (min-width: 630px) {
+  .footer__container {
+    font-size: 1rem;
+  }
 }
 .footer__sns {
   display: flex;
@@ -359,6 +434,12 @@ body:not(#home) .main {
   height: 24px;
   display: block;
 }
+@media screen and (min-width: 630px) {
+  .footer__insta {
+    width: 32px;
+    height: 32px;
+  }
+}
 .footer__insta svg {
   width: 100%;
   height: 100%;
@@ -367,6 +448,12 @@ body:not(#home) .main {
   width: 24px;
   height: 22px;
   display: block;
+}
+@media screen and (min-width: 630px) {
+  .footer__x {
+    width: 32px;
+    height: 29px;
+  }
 }
 .footer__x svg {
   width: 100%;
@@ -377,10 +464,20 @@ body:not(#home) .main {
   font-size: 0.875rem;
   line-height: 1.9;
 }
+@media screen and (min-width: 630px) {
+  .footer__address {
+    font-size: 1rem;
+  }
+}
 .footer__copy {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.625rem;
+}
+@media screen and (min-width: 630px) {
+  .footer__copy {
+    font-size: 0.8rem;
+  }
 }
 
 .fnav {
@@ -408,8 +505,9 @@ body:not(#home) .main {
   position: relative;
 }
 #home .mv svg {
-  width: 303px;
-  height: 295px;
+  width: 80%;
+  height: auto;
+  max-width: 500px;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -433,9 +531,19 @@ body:not(#home) .main {
   color: #343B4C;
   text-decoration: none;
 }
+@media screen and (min-width: 630px) {
+  #home .all__link {
+    font-size: 1.25rem;
+  }
+}
 #home .all__link svg {
   width: 6px;
-  height: 10px;
+  height: auto;
+}
+@media screen and (min-width: 630px) {
+  #home .all__link svg {
+    width: 8px;
+  }
 }
 #home .latest {
   position: relative;
@@ -453,7 +561,12 @@ body:not(#home) .main {
 }
 #home .latest__bg svg {
   width: 100%;
-  height: 680px;
+  height: auto;
+}
+@media screen and (min-width: 630px) {
+  #home .latest__bg svg {
+    height: calc(640px + 50vw);
+  }
 }
 #home .latest__ttl {
   margin-bottom: 50px;
@@ -462,6 +575,11 @@ body:not(#home) .main {
   font-weight: 400;
   font-size: 2.5rem;
   color: #F6F7F8;
+}
+@media screen and (min-width: 630px) {
+  #home .latest__ttl {
+    font-size: 3em;
+  }
 }
 #home .moviesection {
   margin-top: 90px;
@@ -499,6 +617,11 @@ body:not(#home) .main {
   paint-order: stroke;
   white-space: nowrap;
 }
+@media screen and (min-width: 630px) {
+  #home .moviettl {
+    font-size: 2.55rem;
+  }
+}
 #home .flyers {
   position: relative;
 }
@@ -509,7 +632,12 @@ body:not(#home) .main {
 }
 #home .flyers__bg svg {
   width: 100%;
-  height: 1205px;
+  height: auto;
+}
+@media screen and (min-width: 630px) {
+  #home .flyers__bg svg {
+    height: calc(1165px + 50vw);
+  }
 }
 #home .tickets {
   position: relative;
@@ -521,7 +649,12 @@ body:not(#home) .main {
 }
 #home .tickets__bg svg {
   width: 100%;
-  height: 1240px;
+  height: auto;
+}
+@media screen and (min-width: 630px) {
+  #home .tickets__bg svg {
+    height: calc(1200px + 50vw);
+  }
 }
 #home .streetware {
   margin-bottom: 90px;

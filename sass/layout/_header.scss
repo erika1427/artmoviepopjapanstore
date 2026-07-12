@@ -3,13 +3,17 @@
 @use "../global" as *;
 
 .header {
-    padding: 15px 27px 15px 20px;
+    padding: 15px 5%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 3;
+
+    @media screen and (min-width: 630px) {
+        padding: 24px 5%;
+    }
 
     &::before {
         content: "";
@@ -24,7 +28,11 @@
 
     &__logo {
         width: 42px;
-        height: 40px;
+        height: auto;
+
+        @media screen and (min-width: 630px) {
+            width: 60px;
+        }
 
         svg {
             width: 100%;
@@ -39,6 +47,10 @@
     align-items: center;
     gap: 21px;
 
+    @media screen and (min-width: 630px) {
+        gap: 30px;
+    }
+
     &__burger {
         height: 100%;
         position: relative;
@@ -46,7 +58,11 @@
         justify-content: space-between;
         align-items: center;
         width: 25px;
-        
+
+        @media screen and (min-width: 630px) {
+            width: 35px;
+        }
+
         cursor: pointer;
         z-index: 1;
     }
@@ -63,6 +79,10 @@
     &__top {
         transform: translateY(-8px);
         background: $black;
+
+        @media screen and (min-width: 630px) {
+            transform: translateY(-11px);
+        }
     }
 
     &__middle {
@@ -72,12 +92,20 @@
     &__bottom {
         transform: translateY(8px);
         background: $black;
+
+        @media screen and (min-width: 630px) {
+            transform: translateY(11px);
+        }
     }
 }
 
 .cart {
     width: 21px;
-    height: 21px;
+    height: auto;
+
+    @media screen and (min-width: 630px) {
+        width: 30px;
+    }
 
     &__link {
         display: block;
