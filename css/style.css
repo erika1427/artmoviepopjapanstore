@@ -111,6 +111,28 @@ body:not(#home) .main {
   justify-content: space-between;
 }
 
+.box {
+  width: 46%;
+  color: #343B4C;
+  text-decoration: none;
+}
+
+.image {
+  margin-bottom: 10px;
+}
+
+.itemtitle {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+.year {
+  font-weight: 600;
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+}
+
 .underlink {
   width: -moz-fit-content;
   width: fit-content;
@@ -383,24 +405,6 @@ body:not(#home) .main {
 #home .flex {
   margin-bottom: 60px;
 }
-#home .box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#home .image {
-  margin-bottom: 10px;
-}
-#home .title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-#home .year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
 #home .all {
   width: -moz-fit-content;
   width: fit-content;
@@ -625,6 +629,11 @@ body:not(#home) .main {
   padding-bottom: 30px;
   /* バーを置くための余白 */
 }
+#details .slider-wrapper .swiper-button-next,
+#details .slider-wrapper .swiper-button-prev,
+#details .slider-wrapper .swiper-pagination {
+  z-index: 0;
+}
 #details .slider-wrapper .swiper-button-prev {
   left: -50px;
   color: #343B4C;
@@ -712,18 +721,17 @@ body:not(#home) .main {
   margin-left: 5%;
   margin-right: 5%;
   padding: 29px 5% 22px 5%;
+  line-height: 1.9;
   background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
 }
 #details .shipping__ttl {
   margin-bottom: 21px;
   font-weight: 700;
   font-size: 0.875rem;
-  line-height: 1.9;
 }
 #details .shipping__txt {
   margin-bottom: 6px;
   font-size: 0.875rem;
-  line-height: 1.9;
 }
 #details .shipping__payments {
   display: flex;
@@ -737,7 +745,6 @@ body:not(#home) .main {
 }
 #details .shipping__payments-txt {
   font-size: 0.875rem;
-  line-height: 1.9;
 }
 #details .shipping-detail {
   margin: 0 5% 97px 5%;
@@ -750,89 +757,21 @@ body:not(#home) .main {
 #details .shipping-detail__shipping {
   margin-bottom: 27px;
 }
-#details .similar {
-  margin-bottom: 90px;
-}
-#details .similar__ttl {
+#details .secttl {
   margin-bottom: 50px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
   text-align: center;
 }
-#details .similar__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#details .similar__image {
-  margin-bottom: 10px;
-}
-#details .similar__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.625rem;
-}
-#details .similar__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
+#details .similar {
+  margin-bottom: 90px;
 }
 #details .picks {
   margin-bottom: 90px;
 }
-#details .picks__ttl {
-  margin-bottom: 50px;
-  font-family: "Climate Crisis", sans-serif;
-  font-weight: 400;
-  font-size: 2.5rem;
-  text-align: center;
-}
-#details .picks__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#details .picks__image {
-  margin-bottom: 10px;
-}
-#details .picks__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.625rem;
-}
-#details .picks__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
 #details .viewed {
   margin-bottom: 60px;
-}
-#details .viewed__ttl {
-  margin-bottom: 50px;
-  font-family: "Climate Crisis", sans-serif;
-  font-weight: 400;
-  font-size: 2.5rem;
-  text-align: center;
-}
-#details .viewed__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#details .viewed__image {
-  margin-bottom: 10px;
-}
-#details .viewed__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.625rem;
-}
-#details .viewed__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
 }
 #details .underlink {
   margin-bottom: 90px;

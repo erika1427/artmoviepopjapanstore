@@ -50,6 +50,29 @@ body:not(#home) {
     justify-content: space-between;
 }
 
+
+.box {
+    width: 46%;
+    color: $black;
+    text-decoration: none;
+}
+
+.image {
+    margin-bottom: 10px;
+}
+
+.itemtitle {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: .9375rem;
+}
+
+.year {
+    font-weight: 600;
+    font-size: .625rem;
+    letter-spacing: .3em;
+}
+
 .underlink {
     width: fit-content;
     margin: 0 auto;

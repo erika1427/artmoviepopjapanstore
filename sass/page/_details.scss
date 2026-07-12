@@ -21,6 +21,12 @@
         padding-bottom: 30px;
         /* バーを置くための余白 */
 
+        .swiper-button-next,
+        .swiper-button-prev,
+        .swiper-pagination {
+            z-index: 0;
+        }
+
         .swiper-button-prev {
             left: -50px;
             color: $black;
@@ -119,19 +125,18 @@
         margin-left: 5%;
         margin-right: 5%;
         padding: 29px 5% 22px 5%;
+        line-height: 1.9;
         background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
 
         &__ttl {
             margin-bottom: 21px;
             font-weight: 700;
             font-size: .875rem;
-            line-height: 1.9;
         }
 
         &__txt {
             margin-bottom: 6px;
             font-size: .875rem;
-            line-height: 1.9;
         }
 
         &__payments {
@@ -148,7 +153,6 @@
 
         &__payments-txt {
             font-size: .875rem;
-            line-height: 1.9;
         }
 
         &-detail {
@@ -165,127 +169,24 @@
         }
     }
 
+    .secttl {
+        margin-bottom: 50px;
+        font-family: $head;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
     .similar {
         margin-bottom: 90px;
-
-        &__ttl {
-            margin-bottom: 50px;
-            font-family: $head;
-            font-weight: 400;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        // &__items {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     row-gap: 84px;
-        //     justify-content: space-between;
-        // }
-
-        &__box {
-            width: 46%;
-            color: $black;
-            text-decoration: none;
-        }
-
-        &__image {
-            margin-bottom: 10px;
-        }
-
-        &__title {
-            margin-bottom: 10px;
-            font-weight: 700;
-            font-size: .625rem;
-        }
-
-        &__year {
-            font-weight: 600;
-            font-size: .625rem;
-            letter-spacing: .3em;
-        }
     }
 
     .picks {
         margin-bottom: 90px;
-
-        &__ttl {
-            margin-bottom: 50px;
-            font-family: $head;
-            font-weight: 400;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        // &__items {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     row-gap: 84px;
-        //     justify-content: space-between;
-        // }
-
-        &__box {
-            width: 46%;
-            color: $black;
-            text-decoration: none;
-        }
-
-        &__image {
-            margin-bottom: 10px;
-        }
-
-        &__title {
-            margin-bottom: 10px;
-            font-weight: 700;
-            font-size: .625rem;
-        }
-
-        &__year {
-            font-weight: 600;
-            font-size: .625rem;
-            letter-spacing: .3em;
-        }
     }
 
     .viewed {
         margin-bottom: 60px;
-
-        &__ttl {
-            margin-bottom: 50px;
-            font-family: $head;
-            font-weight: 400;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        // &__items {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     row-gap: 84px;
-        //     justify-content: space-between;
-        // }
-
-        &__box {
-            width: 46%;
-            color: $black;
-            text-decoration: none;
-        }
-
-        &__image {
-            margin-bottom: 10px;
-        }
-
-        &__title {
-            margin-bottom: 10px;
-            font-weight: 700;
-            font-size: .625rem;
-        }
-
-        &__year {
-            font-weight: 600;
-            font-size: .625rem;
-            letter-spacing: .3em;
-        }
     }
 
     .underlink {
