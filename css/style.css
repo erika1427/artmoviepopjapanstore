@@ -759,7 +759,7 @@ body:not(#home) .main {
   margin-bottom: 90px;
 }
 
-#contact .main > :not(.contact, .top__link) {
+#contact .main > :not(.underlink) {
   margin-left: 5%;
   margin-right: 5%;
 }

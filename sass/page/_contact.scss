@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 #contact {
-    .main> :not(.contact, .top__link) {
+    .main> :not(.underlink) {
         margin-left: 5%;
         margin-right: 5%;
     }
