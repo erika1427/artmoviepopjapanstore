@@ -6,6 +6,8 @@ $(function () {
         $('#btn__middle').toggleClass('hideMiddle');
         $('#btn__bottom').toggleClass('rotateBottom');
         $('#gnav').toggleClass('translateNav');
+        // bodyタグに 'no-scroll' クラスを付け外しする
+        $('body').toggleClass('no-scroll');
     });
 
     $('.gnav__link').on('click', function () {
@@ -16,6 +18,7 @@ $(function () {
             $('#btn__bottom').removeClass('rotateBottom');
         }
     });
+
 
     // filters
     $('.filters__btn').on('click', function () {

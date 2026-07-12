@@ -74,6 +74,9 @@ body {
   line-height: 1;
   color: #343B4C;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 .wrapper {
   overflow-x: hidden;
@@ -261,7 +264,7 @@ body:not(#home) .main {
   display: flex;
   flex-direction: column;
   gap: 146px;
-  position: absolute;
+  position: fixed;
   background: linear-gradient(to right, #F36655, #E74C69);
   top: 0;
   left: 0;
