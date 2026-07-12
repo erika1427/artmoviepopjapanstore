@@ -16,12 +16,12 @@
         margin-bottom: 20px;
         font-family: $head;
         font-weight: 400;
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .txt {
         margin-bottom: 30px;
-        font-size: 14px;
+        font-size: .875rem;
         line-height: 1.9;
     }
 
@@ -46,7 +46,7 @@
                 }
                 
                 option {
-                    font-size: 14px;
+                    font-size: .875rem;
                     color: $black;
                 }
             }
@@ -73,7 +73,7 @@
         &__label {
             margin-bottom: 10px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: .875rem;
 
             span {
                 color: #D7003A;
@@ -82,7 +82,7 @@
 
         &__input {
             padding: 7px 10px;
-            font-size: 14px;
+            font-size: .875rem;
             color: #6c6c6c;
             border-radius: 5px;
             border: none;
@@ -92,7 +92,7 @@
         &__message {
             height: 300px;
             padding: 10px;
-            font-size: 14px;
+            font-size: .875rem;
             color: #6c6c6c;
             border-radius: 5px;
             border: none;
@@ -102,7 +102,7 @@
             width: fit-content;
             padding: 17px 71px;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 1.5rem;
             color: $black;
             background: $white;
             cursor: pointer;
@@ -112,7 +112,7 @@
     .top__link {
         width: fit-content;
         margin: 0 auto;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 700;
         color: $black;
         text-decoration: none;

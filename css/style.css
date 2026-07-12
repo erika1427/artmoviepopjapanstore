@@ -115,7 +115,7 @@ body {
 .contact__txt {
   margin-bottom: 23px;
   font-family: "Climate Crisis", sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
 }
 .contact__btn {
@@ -128,7 +128,7 @@ body {
   display: block;
   padding: 17px 51px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #343B4C;
   text-decoration: none;
 }
@@ -241,7 +241,7 @@ body {
 
 .box__weight {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #343B4C;
   text-decoration: none;
 }
@@ -253,7 +253,7 @@ body {
 
 .box__thin {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #343B4C;
   text-decoration: none;
 }
@@ -291,7 +291,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .footer__sns {
   display: flex;
@@ -318,13 +318,13 @@ body {
 }
 .footer__address {
   margin-bottom: 36px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 .footer__copy {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .fnav {
@@ -382,7 +382,7 @@ body {
   padding-top: 32px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   color: #F6F7F8;
 }
 #top .latest__items {
@@ -403,11 +403,11 @@ body {
 #top .latest__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 #top .latest__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #top .latest__all {
@@ -418,7 +418,7 @@ body {
 #top .latest__link {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 15px;
+  font-size: 0.9375rem;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -464,7 +464,7 @@ body {
 #top .flyers__ttl {
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #F6F7F8;
   position: absolute;
   top: 50%;
@@ -493,11 +493,11 @@ body {
 #top .flyers__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 #top .flyers__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #top .flyers__all {
@@ -508,7 +508,7 @@ body {
 #top .flyers__link {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 15px;
+  font-size: 0.9375rem;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -554,7 +554,7 @@ body {
 #top .tickets__ttl {
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #F6F7F8;
   position: absolute;
   top: 50%;
@@ -583,11 +583,11 @@ body {
 #top .tickets__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 #top .tickets__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #top .tickets__all {
@@ -598,7 +598,7 @@ body {
 #top .tickets__link {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 15px;
+  font-size: 0.9375rem;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -635,7 +635,7 @@ body {
 #top .streetware__ttl {
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #F6F7F8;
   position: absolute;
   top: 50%;
@@ -664,11 +664,11 @@ body {
 #top .streetware__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 #top .streetware__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #top .streetware__all {
@@ -679,7 +679,7 @@ body {
 #top .streetware__link {
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 15px;
+  font-size: 0.9375rem;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -701,11 +701,11 @@ body {
   margin-bottom: 20px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 #items .filters__txt {
   font-weight: 700;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 #items .filters__btn {
   margin-bottom: 84px;
@@ -744,7 +744,7 @@ body {
 }
 #items .filters__count {
   margin-bottom: 49px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 #items .filters__list {
@@ -754,7 +754,7 @@ body {
 #items .filters__item {
   margin-bottom: 21px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
 }
 #items .filters__close {
   width: 26px;
@@ -788,18 +788,18 @@ body {
 #items .items__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 #items .items__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #items .items__link {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -870,7 +870,7 @@ body {
 #details .title {
   margin-bottom: 23px;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 #details .buy,
 #details .add {
@@ -879,7 +879,7 @@ body {
 #details .price {
   margin-bottom: 23px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 #details .buy {
   margin-bottom: 19px;
@@ -887,7 +887,7 @@ body {
   padding: 18px 0;
   display: block;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #343B4C;
   background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
   text-decoration: none;
@@ -899,7 +899,7 @@ body {
   padding: 18px 0;
   display: block;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #343B4C;
   text-decoration: none;
   text-align: center;
@@ -907,7 +907,7 @@ body {
 }
 #details .text {
   margin-bottom: 38px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #details .shipping {
@@ -920,12 +920,12 @@ body {
 #details .shipping__ttl {
   margin-bottom: 21px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #details .shipping__txt {
   margin-bottom: 6px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #details .shipping__payments {
@@ -939,13 +939,13 @@ body {
   border: 1px solid #343B4C;
 }
 #details .shipping__payments-txt {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #details .shipping-detail {
   margin: 0 5% 97px 5%;
   padding: 29px 5% 23px 5%;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
   background: #F6F7F8;
   border: 1px solid #343B4C;
@@ -960,7 +960,7 @@ body {
   margin-bottom: 50px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: center;
 }
 #details .similar__items {
@@ -980,11 +980,11 @@ body {
 #details .similar__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.625rem;
 }
 #details .similar__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #details .picks {
@@ -994,7 +994,7 @@ body {
   margin-bottom: 50px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: center;
 }
 #details .picks__items {
@@ -1014,11 +1014,11 @@ body {
 #details .picks__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.625rem;
 }
 #details .picks__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #details .viewed {
@@ -1028,7 +1028,7 @@ body {
   margin-bottom: 50px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-align: center;
 }
 #details .viewed__items {
@@ -1048,18 +1048,18 @@ body {
 #details .viewed__title {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.625rem;
 }
 #details .viewed__year {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.3em;
 }
 #details .all__link {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 90px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -1084,11 +1084,11 @@ body {
   margin-bottom: 20px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 #contact .txt {
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #contact .form {
@@ -1109,7 +1109,7 @@ body {
   cursor: pointer;
 }
 #contact .form__box:nth-child(4) option {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #343B4C;
 }
 #contact .form__box:last-child {
@@ -1130,14 +1130,14 @@ body {
 #contact .form__label {
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 #contact .form__label span {
   color: #D7003A;
 }
 #contact .form__input {
   padding: 7px 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #6c6c6c;
   border-radius: 5px;
   border: none;
@@ -1145,7 +1145,7 @@ body {
 #contact .form__message {
   height: 300px;
   padding: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #6c6c6c;
   border-radius: 5px;
   border: none;
@@ -1155,7 +1155,7 @@ body {
   width: fit-content;
   padding: 17px 71px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #343B4C;
   background: #F6F7F8;
   cursor: pointer;
@@ -1164,7 +1164,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -1186,7 +1186,7 @@ body {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
 }
 #shipping .shipping {
@@ -1195,17 +1195,17 @@ body {
 #shipping .shipping__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #shipping .shipping__txt {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .shipping__options {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .shipping__options-ttl {
@@ -1225,7 +1225,7 @@ body {
   font-weight: 700;
 }
 #shipping .shipping__packaging {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .shipping__packaging-ttl {
@@ -1235,7 +1235,7 @@ body {
   margin-bottom: 27px;
 }
 #shipping .shipping__customs {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .shipping__customs-ttl {
@@ -1247,17 +1247,17 @@ body {
 #shipping .return__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #shipping .return__txt {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .return__confitions {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .return__confitions-ttl {
@@ -1277,7 +1277,7 @@ body {
   font-weight: 700;
 }
 #shipping .return__howto {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .return__howto-ttl {
@@ -1287,7 +1287,7 @@ body {
   margin-bottom: 27px;
 }
 #shipping .return__refunds {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .return__refunds-ttl {
@@ -1297,7 +1297,7 @@ body {
   margin-bottom: 27px;
 }
 #shipping .return__rts {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #shipping .return__rts-ttl {
@@ -1307,7 +1307,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 90px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -1329,7 +1329,7 @@ body {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
 }
 #faq .item {
@@ -1338,12 +1338,12 @@ body {
 #faq .item__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #faq .item__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #faq .item__box:last-child {
@@ -1355,12 +1355,12 @@ body {
 #faq .packaging__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #faq .packaging__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #faq .packaging__box:last-child {
@@ -1372,12 +1372,12 @@ body {
 #faq .orders__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #faq .orders__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #faq .orders__box:last-child {
@@ -1387,7 +1387,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 90px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -1409,7 +1409,7 @@ body {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
 }
 #policy .item {
@@ -1418,12 +1418,12 @@ body {
 #policy .item__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #policy .item__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #policy .item__box:last-child {
@@ -1435,12 +1435,12 @@ body {
 #policy .packaging__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #policy .packaging__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #policy .packaging__box:last-child {
@@ -1452,12 +1452,12 @@ body {
 #policy .orders__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #policy .orders__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #policy .orders__box:last-child {
@@ -1467,7 +1467,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 90px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -1489,7 +1489,7 @@ body {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
 }
 #terms .item {
@@ -1498,12 +1498,12 @@ body {
 #terms .item__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #terms .item__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #terms .item__box:last-child {
@@ -1515,12 +1515,12 @@ body {
 #terms .packaging__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #terms .packaging__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #terms .packaging__box:last-child {
@@ -1532,12 +1532,12 @@ body {
 #terms .orders__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #terms .orders__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #terms .orders__box:last-child {
@@ -1547,7 +1547,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 90px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;
@@ -1569,7 +1569,7 @@ body {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: center;
 }
 #ligal .item {
@@ -1578,12 +1578,12 @@ body {
 #ligal .item__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #ligal .item__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #ligal .item__box:last-child {
@@ -1595,12 +1595,12 @@ body {
 #ligal .packaging__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #ligal .packaging__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #ligal .packaging__box:last-child {
@@ -1612,12 +1612,12 @@ body {
 #ligal .orders__ttl {
   margin-bottom: 38px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #F36658;
 }
 #ligal .orders__box {
   margin-bottom: 27px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.9;
 }
 #ligal .orders__box:last-child {
@@ -1627,7 +1627,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 90px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #343B4C;
   text-decoration: none;

@@ -27,7 +27,7 @@
         display: flex;
         flex-direction: column;
         gap: 48px;
-        font-size: 14px;
+        font-size: .875rem;
     }
 
     &__sns {
@@ -60,13 +60,13 @@
 
     &__address {
         margin-bottom: 36px;
-        font-size: 14px;
+        font-size: .875rem;
         line-height: 1.9;
     }
 
     &__copy {
         width: fit-content;
-        font-size: 10px;
+        font-size: .625rem;
     }
 }
 
