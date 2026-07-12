@@ -162,20 +162,6 @@
     }
 
     .top__link {
-        width: fit-content;
-        margin: 0 auto 90px;
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: $black;
-        text-decoration: none;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        gap: 13px;
-
-        svg {
-            width: 8px;
-            height: 14px;
-        }
+        margin-bottom: 90px;
     }
 }

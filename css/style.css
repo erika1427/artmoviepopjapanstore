@@ -111,6 +111,24 @@ body:not(#home) .main {
   justify-content: space-between;
 }
 
+.underlink {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #343B4C;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 13px;
+}
+.underlink svg {
+  width: 8px;
+  height: 14px;
+}
+
 .contact {
   padding: 39px 36px;
   background: linear-gradient(to right, #10EBB4, #17E6D3);
@@ -537,7 +555,6 @@ body:not(#home) .main {
   opacity: 0;
   pointer-events: none;
   z-index: 3;
-  /* ここに「.translateNav」がついた時のスタイルを【入れ子】で書く */
 }
 #items .filters.translateNav {
   opacity: 1;
@@ -591,23 +608,6 @@ body:not(#home) .main {
   font-weight: 600;
   font-size: 0.625rem;
   letter-spacing: 0.3em;
-}
-#items .items__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#items .items__link svg {
-  width: 8px;
-  height: 14px;
 }
 
 #details .main > :not(.contact):not(.buy):not(.add):not(.shipping):not(.shipping-detail) {
@@ -835,21 +835,7 @@ body:not(#home) .main {
   letter-spacing: 0.3em;
 }
 #details .all__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 90px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#details .all__link svg {
-  width: 8px;
-  height: 14px;
+  margin-bottom: 90px;
 }
 
 #contact .main > :not(.contact, .top__link) {
@@ -938,23 +924,6 @@ body:not(#home) .main {
   color: #343B4C;
   background: #F6F7F8;
   cursor: pointer;
-}
-#contact .top__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#contact .top__link svg {
-  width: 8px;
-  height: 14px;
 }
 
 #shipping .main > :not(.contact) {
@@ -1083,21 +1052,7 @@ body:not(#home) .main {
   font-weight: 700;
 }
 #shipping .top__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 90px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#shipping .top__link svg {
-  width: 8px;
-  height: 14px;
+  margin-bottom: 90px;
 }
 
 #faq .main > :not(.contact) {
@@ -1163,21 +1118,7 @@ body:not(#home) .main {
   margin-bottom: 0;
 }
 #faq .top__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 90px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#faq .top__link svg {
-  width: 8px;
-  height: 14px;
+  margin-bottom: 90px;
 }
 
 #policy .main > :not(.contact) {
@@ -1243,21 +1184,7 @@ body:not(#home) .main {
   margin-bottom: 0;
 }
 #policy .top__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 90px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#policy .top__link svg {
-  width: 8px;
-  height: 14px;
+  margin-bottom: 90px;
 }
 
 #terms .main > :not(.contact) {
@@ -1323,21 +1250,7 @@ body:not(#home) .main {
   margin-bottom: 0;
 }
 #terms .top__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 90px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#terms .top__link svg {
-  width: 8px;
-  height: 14px;
+  margin-bottom: 90px;
 }
 
 #ligal .main > :not(.contact) {
@@ -1403,21 +1316,7 @@ body:not(#home) .main {
   margin-bottom: 0;
 }
 #ligal .top__link {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto 90px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #343B4C;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  gap: 13px;
-}
-#ligal .top__link svg {
-  width: 8px;
-  height: 14px;
+  margin-bottom: 90px;
 }
 
 .rotateTop {

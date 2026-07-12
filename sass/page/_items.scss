@@ -54,7 +54,6 @@
         pointer-events: none;
         z-index: 3;
 
-        /* ここに「.translateNav」がついた時のスタイルを【入れ子】で書く */
         &.translateNav {
             opacity: 1;
             pointer-events: auto;
@@ -121,22 +120,22 @@
             letter-spacing: .3em;
         }
 
-        &__link {
-            width: fit-content;
-            margin: 0 auto;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: $black;
-            text-decoration: none;
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            gap: 13px;
+        // &__link {
+        //     width: fit-content;
+        //     margin: 0 auto;
+        //     font-size: 1.25rem;
+        //     font-weight: 700;
+        //     color: $black;
+        //     text-decoration: none;
+        //     display: flex;
+        //     flex-direction: row-reverse;
+        //     align-items: center;
+        //     gap: 13px;
 
-            svg {
-                width: 8px;
-                height: 14px;
-            }
-        }
+        //     svg {
+        //         width: 8px;
+        //         height: 14px;
+        //     }
+        // }
     }
 }
