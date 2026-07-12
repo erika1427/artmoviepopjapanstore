@@ -595,24 +595,6 @@ body:not(#home) .main {
 #items .items__items {
   margin-bottom: 60px;
 }
-#items .items__box {
-  width: 46%;
-  color: #343B4C;
-  text-decoration: none;
-}
-#items .items__image {
-  margin-bottom: 10px;
-}
-#items .items__title {
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-}
-#items .items__year {
-  font-weight: 600;
-  font-size: 0.625rem;
-  letter-spacing: 0.3em;
-}
 
 #details .main > :not(.contact):not(.buy):not(.add):not(.shipping):not(.shipping-detail) {
   padding-left: 5%;
