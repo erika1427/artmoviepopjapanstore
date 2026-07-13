@@ -24,6 +24,10 @@ body:not(#home) {
         background-repeat: repeat-y;
         background-size: 100% auto;
         background-position: 0 -340px;
+
+        @media screen and (min-width: 630px) {
+            padding-top: 120px;
+        }
     }
 }
 

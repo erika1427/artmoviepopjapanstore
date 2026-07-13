@@ -16,11 +16,19 @@
         font-family: $head;
         font-weight: 400;
         font-size: 2.5rem;
+
+        @media screen and (min-width: 630px) {
+            font-size: 3rem;
+        }
     }
 
     .filters__txt {
         font-weight: 700;
         font-size: .8125rem;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1.25rem;
+        }
     }
 
     .filters__btn {
@@ -36,8 +44,12 @@
 
         svg {
             width: 13px;
-            height: 14px;
+            height: auto;
             display: block;
+
+            @media screen and (min-width: 630px) {
+                width: 18px;
+            }
         }
     }
 
@@ -54,6 +66,10 @@
         pointer-events: none;
         z-index: 3;
 
+        @media screen and (min-width: 630px) {
+            padding-top: 43px;
+        }
+
         &.translateNav {
             opacity: 1;
             pointer-events: auto;
@@ -63,6 +79,10 @@
             margin-bottom: 49px;
             font-size: 1.25rem;
             font-weight: 700;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1.75rem;
+            }
         }
 
         &__list {
@@ -74,6 +94,10 @@
             margin-bottom: 21px;
             font-weight: 700;
             font-size: 1rem;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1.25rem;
+            }
         }
 
         &__close {
@@ -83,6 +107,9 @@
             top: 25px;
             right: 27px;
 
+            @media screen and (min-width: 630px) {
+                top: 39px;
+            }
 
             svg {
                 width: 100%;

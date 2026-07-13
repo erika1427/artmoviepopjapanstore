@@ -89,6 +89,11 @@ body:not(#home) .main {
   background-size: 100% auto;
   background-position: 0 -340px;
 }
+@media screen and (min-width: 630px) {
+  body:not(#home) .main {
+    padding-top: 120px;
+  }
+}
 
 .totop__link {
   width: 64px;
@@ -529,9 +534,9 @@ body:not(#home) .main {
   height: auto;
   max-width: 700px;
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 #home .flex {
   margin-bottom: 60px;
@@ -598,7 +603,7 @@ body:not(#home) .main {
 }
 @media screen and (min-width: 630px) {
   #home .latest__ttl {
-    font-size: 3em;
+    font-size: 3rem;
   }
 }
 #home .moviesection {
@@ -692,9 +697,19 @@ body:not(#home) .main {
   font-weight: 400;
   font-size: 2.5rem;
 }
+@media screen and (min-width: 630px) {
+  #items .items__ttl {
+    font-size: 3rem;
+  }
+}
 #items .filters__txt {
   font-weight: 700;
   font-size: 0.8125rem;
+}
+@media screen and (min-width: 630px) {
+  #items .filters__txt {
+    font-size: 1.25rem;
+  }
 }
 #items .filters__btn {
   margin-bottom: 84px;
@@ -710,8 +725,13 @@ body:not(#home) .main {
 }
 #items .filters__btn svg {
   width: 13px;
-  height: 14px;
+  height: auto;
   display: block;
+}
+@media screen and (min-width: 630px) {
+  #items .filters__btn svg {
+    width: 18px;
+  }
 }
 #items .filters {
   padding-top: 31px;
@@ -726,6 +746,11 @@ body:not(#home) .main {
   pointer-events: none;
   z-index: 3;
 }
+@media screen and (min-width: 630px) {
+  #items .filters {
+    padding-top: 43px;
+  }
+}
 #items .filters.translateNav {
   opacity: 1;
   pointer-events: auto;
@@ -734,6 +759,11 @@ body:not(#home) .main {
   margin-bottom: 49px;
   font-size: 1.25rem;
   font-weight: 700;
+}
+@media screen and (min-width: 630px) {
+  #items .filters__count {
+    font-size: 1.75rem;
+  }
 }
 #items .filters__list {
   height: calc(100dvh - 130px);
@@ -744,12 +774,22 @@ body:not(#home) .main {
   font-weight: 700;
   font-size: 1rem;
 }
+@media screen and (min-width: 630px) {
+  #items .filters__item {
+    font-size: 1.25rem;
+  }
+}
 #items .filters__close {
   width: 26px;
   height: 26px;
   position: absolute;
   top: 25px;
   right: 27px;
+}
+@media screen and (min-width: 630px) {
+  #items .filters__close {
+    top: 39px;
+  }
 }
 #items .filters__close svg {
   width: 100%;
