@@ -58,7 +58,6 @@ body:not(#home) {
     justify-content: space-between;
 }
 
-
 .box {
     width: 46%;
     color: $black;
@@ -114,8 +113,12 @@ body:not(#home) {
     &__txt {
         margin-bottom: 23px;
         font-family: $head;
-        font-size: 1.875rem;
+        font-size: 1.85rem;
         text-align: center;
+
+        @media screen and (min-width: 630px) {
+            font-size: 3rem;
+        }
     }
 
     &__btn {

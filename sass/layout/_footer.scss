@@ -104,16 +104,28 @@
     flex-direction: column;
     gap: 17px;
 
+    @media screen and (min-width: 630px) {
+        gap: 22px;
+    }
+
     &__nav-main {
         display: flex;
         flex-direction: column;
         gap: 17px;
+
+        @media screen and (min-width: 630px) {
+            gap: 22px;
+        }
     }
 
     &__nav-sub {
         display: flex;
         flex-direction: column;
         gap: 17px;
+
+        @media screen and (min-width: 630px) {
+            gap: 22px;
+        }
     }
 
     &__link {
