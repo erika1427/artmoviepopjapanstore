@@ -809,13 +809,12 @@ body:not(#home) .main {
 #details .slider-wrapper {
   padding-left: 5%;
   padding-right: 5%;
-}
-#details .slider-wrapper {
-  width: 247px;
   margin: 0 auto 30px;
   position: relative;
   padding-bottom: 30px;
-  /* バーを置くための余白 */
+  width: 80%;
+  /* 👇 広がりすぎるのを防ぐための最大幅（例: 600px）を設定しておくのがオススメ */
+  max-width: 600px;
 }
 #details .slider-wrapper .swiper-button-next,
 #details .slider-wrapper .swiper-button-prev,
@@ -823,11 +822,11 @@ body:not(#home) .main {
   z-index: 0;
 }
 #details .slider-wrapper .swiper-button-prev {
-  left: -50px;
+  left: -8%;
   color: #343B4C;
 }
 #details .slider-wrapper .swiper-button-next {
-  right: -50px;
+  right: -8%;
   color: #343B4C;
 }
 #details .slider-wrapper {
@@ -855,8 +854,14 @@ body:not(#home) .main {
 #details .product-slider {
   width: 100%;
 }
+#details .product-slider .swiper-slide {
+  /* スライドの中身を真ん中に寄せる設定（画像の横幅が100%未満になった時のため） */
+  display: flex;
+  justify-content: center;
+}
 #details .product-slider .swiper-slide img {
-  width: 100%;
+  /* 👇 100%だと画質が荒れることがあるので、max-width: 100% と height: auto を使うのが王道 */
+  max-width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;

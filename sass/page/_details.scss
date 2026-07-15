@@ -12,14 +12,15 @@
     .slider-wrapper {
         padding-left: 5%;
         padding-right: 5%;
-    }
-
-    .slider-wrapper {
-        width: 247px;
+        // width: 247px;
         margin: 0 auto 30px;
         position: relative;
         padding-bottom: 30px;
-        /* バーを置くための余白 */
+
+        width: 80%; 
+        
+        /* 👇 広がりすぎるのを防ぐための最大幅（例: 600px）を設定しておくのがオススメ */
+        max-width: 600px; 
 
         .swiper-button-next,
         .swiper-button-prev,
@@ -28,12 +29,12 @@
         }
 
         .swiper-button-prev {
-            left: -50px;
+            left: -8%;
             color: $black;
         }
 
         .swiper-button-next {
-            right: -50px;
+            right: -8%;
             color: $black;
         }
 
@@ -63,8 +64,14 @@
         width: 100%;
 
         .swiper-slide {
+            /* スライドの中身を真ん中に寄せる設定（画像の横幅が100%未満になった時のため） */
+            display: flex;
+            justify-content: center;
+
             img {
-                width: 100%;
+                /* 👇 100%だと画質が荒れることがあるので、max-width: 100% と height: auto を使うのが王道 */
+                max-width: 100%;
+                // width: 100%;
                 height: auto;
                 object-fit: cover;
             }
