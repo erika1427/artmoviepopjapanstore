@@ -4,23 +4,16 @@
 
 #details {
 
-    .main> :not(.contact):not(.buy):not(.add):not(.shipping):not(.shipping-detail) {
-        padding-left: 5%;
-        padding-right: 5%;
+    .main> :not(.contact, .buy, .add, .shipping, .shipping-detail) {
+        padding-inline: 5%;
     }
 
     .slider-wrapper {
-        padding-left: 5%;
-        padding-right: 5%;
-        // width: 247px;
         margin: 0 auto 30px;
         position: relative;
         padding-bottom: 30px;
-
-        width: 80%; 
-        
-        /* 👇 広がりすぎるのを防ぐための最大幅（例: 600px）を設定しておくのがオススメ */
-        max-width: 600px; 
+        width: 80%;
+        max-width: 600px;
 
         .swiper-button-next,
         .swiper-button-prev,
@@ -38,7 +31,6 @@
             color: $black;
         }
 
-        /* ページネーション（バー）のデザイン */
         .swiper-pagination {
             bottom: 0;
         }
@@ -59,19 +51,15 @@
         }
     }
 
-    /* 商品スライダー本体 */
     .product-slider {
         width: 100%;
 
         .swiper-slide {
-            /* スライドの中身を真ん中に寄せる設定（画像の横幅が100%未満になった時のため） */
             display: flex;
             justify-content: center;
 
             img {
-                /* 👇 100%だと画質が荒れることがあるので、max-width: 100% と height: auto を使うのが王道 */
-                max-width: 100%;
-                // width: 100%;
+                width: 100%;
                 height: auto;
                 object-fit: cover;
             }
@@ -82,6 +70,10 @@
         margin-bottom: 23px;
         font-weight: 700;
         font-size: 1.875rem;
+
+        @media screen and (min-width: 630px) {
+            font-size: 2rem;
+        }
     }
 
     .buy,
@@ -93,6 +85,10 @@
         margin-bottom: 23px;
         font-weight: 700;
         font-size: 1.25rem;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1.5rem;
+        }
     }
 
     .buy {
@@ -125,6 +121,10 @@
         margin-bottom: 38px;
         font-size: .875rem;
         line-height: 1.9;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
     }
 
     .shipping {
@@ -139,11 +139,19 @@
             margin-bottom: 21px;
             font-weight: 700;
             font-size: .875rem;
+
+            @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
         }
 
         &__txt {
             margin-bottom: 6px;
             font-size: .875rem;
+
+            @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
         }
 
         &__payments {
@@ -160,6 +168,10 @@
 
         &__payments-txt {
             font-size: .875rem;
+
+            @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
         }
 
         &-detail {
@@ -169,6 +181,10 @@
             line-height: 1.9;
             background: $white;
             border: 1px solid $black;
+
+            @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
         }
 
         &-detail__shipping {
@@ -182,6 +198,10 @@
         font-weight: 400;
         font-size: 2.5rem;
         text-align: center;
+
+        @media screen and (min-width: 630px) {
+                font-size: 3rem;
+            }
     }
 
     .similar {
