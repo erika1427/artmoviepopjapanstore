@@ -94,14 +94,16 @@ body:not(#home) .main {
   }
 }
 
-.totop__link {
-  width: 64px;
-  height: 64px;
-  display: block;
+.totop {
   position: fixed;
   bottom: 14px;
   right: 5%;
   z-index: 3;
+}
+.totop__link {
+  width: 64px;
+  height: 64px;
+  display: block;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
   border-radius: 100%;
 }
@@ -210,7 +212,7 @@ body:not(#home) .main {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
 }
 @media screen and (min-width: 630px) {
   .header {
