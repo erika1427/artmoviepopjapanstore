@@ -1423,6 +1423,11 @@ body:not(#home) .main {
   font-size: 1.875rem;
   text-align: center;
 }
+@media screen and (min-width: 630px) {
+  #policy .ttl {
+    font-size: 2rem;
+  }
+}
 #policy .item {
   margin-bottom: 67px;
 }
@@ -1432,10 +1437,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #policy .item__ttl {
+    font-size: 1.3rem;
+  }
+}
 #policy .item__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #policy .item__box {
+    font-size: 1rem;
+  }
 }
 #policy .item__box:last-child {
   margin-bottom: 0;
@@ -1449,10 +1464,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #policy .packaging__ttl {
+    font-size: 1.3rem;
+  }
+}
 #policy .packaging__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #policy .packaging__box {
+    font-size: 1rem;
+  }
 }
 #policy .packaging__box:last-child {
   margin-bottom: 0;
@@ -1466,10 +1491,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #policy .orders__ttl {
+    font-size: 1.3rem;
+  }
+}
 #policy .orders__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #policy .orders__box {
+    font-size: 1rem;
+  }
 }
 #policy .orders__box:last-child {
   margin-bottom: 0;
