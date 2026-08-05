@@ -1322,6 +1322,11 @@ body:not(#home) .main {
   font-size: 1.875rem;
   text-align: center;
 }
+@media screen and (min-width: 630px) {
+  #faq .ttl {
+    font-size: 2rem;
+  }
+}
 #faq .item {
   margin-bottom: 67px;
 }
@@ -1331,10 +1336,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #faq .item__ttl {
+    font-size: 1.3rem;
+  }
+}
 #faq .item__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #faq .item__box {
+    font-size: 1rem;
+  }
 }
 #faq .item__box:last-child {
   margin-bottom: 0;
@@ -1348,10 +1363,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #faq .packaging__ttl {
+    font-size: 1.3rem;
+  }
+}
 #faq .packaging__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #faq .packaging__box {
+    font-size: 1rem;
+  }
 }
 #faq .packaging__box:last-child {
   margin-bottom: 0;
@@ -1365,10 +1390,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #faq .orders__ttl {
+    font-size: 1.3rem;
+  }
+}
 #faq .orders__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #faq .orders__box {
+    font-size: 1rem;
+  }
 }
 #faq .orders__box:last-child {
   margin-bottom: 0;
