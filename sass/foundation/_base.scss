@@ -36,7 +36,11 @@ body:not(#home) {
     bottom: 14px;
     right: 5%;
     z-index: 3;
-    
+
+    @media screen and (min-width: 1024px) {
+            bottom: 34px;
+        }
+
     &__link {
         width: 64px;
         height: 64px;
@@ -46,6 +50,11 @@ body:not(#home) {
 
         @media screen and (min-width: 360px) {
             bottom: 30px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 100px;
+            height: 100px;
         }
 
         svg {

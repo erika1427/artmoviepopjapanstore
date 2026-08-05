@@ -100,6 +100,11 @@ body:not(#home) .main {
   right: 5%;
   z-index: 3;
 }
+@media screen and (min-width: 1024px) {
+  .totop {
+    bottom: 34px;
+  }
+}
 .totop__link {
   width: 64px;
   height: 64px;
@@ -110,6 +115,12 @@ body:not(#home) .main {
 @media screen and (min-width: 360px) {
   .totop__link {
     bottom: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .totop__link {
+    width: 100px;
+    height: 100px;
   }
 }
 .totop__link svg {
@@ -219,6 +230,11 @@ body:not(#home) .main {
     padding: 24px 5%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 36px 5%;
+  }
+}
 .header::before {
   content: "";
   position: absolute;
@@ -236,6 +252,11 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   .header__logo {
     width: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    width: 5.3%;
   }
 }
 .header__logo svg {
@@ -533,7 +554,7 @@ body:not(#home) .main {
 #home .mv svg {
   width: 80%;
   height: auto;
-  max-width: 700px;
+  max-width: 36%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -580,6 +601,12 @@ body:not(#home) .main {
   position: relative;
   z-index: 2;
 }
+@media screen and (min-width: 1024px) {
+  #home .latest__ttl, #home .latest__items {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 #home .latest__bg {
   width: 100%;
   position: absolute;
@@ -615,6 +642,12 @@ body:not(#home) .main {
   padding-right: 5%;
   position: relative;
   z-index: 2;
+}
+@media screen and (min-width: 1024px) {
+  #home .secwrapper {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 }
 #home .video {
   width: 100%;

@@ -15,6 +15,10 @@
         padding: 24px 5%;
     }
 
+    @media screen and (min-width: 1024px) {
+        padding: 36px 5%;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -32,6 +36,10 @@
 
         @media screen and (min-width: 630px) {
             width: 60px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 5.3%;
         }
 
         svg {
