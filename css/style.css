@@ -1625,6 +1625,11 @@ body:not(#home) .main {
   font-size: 1.875rem;
   text-align: center;
 }
+@media screen and (min-width: 630px) {
+  #ligal .ttl {
+    font-size: 2rem;
+  }
+}
 #ligal .item {
   margin-bottom: 67px;
 }
@@ -1634,10 +1639,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #ligal .item__ttl {
+    font-size: 1.3rem;
+  }
+}
 #ligal .item__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #ligal .item__box {
+    font-size: 1rem;
+  }
 }
 #ligal .item__box:last-child {
   margin-bottom: 0;
@@ -1651,10 +1666,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #ligal .packaging__ttl {
+    font-size: 1.3rem;
+  }
+}
 #ligal .packaging__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #ligal .packaging__box {
+    font-size: 1rem;
+  }
 }
 #ligal .packaging__box:last-child {
   margin-bottom: 0;
@@ -1668,10 +1693,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #ligal .orders__ttl {
+    font-size: 1.3rem;
+  }
+}
 #ligal .orders__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #ligal .orders__box {
+    font-size: 1rem;
+  }
 }
 #ligal .orders__box:last-child {
   margin-bottom: 0;
