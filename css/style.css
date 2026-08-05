@@ -1010,10 +1010,20 @@ body:not(#home) .main {
   font-weight: 400;
   font-size: 2.5rem;
 }
+@media screen and (min-width: 630px) {
+  #contact .ttl {
+    font-size: 3rem;
+  }
+}
 #contact .txt {
   margin-bottom: 30px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #contact .txt {
+    font-size: 1rem;
+  }
 }
 #contact .form {
   margin-bottom: 60px;
@@ -1025,6 +1035,11 @@ body:not(#home) .main {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 630px) {
+  #contact .form__box {
+    margin-bottom: 36px;
+  }
 }
 #contact .form__box:nth-last-child(2) {
   margin-bottom: 50px;
@@ -1051,10 +1066,20 @@ body:not(#home) .main {
   left: 0;
   background: #8993aa;
 }
+@media screen and (min-width: 630px) {
+  #contact .form__box:nth-child(-n+4)::after {
+    bottom: -20px;
+  }
+}
 #contact .form__label {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 0.875rem;
+}
+@media screen and (min-width: 630px) {
+  #contact .form__label {
+    font-size: 1rem;
+  }
 }
 #contact .form__label span {
   color: #D7003A;
@@ -1066,6 +1091,12 @@ body:not(#home) .main {
   border-radius: 5px;
   border: none;
 }
+@media screen and (min-width: 630px) {
+  #contact .form__input {
+    padding: 10px 12px;
+    font-size: 1rem;
+  }
+}
 #contact .form__message {
   height: 300px;
   padding: 10px;
@@ -1073,6 +1104,12 @@ body:not(#home) .main {
   color: #6c6c6c;
   border-radius: 5px;
   border: none;
+}
+@media screen and (min-width: 630px) {
+  #contact .form__message {
+    padding: 15px;
+    font-size: 1rem;
+  }
 }
 #contact .form__submit {
   width: -moz-fit-content;

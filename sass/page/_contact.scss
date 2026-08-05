@@ -7,7 +7,7 @@
         margin-left: 5%;
         margin-right: 5%;
     }
-    
+
     .main {
         padding-bottom: 90px;
     }
@@ -17,12 +17,20 @@
         font-family: $head;
         font-weight: 400;
         font-size: 2.5rem;
+
+        @media screen and (min-width: 630px) {
+            font-size: 3rem;
+        }
     }
 
     .txt {
         margin-bottom: 30px;
         font-size: .875rem;
         line-height: 1.9;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
     }
 
     .form {
@@ -36,6 +44,10 @@
             display: flex;
             flex-direction: column;
 
+            @media screen and (min-width: 630px) {
+                margin-bottom: 36px;
+            }
+
             &:nth-last-child(2) {
                 margin-bottom: 50px;
             }
@@ -44,7 +56,7 @@
                 .form__input {
                     cursor: pointer;
                 }
-                
+
                 option {
                     font-size: .875rem;
                     color: $black;
@@ -67,6 +79,10 @@
                 bottom: -13px;
                 left: 0;
                 background: #8993aa;
+
+                @media screen and (min-width: 630px) {
+                    bottom: -20px;
+                }
             }
         }
 
@@ -74,6 +90,10 @@
             margin-bottom: 10px;
             font-weight: 700;
             font-size: .875rem;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1rem;
+            }
 
             span {
                 color: #D7003A;
@@ -86,6 +106,11 @@
             color: #6c6c6c;
             border-radius: 5px;
             border: none;
+
+            @media screen and (min-width: 630px) {
+                padding: 10px 12px;
+                font-size: 1rem;
+            }
         }
 
 
@@ -96,6 +121,11 @@
             color: #6c6c6c;
             border-radius: 5px;
             border: none;
+
+            @media screen and (min-width: 630px) {
+                padding: 15px;
+                font-size: 1rem;
+            }
         }
 
         &__submit {
