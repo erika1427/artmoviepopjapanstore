@@ -15,7 +15,9 @@
         font-size: 1.875rem;
         text-align: center;
 
-        
+        @media screen and (min-width: 630px) {
+            font-size: 2rem;
+        }
     }
 
     .item {
@@ -26,12 +28,20 @@
             font-weight: 700;
             font-size: 1.125rem;
             color: $red;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1.3rem;
+            }
         }
 
         &__box {
             margin-bottom: 27px;
             font-size: .875rem;
             line-height: 1.9;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1rem;
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -47,12 +57,20 @@
             font-weight: 700;
             font-size: 1.125rem;
             color: $red;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1.3rem;
+            }
         }
 
         &__box {
             margin-bottom: 27px;
             font-size: .875rem;
             line-height: 1.9;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1rem;
+            }
 
             &:last-child {
                 margin-bottom: 0;
@@ -68,12 +86,20 @@
             font-weight: 700;
             font-size: 1.125rem;
             color: $red;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1.3rem;
+            }
         }
 
         &__box {
             margin-bottom: 27px;
             font-size: .875rem;
             line-height: 1.9;
+
+            @media screen and (min-width: 630px) {
+                font-size: 1rem;
+            }
 
             &:last-child {
                 margin-bottom: 0;

@@ -1524,6 +1524,11 @@ body:not(#home) .main {
   font-size: 1.875rem;
   text-align: center;
 }
+@media screen and (min-width: 630px) {
+  #terms .ttl {
+    font-size: 2rem;
+  }
+}
 #terms .item {
   margin-bottom: 67px;
 }
@@ -1533,10 +1538,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #terms .item__ttl {
+    font-size: 1.3rem;
+  }
+}
 #terms .item__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #terms .item__box {
+    font-size: 1rem;
+  }
 }
 #terms .item__box:last-child {
   margin-bottom: 0;
@@ -1550,10 +1565,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #terms .packaging__ttl {
+    font-size: 1.3rem;
+  }
+}
 #terms .packaging__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #terms .packaging__box {
+    font-size: 1rem;
+  }
 }
 #terms .packaging__box:last-child {
   margin-bottom: 0;
@@ -1567,10 +1592,20 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #terms .orders__ttl {
+    font-size: 1.3rem;
+  }
+}
 #terms .orders__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #terms .orders__box {
+    font-size: 1rem;
+  }
 }
 #terms .orders__box:last-child {
   margin-bottom: 0;
