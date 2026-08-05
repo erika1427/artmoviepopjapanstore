@@ -1133,6 +1133,11 @@ body:not(#home) .main {
   font-size: 1.875rem;
   text-align: center;
 }
+@media screen and (min-width: 630px) {
+  #shipping .ttl {
+    font-size: 2rem;
+  }
+}
 #shipping .shipping {
   margin-bottom: 67px;
 }
@@ -1142,15 +1147,30 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #shipping .shipping__ttl {
+    font-size: 1.3rem;
+  }
+}
 #shipping .shipping__txt {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
 }
+@media screen and (min-width: 630px) {
+  #shipping .shipping__txt {
+    font-size: 1rem;
+  }
+}
 #shipping .shipping__options {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #shipping .shipping__options {
+    font-size: 1rem;
+  }
 }
 #shipping .shipping__options-ttl {
   font-weight: 700;
@@ -1172,6 +1192,11 @@ body:not(#home) .main {
   font-size: 0.875rem;
   line-height: 1.9;
 }
+@media screen and (min-width: 630px) {
+  #shipping .shipping__packaging {
+    font-size: 1rem;
+  }
+}
 #shipping .shipping__packaging-ttl {
   font-weight: 700;
 }
@@ -1181,6 +1206,11 @@ body:not(#home) .main {
 #shipping .shipping__customs {
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #shipping .shipping__customs {
+    font-size: 1rem;
+  }
 }
 #shipping .shipping__customs-ttl {
   font-weight: 700;
@@ -1194,15 +1224,30 @@ body:not(#home) .main {
   font-size: 1.125rem;
   color: #F36658;
 }
+@media screen and (min-width: 630px) {
+  #shipping .return__ttl {
+    font-size: 1.3rem;
+  }
+}
 #shipping .return__txt {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
 }
+@media screen and (min-width: 630px) {
+  #shipping .return__txt {
+    font-size: 1rem;
+  }
+}
 #shipping .return__confitions {
   margin-bottom: 27px;
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #shipping .return__confitions {
+    font-size: 1rem;
+  }
 }
 #shipping .return__confitions-ttl {
   font-weight: 700;
@@ -1224,6 +1269,11 @@ body:not(#home) .main {
   font-size: 0.875rem;
   line-height: 1.9;
 }
+@media screen and (min-width: 630px) {
+  #shipping .return__howto {
+    font-size: 1rem;
+  }
+}
 #shipping .return__howto-ttl {
   font-weight: 700;
 }
@@ -1234,6 +1284,11 @@ body:not(#home) .main {
   font-size: 0.875rem;
   line-height: 1.9;
 }
+@media screen and (min-width: 630px) {
+  #shipping .return__refunds {
+    font-size: 1rem;
+  }
+}
 #shipping .return__refunds-ttl {
   font-weight: 700;
 }
@@ -1243,6 +1298,11 @@ body:not(#home) .main {
 #shipping .return__rts {
   font-size: 0.875rem;
   line-height: 1.9;
+}
+@media screen and (min-width: 630px) {
+  #shipping .return__rts {
+    font-size: 1rem;
+  }
 }
 #shipping .return__rts-ttl {
   font-weight: 700;
