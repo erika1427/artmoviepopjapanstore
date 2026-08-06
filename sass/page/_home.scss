@@ -23,10 +23,6 @@
 
     .flex {
         margin-bottom: 60px;
-
-        @media screen and (min-width:1024px) {
-            display: block;
-        }
     }
 
     .all {
@@ -60,31 +56,81 @@
     .latest {
         position: relative;
 
+        // タイトルと、スライダー全体の親枠（All Itemsも含む）を前に出す
         &__ttl,
-        &__items {
-            padding-left: 5%;
-            padding-right: 5%;
+        &__slider-wrapper {
             position: relative;
             z-index: 2;
+        }
+
+        &__ttl {
+            padding-left: 5%;
 
             @media screen and (min-width: 1024px) {
                 padding-left: 15%;
                 padding-right: 15%;
+                overflow: hidden; // スライダーのはみ出しを隠す
             }
         }
 
+        // Swiper本体に余とはみ出し隠しを設定
+        &__container {
+            padding-left: 5%;
+            // padding-right: 5%;
+
+            @media screen and (min-width: 1024px) {
+                padding-left: 15%;
+                margin-right: 15%;
+                overflow: hidden; // スライダーのはみ出しを隠す
+            }
+        }
+
+        // 👇 修正ポイント②：PCサイズの時に .flex の悪さを打ち消す！
         &__items {
             @media screen and (max-width: 1023px) {
+                display: flex;
                 flex-wrap: wrap !important;
+                justify-content: space-between;
+                row-gap: 84px;
                 transform: translate3d(0, 0, 0) !important;
+            }
+
+            @media screen and (min-width: 1024px) {
+                flex-wrap: nowrap !important; // 折り返しを禁止して一列にする！
+                justify-content: flex-start !important;
+                row-gap: 0 !important;
             }
         }
 
+        // 👇 修正ポイント③：PCサイズの時は、箱の幅をSwiperの3カラム設定に任せる
         &__box {
             @media screen and (max-width: 1023px) {
                 width: 46% !important;
                 margin-right: 0 !important;
             }
+
+            // @media screen and (min-width: 1024px) {
+            //     width: auto !important; 
+            // }
+        }
+
+        // 👇 修正ポイント④：矢印ボタンの見た目と配置設定
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none; // スマホでは非表示
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                color: $black;
+                top: 45%; // 縦の位置を調整
+                z-index: 10;
+            }
+        }
+        .swiper-button-prev {
+            left: 5%;
+        }
+        .swiper-button-next {
+            right: 5%;
         }
 
         &__bg {
@@ -110,7 +156,7 @@
             width: 100%;
             height: auto;
             position: absolute;
-            top: -19.2%;
+            top: -5.2%;
             display: none;
 
             @media screen and (min-width: 1024px) {
@@ -132,11 +178,11 @@
             color: $white;
 
             @media screen and (min-width: 630px) {
-                font-size: 3rem;
+                font-size: min(5.21vw, 100px);
             }
 
-            @media screen and (min-width: 630px) {
-                font-size: min(5.21vw, 100px);
+            @media screen and (min-width: 1024px) {
+                padding-top: 25%;
             }
         }
     }

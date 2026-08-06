@@ -611,11 +611,6 @@ body:not(#home) .main {
 #home .flex {
   margin-bottom: 60px;
 }
-@media screen and (min-width: 1024px) {
-  #home .flex {
-    display: block;
-  }
-}
 #home .all {
   width: -moz-fit-content;
   width: fit-content;
@@ -648,22 +643,44 @@ body:not(#home) .main {
 #home .latest {
   position: relative;
 }
-#home .latest__ttl, #home .latest__items {
-  padding-left: 5%;
-  padding-right: 5%;
+#home .latest__ttl, #home .latest__slider-wrapper {
   position: relative;
   z-index: 2;
 }
+#home .latest__ttl {
+  padding-left: 5%;
+}
 @media screen and (min-width: 1024px) {
-  #home .latest__ttl, #home .latest__items {
+  #home .latest__ttl {
     padding-left: 15%;
     padding-right: 15%;
+    overflow: hidden;
+  }
+}
+#home .latest__container {
+  padding-left: 5%;
+}
+@media screen and (min-width: 1024px) {
+  #home .latest__container {
+    padding-left: 15%;
+    margin-right: 15%;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 1023px) {
   #home .latest__items {
+    display: flex;
     flex-wrap: wrap !important;
+    justify-content: space-between;
+    row-gap: 84px;
     transform: translate3d(0, 0, 0) !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #home .latest__items {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    row-gap: 0 !important;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -671,6 +688,25 @@ body:not(#home) .main {
     width: 46% !important;
     margin-right: 0 !important;
   }
+}
+#home .latest .swiper-button-prev,
+#home .latest .swiper-button-next {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  #home .latest .swiper-button-prev,
+  #home .latest .swiper-button-next {
+    display: flex;
+    color: #343B4C;
+    top: 45%;
+    z-index: 10;
+  }
+}
+#home .latest .swiper-button-prev {
+  left: 5%;
+}
+#home .latest .swiper-button-next {
+  right: 5%;
 }
 #home .latest__bg {
   width: 100%;
@@ -695,7 +731,7 @@ body:not(#home) .main {
   width: 100%;
   height: auto;
   position: absolute;
-  top: -19.2%;
+  top: -5.2%;
   display: none;
 }
 @media screen and (min-width: 1024px) {
@@ -717,12 +753,12 @@ body:not(#home) .main {
 }
 @media screen and (min-width: 630px) {
   #home .latest__ttl {
-    font-size: 3rem;
+    font-size: min(5.21vw, 100px);
   }
 }
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 1024px) {
   #home .latest__ttl {
-    font-size: min(5.21vw, 100px);
+    padding-top: 25%;
   }
 }
 #home .moviesection {

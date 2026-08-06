@@ -51,13 +51,13 @@ $(function () {
         if (window.innerWidth >= 1024) {
             if (!latestSwiper) {
                 latestSwiper = new Swiper('.latest-swiper', {
-                    // PC版のSwiperの設定（自由に調整してください）
-                    slidesPerView: 3, // 一度に表示する枚数
-                    spaceBetween: 30, // スライド間の余白
-                    loop: true,       // ループさせるか
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    loop: true,
                     navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
+                        // 👇 ここを変更：他のスライダーの矢印と喧嘩しないように確実に指定！
+                        nextEl: '.latest-swiper .swiper-button-next',
+                        prevEl: '.latest-swiper .swiper-button-prev',
                     },
                 });
             }
@@ -70,7 +70,7 @@ $(function () {
         }
     };
 
-    // ページ読み込み時と、画面幅を変えた時にチェックする
-    window.addEventListener('load', initLatestSwiper);
+    // 👇 ここを変更：ページが読み込まれたら '待たずに' 即実行させる！
+    initLatestSwiper();
     window.addEventListener('resize', initLatestSwiper);
 })
