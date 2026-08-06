@@ -232,7 +232,8 @@ body:not(#home) .main {
 }
 @media screen and (min-width: 1024px) {
   .header {
-    padding: 36px 5%;
+    padding-left: 3.5%;
+    padding-right: 3.8%;
   }
 }
 .header::before {
@@ -282,15 +283,18 @@ body:not(#home) .main {
   justify-content: space-between;
   align-items: center;
   width: 25px;
+  cursor: pointer;
+  z-index: 1;
 }
 @media screen and (min-width: 630px) {
   .btn__burger {
     width: 35px;
   }
 }
-.btn__burger {
-  cursor: pointer;
-  z-index: 1;
+@media screen and (min-width: 1024px) {
+  .btn__burger {
+    display: none;
+  }
 }
 .btn__top, .btn__middle, .btn__bottom {
   position: absolute;
@@ -355,6 +359,17 @@ body:not(#home) .main {
   opacity: 0;
   pointer-events: none;
 }
+@media screen and (min-width: 1024px) {
+  .gnav {
+    width: auto;
+    height: auto;
+    padding: 0;
+    position: static;
+    background: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 .gnav__list {
   width: -moz-fit-content;
   width: fit-content;
@@ -402,12 +417,22 @@ body:not(#home) .main {
   flex-direction: column;
   gap: 34px;
 }
+@media screen and (min-width: 1024px) {
+  .box__weight .gnav__nav {
+    flex-direction: row;
+  }
+}
 
 .box__thin {
   font-weight: 400;
   font-size: 1.25rem;
   color: #343B4C;
   text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  .box__thin {
+    display: none;
+  }
 }
 .box__thin .gnav__nav {
   display: flex;
@@ -419,6 +444,11 @@ body:not(#home) .main {
   display: flex;
   align-items: center;
   gap: 17px;
+}
+@media screen and (min-width: 1024px) {
+  .box__sns {
+    display: none;
+  }
 }
 
 .footer {

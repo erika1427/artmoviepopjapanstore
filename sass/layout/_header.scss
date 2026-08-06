@@ -16,7 +16,8 @@
     }
 
     @media screen and (min-width: 1024px) {
-        padding: 36px 5%;
+        padding-left: 3.5%;
+        padding-right: 3.8%;
     }
 
     &::before {
@@ -66,13 +67,17 @@
         justify-content: space-between;
         align-items: center;
         width: 25px;
+        cursor: pointer;
+        z-index: 1;
 
         @media screen and (min-width: 630px) {
             width: 35px;
         }
 
-        cursor: pointer;
-        z-index: 1;
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+
     }
 
     &__top,

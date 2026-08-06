@@ -17,6 +17,16 @@
     opacity: 0;
     pointer-events: none;
 
+    @media screen and (min-width: 1024px) {
+        width: auto;
+        height: auto;
+        padding: 0;
+        position: static;
+        background: none;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     &__list {
         width: fit-content;
     }
@@ -64,6 +74,10 @@
         display: flex;
         flex-direction: column;
         gap: 34px;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -72,6 +86,10 @@
     font-size: 1.25rem;
     color: $black;
     text-decoration: none;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 
     .gnav__nav {
         display: flex;
@@ -84,4 +102,8 @@
     display: flex;
     align-items: center;
     gap: 17px;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 }
