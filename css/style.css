@@ -598,14 +598,23 @@ body:not(#home) .main {
 #home .mv svg {
   width: 80%;
   height: auto;
-  max-width: 36%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (min-width: 630px) {
+  #home .mv svg {
+    max-width: 36%;
+  }
+}
 #home .flex {
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1024px) {
+  #home .flex {
+    display: block;
+  }
 }
 #home .all {
   width: -moz-fit-content;
@@ -649,6 +658,18 @@ body:not(#home) .main {
   #home .latest__ttl, #home .latest__items {
     padding-left: 15%;
     padding-right: 15%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  #home .latest__items {
+    flex-wrap: wrap !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  #home .latest__box {
+    width: 46% !important;
+    margin-right: 0 !important;
   }
 }
 #home .latest__bg {
