@@ -656,6 +656,11 @@ body:not(#home) .main {
   position: absolute;
   top: -27px;
 }
+@media screen and (min-width: 1024px) {
+  #home .latest__bg {
+    display: none;
+  }
+}
 #home .latest__bg svg {
   width: 100%;
   height: auto;
@@ -664,6 +669,22 @@ body:not(#home) .main {
   #home .latest__bg svg {
     height: calc(640px + 50vw);
   }
+}
+#home .latest__bg-pc {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: -19.2%;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  #home .latest__bg-pc {
+    display: block;
+  }
+}
+#home .latest__bg-pc svg {
+  width: 100%;
+  height: auto;
 }
 #home .latest__ttl {
   margin-bottom: 50px;
@@ -676,6 +697,11 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #home .latest__ttl {
     font-size: 3rem;
+  }
+}
+@media screen and (min-width: 630px) {
+  #home .latest__ttl {
+    font-size: min(5.21vw, 100px);
   }
 }
 #home .moviesection {

@@ -71,6 +71,10 @@
             position: absolute;
             top: -27px;
 
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+
             svg {
                 width: 100%;
                 height: auto;
@@ -78,6 +82,23 @@
                 @media screen and (min-width: 630px) {
                     height: calc(640px + 50vw);
                 }
+            }
+        }
+
+        &__bg-pc {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -19.2%;
+            display: none;
+
+            @media screen and (min-width: 1024px) {
+                display: block;
+            }
+
+            svg {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -91,6 +112,10 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 3rem;
+            }
+
+            @media screen and (min-width: 630px) {
+                font-size: min(5.21vw, 100px);
             }
         }
     }
