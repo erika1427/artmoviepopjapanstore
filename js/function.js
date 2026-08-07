@@ -53,11 +53,15 @@ $(function () {
                 latestSwiper = new Swiper('.latest-swiper', {
                     slidesPerView: 3,
                     spaceBetween: 30,
-                    loop: true,
+                    loop: false,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true, // ドットをクリック可能にする
+                    },
                     navigation: {
-                        // 👇 ここを変更：他のスライダーの矢印と喧嘩しないように確実に指定！
-                        nextEl: '.latest-swiper .swiper-button-next',
-                        prevEl: '.latest-swiper .swiper-button-prev',
+                        // 👇 『 .latest-swiper 』という文字を消して、親枠である『 .latest__slider-wrapper 』にする
+                        nextEl: '.latest__slider-wrapper .swiper-button-next',
+                        prevEl: '.latest__slider-wrapper .swiper-button-prev',
                     },
                 });
             }

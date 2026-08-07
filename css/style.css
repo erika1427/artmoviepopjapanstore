@@ -659,11 +659,13 @@ body:not(#home) .main {
 }
 #home .latest__container {
   padding-left: 5%;
+  padding-right: 5%;
 }
 @media screen and (min-width: 1024px) {
   #home .latest__container {
-    padding-left: 15%;
+    margin-left: 15%;
     margin-right: 15%;
+    padding: 0;
     overflow: hidden;
   }
 }
@@ -689,6 +691,11 @@ body:not(#home) .main {
     margin-right: 0 !important;
   }
 }
+#home .latest .swiper-pagination {
+  width: auto;
+  top: auto;
+  bottom: -45px;
+}
 #home .latest .swiper-button-prev,
 #home .latest .swiper-button-next {
   display: none;
@@ -703,10 +710,10 @@ body:not(#home) .main {
   }
 }
 #home .latest .swiper-button-prev {
-  left: 5%;
+  left: 6%;
 }
 #home .latest .swiper-button-next {
-  right: 5%;
+  right: 6%;
 }
 #home .latest__bg {
   width: 100%;
@@ -758,6 +765,7 @@ body:not(#home) .main {
 }
 @media screen and (min-width: 1024px) {
   #home .latest__ttl {
+    margin-bottom: min(5.47vw, 105px);
     padding-top: 25%;
   }
 }

@@ -76,11 +76,12 @@
         // Swiper本体に余とはみ出し隠しを設定
         &__container {
             padding-left: 5%;
-            // padding-right: 5%;
+            padding-right: 5%;
 
             @media screen and (min-width: 1024px) {
-                padding-left: 15%;
+                margin-left: 15%;
                 margin-right: 15%;
+                padding: 0;
                 overflow: hidden; // スライダーのはみ出しを隠す
             }
         }
@@ -114,6 +115,12 @@
             // }
         }
 
+        .swiper-pagination {
+            width: auto;
+            top: auto;
+            bottom: -45px;
+        }
+
         // 👇 修正ポイント④：矢印ボタンの見た目と配置設定
         .swiper-button-prev,
         .swiper-button-next {
@@ -126,11 +133,13 @@
                 z-index: 10;
             }
         }
+
         .swiper-button-prev {
-            left: 5%;
+            left: 6%;
         }
+
         .swiper-button-next {
-            right: 5%;
+            right: 6%;
         }
 
         &__bg {
@@ -182,6 +191,7 @@
             }
 
             @media screen and (min-width: 1024px) {
+                margin-bottom: min(5.47vw, 105px);
                 padding-top: 25%;
             }
         }
