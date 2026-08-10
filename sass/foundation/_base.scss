@@ -38,8 +38,8 @@ body:not(#home) {
     z-index: 3;
 
     @media screen and (min-width: 1024px) {
-            bottom: 34px;
-        }
+        bottom: 34px;
+    }
 
     &__link {
         width: 64px;
@@ -53,8 +53,8 @@ body:not(#home) {
         }
 
         @media screen and (min-width: 1024px) {
-            width: 100px;
-            height: 100px;
+            width: min(6.25vw, 120px);
+            height: min(6.25vw, 120px);
         }
 
         svg {
@@ -70,16 +70,28 @@ body:not(#home) {
     flex-wrap: wrap;
     row-gap: 84px;
     justify-content: space-between;
+
+    @media screen and (min-width: 1024px) {
+        row-gap: min(6.83vw, 131px);
+    }
 }
 
 .box {
     width: 46%;
     color: $black;
     text-decoration: none;
+
+    @media screen and (min-width: 1024px) {
+        width: min(20.8vw, 399px);
+    }
 }
 
 .image {
     margin-bottom: 10px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: min(1.72vw, 33px);
+    }
 }
 
 .itemtitle {
@@ -90,6 +102,11 @@ body:not(#home) {
     @media screen and (min-width: 630px) {
         font-size: 1.25rem;
     }
+
+    @media screen and (min-width: 1024px) {
+        font-size: min(1.46vw, 28px);
+        margin-bottom: min(.84vw, 16px);
+    }
 }
 
 .year {
@@ -99,6 +116,10 @@ body:not(#home) {
 
     @media screen and (min-width: 630px) {
         font-size: .7rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: min(.73vw, 14px);
     }
 }
 

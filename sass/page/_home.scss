@@ -23,11 +23,19 @@
 
     .flex {
         margin-bottom: 60px;
+
+        // @media screen and (min-width: 1024px) {
+        //     margin-bottom: min(14.4vw, 277px);
+        // }
     }
 
     .all {
         width: fit-content;
         margin: 0 auto;
+
+        @media screen and (min-width: 1024px) {
+            margin-right: 0;
+        }
 
         &__link {
             width: fit-content;
@@ -49,6 +57,30 @@
                 @media screen and (min-width: 630px) {
                     width: 8px;
                 }
+            }
+        }
+    }
+
+    // スマホ（1023px以下）の時の設定
+    .br-pc {
+        display: none; // PC用の改行を無効にする
+    }
+
+    // PC（1024px以上）の時の設定
+    @media screen and (min-width: 1024px) {
+        .br-sp {
+            display: none; // スマホ用の改行を無効にする
+        }
+
+        .br-pc {
+            display: inline; // PC用の改行を有効にする（blockにすると余計な余白ができることがあるためinlineにします）
+        }
+    }
+
+    .box {
+        @media screen and (max-width: 1023px) {
+            &:nth-child(n+5) {
+                display: none !important;
             }
         }
     }
@@ -100,25 +132,42 @@
                 flex-wrap: nowrap !important; // 折り返しを禁止して一列にする！
                 justify-content: flex-start !important;
                 row-gap: 0 !important;
+
+                margin-bottom: min(14.4vw, 277px);
             }
         }
 
-        // 👇 修正ポイント③：PCサイズの時は、箱の幅をSwiperの3カラム設定に任せる
+
         &__box {
             @media screen and (max-width: 1023px) {
                 width: 46% !important;
                 margin-right: 0 !important;
             }
-
-            // @media screen and (min-width: 1024px) {
-            //     width: auto !important; 
-            // }
         }
 
         .swiper-pagination {
             width: auto;
             top: auto;
             bottom: -45px;
+            position: absolute;
+            bottom: 6.5vw;
+            left: 0;
+            display: flex;
+            gap: min(.83vw, 16px);
+        }
+
+        .swiper-pagination-bullet {
+            display: block;
+            margin: 0;
+            background: #fff;
+            opacity: 1;
+            width: min(20px, 1.04vw);
+            height: min(20px, 1.04vw);
+            border-radius: 0;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #17E5D0;
         }
 
         // 👇 修正ポイント④：矢印ボタンの見た目と配置設定
@@ -129,7 +178,7 @@
             @media screen and (min-width: 1024px) {
                 display: flex;
                 color: $black;
-                top: 45%; // 縦の位置を調整
+                top: 32%; // 縦の位置を調整
                 z-index: 10;
             }
         }
@@ -165,7 +214,7 @@
             width: 100%;
             height: auto;
             position: absolute;
-            top: -5.2%;
+            top: min(-14.7vw, 283px);
             display: none;
 
             @media screen and (min-width: 1024px) {
@@ -192,13 +241,27 @@
 
             @media screen and (min-width: 1024px) {
                 margin-bottom: min(5.47vw, 105px);
-                padding-top: 25%;
+                // padding-top: 25%;
+                padding-top: min(14.1vw, 271px);
+            }
+        }
+
+        &__all {
+            @media screen and (min-width: 1024px) {
+                margin-right: 15%;
+                position: absolute;
+                bottom: 6.5vw;
+                right: 0;
             }
         }
     }
 
     .moviesection {
         margin-top: 90px;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 0;
+        }
     }
 
     .secwrapper {
@@ -219,6 +282,9 @@
         margin-bottom: 84px;
         position: relative;
 
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(5.32vw, 102px);
+        }
 
         video {
             width: 100%;
@@ -245,15 +311,27 @@
         @media screen and (min-width: 630px) {
             font-size: 2.55rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            font-size: min(5.21vw, 100px);
+        }
     }
 
     .flyers {
         position: relative;
 
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.46vw, 124px);
+        }
+
         &__bg {
             width: 100%;
             position: absolute;
             top: -19px;
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
 
             svg {
                 width: 100%;
@@ -269,10 +347,18 @@
     .tickets {
         position: relative;
 
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.46vw, 124px);
+        }
+
         &__bg {
             width: 100%;
             position: absolute;
             top: 474px;
+
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
 
             svg {
                 width: 100%;
@@ -287,5 +373,9 @@
 
     .streetware {
         margin-bottom: 90px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.46vw, 124px);
+        }
     }
 }

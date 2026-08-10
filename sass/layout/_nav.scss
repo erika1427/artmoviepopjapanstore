@@ -71,7 +71,7 @@
     text-decoration: none;
 
     @media screen and (min-width: 1024px) {
-        font-size: 1rem;
+        font-size: min(.84vw, 16px);
     }
 
     .gnav__nav {
@@ -81,7 +81,7 @@
 
         @media screen and (min-width: 1024px) {
             flex-direction: row;
-            gap: 40px;
+            gap: min(40px, 2.09vw);
         }
     }
 }

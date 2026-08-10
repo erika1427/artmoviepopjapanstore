@@ -16,8 +16,8 @@
     }
 
     @media screen and (min-width: 1024px) {
-        padding-left: 3.5%;
-        padding-right: 3.8%;
+        padding-left: min(3.55vw, 68px);
+        padding-right: min(3.86vw, 74px);
     }
 
     &::before {
@@ -54,7 +54,7 @@
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
-            gap: 65px;
+            gap: min(65px, 3.36vw);
         }
     }
 }
