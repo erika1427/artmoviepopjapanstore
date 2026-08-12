@@ -18,15 +18,25 @@ body {
 }
 
 body:not(#home) {
+
     .main {
-        padding-top: 6.25rem; // 100px
+        padding-top: 100px;
         background-image: url('data:image/svg+xml;utf8,<svg width="375" height="1072" viewBox="0 0 375 1072" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M375 469L0 596.5V952L375 1071.5V469Z" fill="%23F6F7F8"/><path d="M375 119.5L0 0V596.501L375 469V119.5Z" fill="%23EDEEF0"/></svg>');
         background-repeat: repeat-y;
         background-size: 100% auto;
-        background-position: 0 -21.25rem; // -340px
+        background-position: 0 -340px;
 
         @media screen and (min-width: 630px) {
-            padding-top: 7.5rem; // 120px
+            padding-top: 120px;
+        }
+
+        // 👇 PC（1024px以上）の時に新しいSVGに切り替える
+        @media screen and (min-width: 1024px) {
+            padding-top: min(12.24vw, 235px);
+            background-image: url('data:image/svg+xml;utf8,<svg width="1920" height="5377" viewBox="0 0 1920 5377" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 731.5V0H1920V326L0 731.5Z" fill="%23EDEEF0"/><path d="M1920 2734.5L0 3048V3767L1920 4239.5V2734.5Z" fill="%23F6F7F8"/><path d="M0 5376.5V3767L1920 4239.5V5113L0 5376.5Z" fill="%23EDEEF0"/><path d="M1920 326L0 731.5V1450.5L1920 1880V326Z" fill="%23F6F7F8"/><path d="M1920 1880L0 1450.5V3048L1920 2734V1880Z" fill="%23EDEEF0"/></svg>');
+
+            // 💡 もしPC版で背景の縦位置がおかしいと感じた場合は、以下のコメントアウトを外して位置をリセットしてください
+            background-position: 0 0;
         }
     }
 }
@@ -49,23 +59,23 @@ body:not(#home) {
 
 .totop {
     position: fixed;
-    bottom: 0.875rem; // 14px
+    bottom: 14px;
     right: 5%;
     z-index: 3;
 
     @media screen and (min-width: 1024px) {
-        bottom: 2.125rem; // 34px
+        bottom: 34px;
     }
 
     &__link {
-        width: 4rem; // 64px
-        height: 4rem; // 64px
+        width: 64px;
+        height: 64px;
         display: block;
-        box-shadow: 0 0.3125rem 0.9375rem 0 rgba(0, 0, 0, 0.35); // 5px 15px
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
         border-radius: 100%;
 
         @media screen and (min-width: 360px) {
-            bottom: 1.875rem; // 30px
+            bottom: 30px;
         }
 
         @media screen and (min-width: 1024px) {
@@ -84,7 +94,7 @@ body:not(#home) {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 5.25rem; // 84px
+    row-gap: 84px;
     justify-content: space-between;
 
     @media screen and (min-width: 1024px) {
@@ -103,7 +113,7 @@ body:not(#home) {
 }
 
 .image {
-    margin-bottom: 0.625rem; // 10px
+    margin-bottom: 10px;
 
     @media screen and (min-width: 1024px) {
         margin-bottom: min(1.72vw, 2.0625rem); // 33px
@@ -111,7 +121,7 @@ body:not(#home) {
 }
 
 .itemtitle {
-    margin-bottom: 0.625rem; // 10px
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: .9375rem;
 
@@ -149,16 +159,27 @@ body:not(#home) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 0.8125rem; // 13px
+    gap: 13px;
 
     svg {
-        width: 0.5rem; // 8px
-        height: 0.875rem; // 14px
+        width: 8px;
+        height: 14px;
+
+        @media screen and (min-width: 1024px) {
+            width: min(.79vw, 15px);
+            height: min(1.31vw, 25px);
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-top: min(6.41vw, 123px);
+        font-size: min(1.57vw, 30px);
+        gap: min(1.05vw, 20px);
     }
 }
 
 .contact {
-    padding: 2.4375rem 0; // 39px
+    padding: 39px 0;
     background: linear-gradient(to right, #10EBB4, #17E6D3);
 
     @media screen and (min-width: 1024px) {
@@ -166,7 +187,7 @@ body:not(#home) {
     }
 
     &__txt {
-        margin-bottom: 1.4375rem; // 23px
+        margin-bottom: 23px;
         font-family: $head;
         font-size: 1.85rem;
         text-align: center;
@@ -177,18 +198,18 @@ body:not(#home) {
 
         @media screen and (min-width: 1024px) {
             font-size: min(3.65vw, 4.375rem); // 70px
-        }   
+        }
     }
 
     &__btn {
         width: fit-content;
         margin: 0 auto;
-        border: 0.1875rem solid $black; // 3px
+        border: 3px solid $black;
     }
 
     &__link {
         display: block;
-        padding: 1.0625rem 3.1875rem; // 17px 51px
+        padding: 17px 51px;
         font-weight: 700;
         font-size: 1.5rem;
         color: $black;

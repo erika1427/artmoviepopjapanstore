@@ -48,7 +48,8 @@
             }
 
             @media screen and (min-width: 1024px) {
-                font-size: min(1.46vw, 1.75rem); // 28px
+                font-size: min(1.46vw, 1.75rem);
+                gap: min(.73vw, 14px);
             }
 
             svg {
@@ -134,11 +135,11 @@
         .swiper-pagination {
             width: auto;
             top: auto;
-            bottom: -2.8125rem; // -45px
+            bottom: min(6.46vw, 124px); // -45px
             position: absolute;
             left: 0;
             display: flex;
-            gap: min(.83vw, 1rem); // 16px
+            gap: min(.83vw, 16px); // 16px
         }
 
         .swiper-pagination-bullet {

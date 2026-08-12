@@ -4,11 +4,25 @@
 
 #items {
 
+    .flex {
+        justify-content: flex-start;
+        column-gap: 8%;
+
+        @media screen and (min-width: 1024px) {
+            column-gap: calc((100% - (min(20.8vw, 24.9375rem) * 3)) / 2);
+        }
+    }
+
     .items__ttl,
     .filters__btn,
     .items {
         padding-left: 5%;
         padding-right: 5%;
+
+        @media screen and (min-width: 1024px) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
     }
 
     .items__ttl {
@@ -20,6 +34,11 @@
         @media screen and (min-width: 630px) {
             font-size: 3rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(7.71vw, 148px); // 28px
+            font-size: min(5.21vw, 6.25rem);
+        }
     }
 
     .filters__txt {
@@ -28,6 +47,10 @@
 
         @media screen and (min-width: 630px) {
             font-size: 1.25rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: min(1.25vw, 24px);
         }
     }
 
@@ -42,6 +65,12 @@
         background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
         border: 2px solid $black;
 
+        @media screen and (min-width: 1024px) {
+            margin-left: 15%;
+            padding: min(1.05vw, 20px) min(1.83vw, 35px);
+            gap: min(.94vw, 18px);
+        }
+
         svg {
             width: 13px;
             height: auto;
@@ -49,6 +78,10 @@
 
             @media screen and (min-width: 630px) {
                 width: 18px;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: min(1.36vw, 26px);
             }
         }
     }
@@ -64,10 +97,14 @@
         left: 0;
         opacity: 0;
         pointer-events: none;
-        z-index: 3;
+        z-index: 4;
 
         @media screen and (min-width: 630px) {
             padding-top: 43px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: min(37.19vw, 714px);
         }
 
         &.translateNav {
@@ -120,6 +157,10 @@
 
     .items {
         margin-bottom: 90px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.41vw, 123px);
+        }
 
         &__items {
             margin-bottom: 60px;
