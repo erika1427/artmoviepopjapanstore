@@ -94,6 +94,18 @@ body:not(#home) .main {
   }
 }
 
+.br-pc {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .br-sp {
+    display: none;
+  }
+  .br-pc {
+    display: inline;
+  }
+}
 .totop {
   position: fixed;
   bottom: 14px;
@@ -213,8 +225,13 @@ body:not(#home) .main {
 }
 
 .contact {
-  padding: 39px 36px;
+  padding: 39px 0;
   background: linear-gradient(to right, #10EBB4, #17E6D3);
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    padding: min(5.27vw, 101px) 0;
+  }
 }
 .contact__txt {
   margin-bottom: 23px;
@@ -225,6 +242,11 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   .contact__txt {
     font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact__txt {
+    font-size: min(3.65vw, 70px);
   }
 }
 .contact__btn {
@@ -240,6 +262,12 @@ body:not(#home) .main {
   font-size: 1.5rem;
   color: #343B4C;
   text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  .contact__link {
+    padding: min(1.05vw, 20px) min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
 }
 
 .header {
@@ -679,17 +707,6 @@ body:not(#home) .main {
 @media screen and (min-width: 1024px) {
   #home .all__link svg {
     width: min(0.47vw, 9px);
-  }
-}
-#home .br-pc {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  #home .br-sp {
-    display: none;
-  }
-  #home .br-pc {
-    display: inline;
   }
 }
 @media screen and (max-width: 1023px) {
