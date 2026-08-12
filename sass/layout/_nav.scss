@@ -130,15 +130,25 @@
         @media screen and (min-width: 630px) {
             gap: 22px;
         }
+
+        @media screen and (min-width: 1024px) {
+            gap: min(38px, 1.98vw);
+        }
     }
 
     &__nav-sub {
+        margin-bottom: 48px;
         display: flex;
         flex-direction: column;
         gap: 17px;
 
         @media screen and (min-width: 630px) {
             gap: 22px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(2.97vw, 57px);
+            gap: min(38px, 1.98vw);
         }
     }
 
