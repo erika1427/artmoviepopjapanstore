@@ -50,12 +50,20 @@
                 font-size: 1.25rem;
             }
 
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.46vw, 28px);
+            }
+
             svg {
                 width: 6px;
                 height: auto;
 
                 @media screen and (min-width: 630px) {
                     width: 8px;
+                }
+
+                @media screen and (min-width: 1024px) {
+                    width: min(.47vw, 9px);
                 }
             }
         }
