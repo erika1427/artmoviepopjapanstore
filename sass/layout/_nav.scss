@@ -5,11 +5,11 @@
 .gnav {
     width: 100%;
     height: 100dvh;
-    padding-top: 105px;
-    padding-left: 66px;
+    padding-top: 6.5625rem; // 105px
+    padding-left: 4.125rem; // 66px
     display: flex;
     flex-direction: column;
-    gap: 146px;
+    gap: 9.125rem; // 146px
     position: fixed;
     background: linear-gradient(to right, #F36655, #E74C69);
     top: 0;
@@ -38,22 +38,22 @@
     }
 
     &__insta {
-        width: 24px;
-        height: 24px;
+        width: 1.5rem; // 24px
+        height: 1.5rem; // 24px
 
         @media screen and (min-width: 630px) {
-            width: 32px;
-            height: 32px;
+            width: 2rem; // 32px
+            height: 2rem; // 32px
         }
     }
 
     &__x {
-        width: 24px;
-        height: 22px;
+        width: 1.5rem; // 24px
+        height: 1.375rem; // 22px
 
         @media screen and (min-width: 630px) {
-            width: 32px;
-            height: 29px;
+            width: 2rem; // 32px
+            height: 1.8125rem; // 29px
         }
     }
 }
@@ -61,7 +61,7 @@
 .box__text {
     display: flex;
     flex-direction: column;
-    gap: 69px;
+    gap: 4.3125rem; // 69px
 }
 
 .box__weight {
@@ -71,17 +71,17 @@
     text-decoration: none;
 
     @media screen and (min-width: 1024px) {
-        font-size: min(.84vw, 16px);
+        font-size: min(.84vw, 1rem); // 16px
     }
 
     .gnav__nav {
         display: flex;
         flex-direction: column;
-        gap: 34px;
+        gap: 2.125rem; // 34px
 
         @media screen and (min-width: 1024px) {
             flex-direction: row;
-            gap: min(40px, 2.09vw);
+            gap: min(2.5rem, 2.09vw); // 40px
         }
     }
 }
@@ -99,14 +99,14 @@
     .gnav__nav {
         display: flex;
         flex-direction: column;
-        gap: 27px;
+        gap: 1.6875rem; // 27px
     }
 }
 
 .box__sns {
     display: flex;
     align-items: center;
-    gap: 17px;
+    gap: 1.0625rem; // 17px
 
     @media screen and (min-width: 1024px) {
         display: none;
@@ -116,39 +116,39 @@
 .fnav {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 1.0625rem; // 17px
 
     @media screen and (min-width: 630px) {
-        gap: 22px;
+        gap: 1.375rem; // 22px
     }
 
     &__nav-main {
         display: flex;
         flex-direction: column;
-        gap: 17px;
+        gap: 1.0625rem; // 17px
 
         @media screen and (min-width: 630px) {
-            gap: 22px;
+            gap: 1.375rem; // 22px
         }
 
         @media screen and (min-width: 1024px) {
-            gap: min(38px, 1.98vw);
+            gap: min(2.375rem, 1.98vw); // 38px
         }
     }
 
     &__nav-sub {
-        margin-bottom: 48px;
+        margin-bottom: 3rem; // 48px
         display: flex;
         flex-direction: column;
-        gap: 17px;
+        gap: 1.0625rem; // 17px
 
         @media screen and (min-width: 630px) {
-            gap: 22px;
+            gap: 1.375rem; // 22px
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(2.97vw, 57px);
-            gap: min(38px, 1.98vw);
+            margin-bottom: min(2.97vw, 3.5625rem); // 57px
+            gap: min(2.375rem, 1.98vw); // 38px
         }
     }
 

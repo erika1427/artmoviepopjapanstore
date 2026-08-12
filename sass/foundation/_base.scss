@@ -19,14 +19,14 @@ body {
 
 body:not(#home) {
     .main {
-        padding-top: 100px;
+        padding-top: 6.25rem; // 100px
         background-image: url('data:image/svg+xml;utf8,<svg width="375" height="1072" viewBox="0 0 375 1072" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M375 469L0 596.5V952L375 1071.5V469Z" fill="%23F6F7F8"/><path d="M375 119.5L0 0V596.501L375 469V119.5Z" fill="%23EDEEF0"/></svg>');
         background-repeat: repeat-y;
         background-size: 100% auto;
-        background-position: 0 -340px;
+        background-position: 0 -21.25rem; // -340px
 
         @media screen and (min-width: 630px) {
-            padding-top: 120px;
+            padding-top: 7.5rem; // 120px
         }
     }
 }
@@ -49,28 +49,28 @@ body:not(#home) {
 
 .totop {
     position: fixed;
-    bottom: 14px;
+    bottom: 0.875rem; // 14px
     right: 5%;
     z-index: 3;
 
     @media screen and (min-width: 1024px) {
-        bottom: 34px;
+        bottom: 2.125rem; // 34px
     }
 
     &__link {
-        width: 64px;
-        height: 64px;
+        width: 4rem; // 64px
+        height: 4rem; // 64px
         display: block;
-        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0.3125rem 0.9375rem 0 rgba(0, 0, 0, 0.35); // 5px 15px
         border-radius: 100%;
 
         @media screen and (min-width: 360px) {
-            bottom: 30px;
+            bottom: 1.875rem; // 30px
         }
 
         @media screen and (min-width: 1024px) {
-            width: min(6.25vw, 120px);
-            height: min(6.25vw, 120px);
+            width: min(6.25vw, 7.5rem); // 120px
+            height: min(6.25vw, 7.5rem); // 120px
         }
 
         svg {
@@ -84,11 +84,11 @@ body:not(#home) {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 84px;
+    row-gap: 5.25rem; // 84px
     justify-content: space-between;
 
     @media screen and (min-width: 1024px) {
-        row-gap: min(6.83vw, 131px);
+        row-gap: min(6.83vw, 8.1875rem); // 131px
     }
 }
 
@@ -98,20 +98,20 @@ body:not(#home) {
     text-decoration: none;
 
     @media screen and (min-width: 1024px) {
-        width: min(20.8vw, 399px);
+        width: min(20.8vw, 24.9375rem); // 399px
     }
 }
 
 .image {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; // 10px
 
     @media screen and (min-width: 1024px) {
-        margin-bottom: min(1.72vw, 33px);
+        margin-bottom: min(1.72vw, 2.0625rem); // 33px
     }
 }
 
 .itemtitle {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem; // 10px
     font-weight: 700;
     font-size: .9375rem;
 
@@ -120,8 +120,8 @@ body:not(#home) {
     }
 
     @media screen and (min-width: 1024px) {
-        font-size: min(1.46vw, 28px);
-        margin-bottom: min(.84vw, 16px);
+        font-size: min(1.46vw, 1.75rem); // 28px
+        margin-bottom: min(.84vw, 1rem); // 16px
     }
 }
 
@@ -135,7 +135,7 @@ body:not(#home) {
     }
 
     @media screen and (min-width: 1024px) {
-        font-size: min(.73vw, 14px);
+        font-size: min(.73vw, 0.875rem); // 14px
     }
 }
 
@@ -149,24 +149,24 @@ body:not(#home) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 13px;
+    gap: 0.8125rem; // 13px
 
     svg {
-        width: 8px;
-        height: 14px;
+        width: 0.5rem; // 8px
+        height: 0.875rem; // 14px
     }
 }
 
 .contact {
-    padding: 39px 0;
+    padding: 2.4375rem 0; // 39px
     background: linear-gradient(to right, #10EBB4, #17E6D3);
 
     @media screen and (min-width: 1024px) {
-        padding: min(5.27vw, 101px) 0;
+        padding: min(5.27vw, 6.3125rem) 0; // 101px
     }
 
     &__txt {
-        margin-bottom: 23px;
+        margin-bottom: 1.4375rem; // 23px
         font-family: $head;
         font-size: 1.85rem;
         text-align: center;
@@ -176,27 +176,27 @@ body:not(#home) {
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: min(3.65vw, 70px);
+            font-size: min(3.65vw, 4.375rem); // 70px
         }   
     }
 
     &__btn {
         width: fit-content;
         margin: 0 auto;
-        border: 3px solid $black;
+        border: 0.1875rem solid $black; // 3px
     }
 
     &__link {
         display: block;
-        padding: 17px 51px;
+        padding: 1.0625rem 3.1875rem; // 17px 51px
         font-weight: 700;
         font-size: 1.5rem;
         color: $black;
         text-decoration: none;
 
         @media screen and (min-width: 1024px) {
-            padding: min(1.05vw, 20px) min(3.13vw, 60px);
-            font-size: min(1.57vw, 30px);
+            padding: min(1.05vw, 1.25rem) min(3.13vw, 3.75rem); // 20px 60px
+            font-size: min(1.57vw, 1.875rem); // 30px
         }
     }
 }
