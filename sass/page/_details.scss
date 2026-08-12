@@ -6,6 +6,17 @@
 
     .main> :not(.contact, .buy, .add, .shipping, .shipping-detail) {
         padding-inline: 5%;
+
+        @media screen and (min-width: 1024px) {
+            padding-inline: 15%;
+        }
+    }
+
+    .product__wrapper {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            gap: min(8.7vw, 167px);
+        }
     }
 
     .slider-wrapper {
@@ -14,6 +25,11 @@
         padding-bottom: 30px;
         width: 80%;
         max-width: 600px;
+
+        @media screen and (min-width: 1024px) {
+            width: min(28.29vw, 543px);
+            height: fit-content;
+        }
 
         .swiper-button-next,
         .swiper-button-prev,
@@ -24,11 +40,21 @@
         .swiper-button-prev {
             left: -8%;
             color: $black;
+
+            @media screen and (min-width: 1024px) {
+                top: min(20vw, 357px);
+                left: -16%;
+            }
         }
 
         .swiper-button-next {
             right: -8%;
             color: $black;
+
+            @media screen and (min-width: 1024px) {
+                top: min(20vw, 357px);
+                right: -16%;
+            }
         }
 
         .swiper-pagination {
