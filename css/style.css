@@ -1716,8 +1716,19 @@ body:not(#home) .main {
   margin-left: 5%;
   margin-right: 5%;
 }
+@media screen and (min-width: 1024px) {
+  #contact .main > :not(.underlink) {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
 #contact .main {
   padding-bottom: 90px;
+}
+@media screen and (min-width: 1024px) {
+  #contact .main {
+    padding-bottom: min(6.41vw, 123px);
+  }
 }
 #contact .ttl {
   margin-bottom: 20px;
@@ -1730,6 +1741,12 @@ body:not(#home) .main {
     font-size: 3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #contact .ttl {
+    margin-bottom: min(2.87vw, 55px);
+    font-size: min(5.21vw, 100px);
+  }
+}
 #contact .txt {
   margin-bottom: 30px;
   font-size: 0.875rem;
@@ -1740,10 +1757,23 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #contact .txt {
+    margin-bottom: min(7.5vw, 144px);
+    font-size: min(1.57vw, 30px);
+    line-height: 1.26;
+  }
+}
 #contact .form {
   margin-bottom: 60px;
   padding: 50px 5%;
   background: linear-gradient(270deg, #CED1E0 0%, #D0CAE1 100%);
+}
+@media screen and (min-width: 1024px) {
+  #contact .form {
+    margin-bottom: min(7.09vw, 136px);
+    padding: min(8.7vw, 167px) min(8.39vw, 161px) min(5.32vw, 102px);
+  }
 }
 #contact .form__box {
   margin-bottom: 26px;
@@ -1756,8 +1786,19 @@ body:not(#home) .main {
     margin-bottom: 36px;
   }
 }
+@media screen and (min-width: 1024px) {
+  #contact .form__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 #contact .form__box:nth-last-child(2) {
   margin-bottom: 50px;
+}
+@media screen and (min-width: 1024px) {
+  #contact .form__box:nth-last-child(2) {
+    margin-bottom: min(5.32vw, 102px);
+  }
 }
 #contact .form__box:nth-child(4) .form__input {
   cursor: pointer;
@@ -1786,6 +1827,11 @@ body:not(#home) .main {
     bottom: -20px;
   }
 }
+@media screen and (min-width: 1024px) {
+  #contact .form__box:nth-child(-n+4)::after {
+    bottom: -1.8vw;
+  }
+}
 #contact .form__label {
   margin-bottom: 10px;
   font-weight: 700;
@@ -1794,6 +1840,11 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #contact .form__label {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .form__label {
+    font-size: min(1.46vw, 28px);
   }
 }
 #contact .form__label span {
@@ -1812,6 +1863,13 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #contact .form__input {
+    padding: min(0.73vw, 14px) min(1.31vw, 25px);
+    width: min(30.42vw, 584px);
+    font-size: min(1.46vw, 28px);
+  }
+}
 #contact .form__message {
   height: 300px;
   padding: 10px;
@@ -1826,6 +1884,14 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #contact .form__message {
+    padding: min(0.73vw, 14px) min(1.31vw, 25px);
+    width: min(30.42vw, 584px);
+    height: min(10.79vw, 207px);
+    font-size: min(1.46vw, 28px);
+  }
+}
 #contact .form__submit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1835,6 +1901,12 @@ body:not(#home) .main {
   color: #343B4C;
   background: #F6F7F8;
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  #contact .form__submit {
+    padding: min(1.05vw, 20px) min(4.38vw, 84px);
+    font-size: min(1.57vw, 30px);
+  }
 }
 
 #shipping .main > :not(.contact) {

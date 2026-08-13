@@ -6,10 +6,19 @@
     .main> :not(.underlink) {
         margin-left: 5%;
         margin-right: 5%;
+
+        @media screen and (min-width: 1024px) {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
     }
 
     .main {
         padding-bottom: 90px;
+
+        @media screen and (min-width: 1024px) {
+            padding-bottom: min(6.41vw, 123px);
+        }
     }
 
     .ttl {
@@ -21,6 +30,11 @@
         @media screen and (min-width: 630px) {
             font-size: 3rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(2.87vw, 55px);
+            font-size: min(5.21vw, 100px);
+        }
     }
 
     .txt {
@@ -31,12 +45,23 @@
         @media screen and (min-width: 630px) {
             font-size: 1rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(7.5vw, 144px);
+            font-size: min(1.57vw, 30px);
+            line-height: 1.26;
+        }
     }
 
     .form {
         margin-bottom: 60px;
         padding: 50px 5%;
         background: linear-gradient(270deg, #CED1E0 0%, #D0CAE1 100%);
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(7.09vw, 136px);
+            padding: min(8.7vw, 167px) min(8.39vw, 161px) min(5.32vw, 102px);
+        }
 
         &__box {
             margin-bottom: 26px;
@@ -48,8 +73,17 @@
                 margin-bottom: 36px;
             }
 
+            @media screen and (min-width: 1024px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
             &:nth-last-child(2) {
                 margin-bottom: 50px;
+
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: min(5.32vw, 102px);
+                }
             }
 
             &:nth-child(4) {
@@ -83,6 +117,11 @@
                 @media screen and (min-width: 630px) {
                     bottom: -20px;
                 }
+
+                @media screen and (min-width: 1024px) 
+                {
+                    bottom: -1.8vw;
+                }
             }
         }
 
@@ -93,6 +132,10 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.46vw, 28px);
             }
 
             span {
@@ -111,6 +154,12 @@
                 padding: 10px 12px;
                 font-size: 1rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                padding: min(.73vw, 14px) min(1.31vw, 25px);
+                width: min(30.42vw, 584px);
+                font-size: min(1.46vw, 28px);
+            }
         }
 
 
@@ -126,6 +175,13 @@
                 padding: 15px;
                 font-size: 1rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                padding: min(.73vw, 14px) min(1.31vw, 25px);
+                width: min(30.42vw, 584px);
+                height: min(10.79vw, 207px);
+                font-size: min(1.46vw, 28px);
+            }
         }
 
         &__submit {
@@ -136,6 +192,11 @@
             color: $black;
             background: $white;
             cursor: pointer;
+
+            @media screen and (min-width: 1024px) {
+                padding: min(1.05vw, 20px) min(4.38vw, 84px);
+                font-size: min(1.57vw, 30px);
+            }
         }
     }
 }
