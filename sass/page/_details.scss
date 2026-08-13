@@ -309,7 +309,16 @@
         }
     }
 
-    .similar {
+    .box {
+        @media screen and (max-width: 1023px) {
+            &:nth-child(n+5) {
+                display: none !important;
+            }
+        }
+    }
+
+    .similar,
+    .picks {
         margin-bottom: 90px;
         position: relative; // 👈 スライダーボタンの基準位置にするため追加
 
@@ -398,9 +407,9 @@
         }
     }
 
-    .picks {
-        margin-bottom: 90px;
-    }
+    // .picks {
+    //     margin-bottom: 90px;
+    // }
 
     .viewed {
         margin-bottom: 60px;

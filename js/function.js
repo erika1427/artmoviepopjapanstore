@@ -111,4 +111,38 @@ $(function () {
     // 読み込み時とリサイズ時に実行
     initSimilarSwiper();
     window.addEventListener('resize', initSimilarSwiper);
+
+    // 👇 ここから追加：Pick Items のスライダー
+    let picksSwiper; // 👈 修正1：similarSwiper ではなく picksSwiper に変更！
+
+    const initPicksSwiper = () => {
+        // 画面幅が1024px以上の場合
+        if (window.innerWidth >= 1024) {
+            if (!picksSwiper) {
+                picksSwiper = new Swiper('.picks-swiper', {
+                    slidesPerView: 3, // 3つ並べる
+                    spaceBetween: 30, // 隙間の広さ
+                    loop: false,
+                    // pagination: {
+                    //     el: '.picks .swiper-pagination', // ページネーションを使う場合はここも .picks に！
+                    //     clickable: true,
+                    // },
+                    navigation: {
+                        nextEl: '.picks .swiper-button-next', // .picks の中の矢印を指定
+                        prevEl: '.picks .swiper-button-prev',
+                    },
+                });
+            }
+        } else {
+            // 1024px未満の場合、Swiperを破壊してただのHTML（2カラム）に戻す
+            if (picksSwiper) {
+                picksSwiper.destroy(true, true);
+                picksSwiper = undefined;
+            }
+        }
+    };
+
+    // 👇 修正2：読み込み時とリサイズ時に実行する関数を initPicksSwiper に変更！
+    initPicksSwiper();
+    window.addEventListener('resize', initPicksSwiper);
 })

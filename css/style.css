@@ -1586,17 +1586,25 @@ body:not(#home) .main {
     font-size: min(3.34vw, 64px);
   }
 }
-#details .similar {
+@media screen and (max-width: 1023px) {
+  #details .box:nth-child(n+5) {
+    display: none !important;
+  }
+}
+#details .similar,
+#details .picks {
   margin-bottom: 90px;
   position: relative;
 }
 @media screen and (min-width: 1024px) {
-  #details .similar {
+  #details .similar,
+  #details .picks {
     margin-bottom: min(8.81vw, 169px);
   }
 }
 @media screen and (max-width: 1023px) {
-  #details .similar__items {
+  #details .similar__items,
+  #details .picks__items {
     display: flex;
     flex-wrap: wrap !important;
     justify-content: space-between;
@@ -1605,7 +1613,8 @@ body:not(#home) .main {
   }
 }
 @media screen and (min-width: 1024px) {
-  #details .similar__items {
+  #details .similar__items,
+  #details .picks__items {
     flex-wrap: nowrap !important;
     justify-content: flex-start !important;
     row-gap: 0 !important;
@@ -1614,7 +1623,8 @@ body:not(#home) .main {
   }
 }
 @media screen and (max-width: 1023px) {
-  #details .similar__box {
+  #details .similar__box,
+  #details .picks__box {
     width: 46% !important;
     margin-right: 0 !important;
   }
@@ -1622,27 +1632,35 @@ body:not(#home) .main {
 @media screen and (max-width: 1023px) {
   #details .similar .swiper-pagination,
   #details .similar .swiper-button-prev,
-  #details .similar .swiper-button-next {
+  #details .similar .swiper-button-next,
+  #details .picks .swiper-pagination,
+  #details .picks .swiper-button-prev,
+  #details .picks .swiper-button-next {
     display: none;
   }
 }
 @media screen and (min-width: 1024px) {
   #details .similar .swiper-button-prev,
-  #details .similar .swiper-button-next {
+  #details .similar .swiper-button-next,
+  #details .picks .swiper-button-prev,
+  #details .picks .swiper-button-next {
     display: flex;
     color: #343B4C;
     top: 23vw;
     z-index: 10;
   }
 }
-#details .similar .swiper-button-prev {
+#details .similar .swiper-button-prev,
+#details .picks .swiper-button-prev {
   left: 6%;
 }
-#details .similar .swiper-button-next {
+#details .similar .swiper-button-next,
+#details .picks .swiper-button-next {
   right: 6%;
 }
 @media screen and (min-width: 1024px) {
-  #details .similar .swiper-pagination {
+  #details .similar .swiper-pagination,
+  #details .picks .swiper-pagination {
     width: auto;
     top: auto;
     bottom: -45px;
@@ -1651,7 +1669,8 @@ body:not(#home) .main {
     display: flex;
   }
 }
-#details .similar .swiper-pagination-bullet {
+#details .similar .swiper-pagination-bullet,
+#details .picks .swiper-pagination-bullet {
   display: block;
   margin: 0 4px !important;
   background: #CED1E0;
@@ -1661,12 +1680,10 @@ body:not(#home) .main {
   border-radius: 2px;
   transition: 0.3s;
 }
-#details .similar .swiper-pagination-bullet-active {
+#details .similar .swiper-pagination-bullet-active,
+#details .picks .swiper-pagination-bullet-active {
   background: #343B4C;
   width: 32px;
-}
-#details .picks {
-  margin-bottom: 90px;
 }
 #details .viewed {
   margin-bottom: 60px;
