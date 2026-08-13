@@ -1379,9 +1379,28 @@ body:not(#home) .main {
     font-size: 2rem;
   }
 }
-#details .buy,
-#details .add {
-  margin-left: 5%;
+@media screen and (min-width: 1024px) {
+  #details .title {
+    margin-bottom: min(1.83vw, 35px);
+    font-size: min(3.34vw, 64px);
+  }
+}
+#details .subtitle {
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+@media screen and (min-width: 630px) {
+  #details .subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #details .subtitle {
+    margin-bottom: min(1.83vw, 35px);
+    font-size: min(2.5vw, 48px);
+  }
 }
 #details .price {
   margin-bottom: 23px;
@@ -1391,6 +1410,12 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #details .price {
     font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #details .price {
+    margin-bottom: min(1.1vw, 21px);
+    font-size: min(1.88vw, 36px);
   }
 }
 #details .buy {
@@ -1405,6 +1430,14 @@ body:not(#home) .main {
   text-decoration: none;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  #details .buy {
+    margin-bottom: min(1.1vw, 21px);
+    width: min(15.16vw, 291px);
+    padding: min(1.05vw, 20px) 0;
+    font-size: min(1.57vw, 30px);
+  }
+}
 #details .add {
   margin-bottom: 47px;
   width: 241px;
@@ -1417,6 +1450,14 @@ body:not(#home) .main {
   text-align: center;
   border: 3px solid #343B4C;
 }
+@media screen and (min-width: 1024px) {
+  #details .add {
+    margin-bottom: min(3.23vw, 62px);
+    width: min(15.16vw, 291px);
+    padding: min(1.05vw, 20px) 0;
+    font-size: min(1.57vw, 30px);
+  }
+}
 #details .text {
   margin-bottom: 38px;
   font-size: 0.875rem;
@@ -1427,13 +1468,23 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #details .text {
+    margin-bottom: min(2.56vw, 49px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #details .shipping {
   margin-bottom: 38px;
-  margin-left: 5%;
-  margin-right: 5%;
   padding: 29px 5% 22px 5%;
   line-height: 1.9;
   background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
+}
+@media screen and (min-width: 1024px) {
+  #details .shipping {
+    margin-bottom: min(5.16vw, 99px);
+    padding: min(1.2vw, 23px) min(1.72vw, 33px);
+  }
 }
 #details .shipping__ttl {
   margin-bottom: 21px;
@@ -1445,6 +1496,12 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #details .shipping__ttl {
+    margin-bottom: min(1.31vw, 25px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #details .shipping__txt {
   margin-bottom: 6px;
   font-size: 0.875rem;
@@ -1452,6 +1509,12 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #details .shipping__txt {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #details .shipping__txt {
+    margin-bottom: min(0.42vw, 8px);
+    font-size: min(1.05vw, 20px);
   }
 }
 #details .shipping__payments {
@@ -1464,12 +1527,22 @@ body:not(#home) .main {
   height: 32px;
   border: 1px solid #343B4C;
 }
+@media screen and (min-width: 1024px) {
+  #details .shipping__payments {
+    gap: min(1.05vw, 20px);
+  }
+}
 #details .shipping__payments-txt {
   font-size: 0.875rem;
 }
 @media screen and (min-width: 630px) {
   #details .shipping__payments-txt {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #details .shipping__payments-txt {
+    font-size: min(1.05vw, 20px);
   }
 }
 #details .shipping-detail {

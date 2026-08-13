@@ -100,12 +100,33 @@
         @media screen and (min-width: 630px) {
             font-size: 2rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.83vw, 35px);
+            font-size: min(3.34vw, 64px);
+        }
     }
 
-    .buy,
-    .add {
-        margin-left: 5%;
+    .subtitle {
+        margin-bottom: 23px;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.2;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.83vw, 35px);
+            font-size: min(2.5vw, 48px);
+        }
     }
+
+    // .buy,
+    // .add {
+    //     margin-left: 5%;
+    // }
 
     .price {
         margin-bottom: 23px;
@@ -114,6 +135,11 @@
 
         @media screen and (min-width: 630px) {
             font-size: 1.5rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.1vw, 21px);
+            font-size: min(1.88vw, 36px);
         }
     }
 
@@ -128,7 +154,14 @@
         background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
         text-decoration: none;
         text-align: center;
-    }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.1vw, 21px);
+            width: min(15.16vw, 291px);
+            padding: min(1.05vw, 20px) 0;
+            font-size: min(1.57vw, 30px);
+        }
+    }   
 
     .add {
         margin-bottom: 47px;
@@ -141,6 +174,13 @@
         text-decoration: none;
         text-align: center;
         border: 3px solid $black;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(3.23vw, 62px);
+            width: min(15.16vw, 291px);
+            padding: min(1.05vw, 20px) 0;
+            font-size: min(1.57vw, 30px);
+        }
     }
 
     .text {
@@ -151,15 +191,25 @@
         @media screen and (min-width: 630px) {
             font-size: 1rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(2.56vw, 49px);
+            font-size: min(1.05vw, 20px);
+        }
     }
 
     .shipping {
         margin-bottom: 38px;
-        margin-left: 5%;
-        margin-right: 5%;
+        // margin-left: 5%;
+        // margin-right: 5%;
         padding: 29px 5% 22px 5%;
         line-height: 1.9;
         background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(5.16vw, 99px);
+            padding: min(1.2vw, 23px) min(1.72vw, 33px);
+        }
 
         &__ttl {
             margin-bottom: 21px;
@@ -167,8 +217,13 @@
             font-size: .875rem;
 
             @media screen and (min-width: 630px) {
-            font-size: 1rem;
-        }
+                font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.31vw, 25px);
+                font-size: min(1.05vw, 20px);
+            }
         }
 
         &__txt {
@@ -176,8 +231,13 @@
             font-size: .875rem;
 
             @media screen and (min-width: 630px) {
-            font-size: 1rem;
-        }
+                font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(0.42vw, 8px);
+                font-size: min(1.05vw, 20px);
+            }
         }
 
         &__payments {
@@ -190,14 +250,22 @@
                 height: 32px;
                 border: 1px solid $black;
             }
+
+            @media screen and (min-width: 1024px) {
+                gap: min(1.05vw, 20px);
+            }
         }
 
         &__payments-txt {
             font-size: .875rem;
 
             @media screen and (min-width: 630px) {
-            font-size: 1rem;
-        }
+                font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.05vw, 20px);
+            }
         }
 
         &-detail {
@@ -209,8 +277,8 @@
             border: 1px solid $black;
 
             @media screen and (min-width: 630px) {
-            font-size: 1rem;
-        }
+                font-size: 1rem;
+            }
         }
 
         &-detail__shipping {
@@ -226,8 +294,8 @@
         text-align: center;
 
         @media screen and (min-width: 630px) {
-                font-size: 3rem;
-            }
+            font-size: 3rem;
+        }
     }
 
     .similar {
