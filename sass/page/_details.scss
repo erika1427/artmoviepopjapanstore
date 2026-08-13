@@ -38,7 +38,7 @@
         }
 
         .swiper-button-prev {
-            left: -8%;
+            left: -14%;
             color: $black;
 
             @media screen and (min-width: 1024px) {
@@ -48,7 +48,7 @@
         }
 
         .swiper-button-next {
-            right: -8%;
+            right: -14%;
             color: $black;
 
             @media screen and (min-width: 1024px) {
@@ -161,7 +161,7 @@
             padding: min(1.05vw, 20px) 0;
             font-size: min(1.57vw, 30px);
         }
-    }   
+    }
 
     .add {
         margin-bottom: 47px;
@@ -321,6 +321,7 @@
     .picks {
         margin-bottom: 90px;
         position: relative; // 👈 スライダーボタンの基準位置にするため追加
+        z-index: 0;
 
         @media screen and (min-width: 1024px) {
             margin-bottom: min(8.81vw, 169px);
@@ -332,7 +333,7 @@
                 display: flex;
                 flex-wrap: wrap !important;
                 justify-content: space-between;
-                row-gap: 84px; 
+                row-gap: 84px;
                 transform: translate3d(0, 0, 0) !important; // Swiperの動きを無効化
             }
 
@@ -367,7 +368,7 @@
                 display: flex;
                 color: $black;
                 top: min(23vw); // 縦の位置を調整
-                z-index: 10;
+                // z-index: 0;
             }
         }
 
@@ -413,9 +414,26 @@
 
     .viewed {
         margin-bottom: 60px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.41vw, 123px);
+        }
+    }
+
+    .flex {
+        justify-content: flex-start;
+        column-gap: 8%;
+
+        @media screen and (min-width: 1024px) {
+            column-gap: calc((100% - (min(20.8vw, 24.9375rem) * 3)) / 2);
+        }
     }
 
     .underlink {
         margin-bottom: 90px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.41vw, 123px);
+        }
     }
 }
