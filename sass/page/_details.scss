@@ -279,6 +279,12 @@
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                margin: 0 15% min(11.57vw, 222px) 15%;
+                padding: min(3.34vw, 64px) min(3.91vw, 75px);
+                font-size: min(1.05vw, 20px);
+            }
         }
 
         &-detail__shipping {
@@ -295,6 +301,11 @@
 
         @media screen and (min-width: 630px) {
             font-size: 3rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(5.32vw, 102px);
+            font-size: min(3.34vw, 64px);
         }
     }
 

@@ -1558,6 +1558,13 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #details .shipping-detail {
+    margin: 0 15% min(11.57vw, 222px) 15%;
+    padding: min(3.34vw, 64px) min(3.91vw, 75px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #details .shipping-detail__shipping {
   margin-bottom: 27px;
 }
@@ -1571,6 +1578,12 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #details .secttl {
     font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #details .secttl {
+    margin-bottom: min(5.32vw, 102px);
+    font-size: min(3.34vw, 64px);
   }
 }
 #details .similar {
