@@ -311,6 +311,91 @@
 
     .similar {
         margin-bottom: 90px;
+        position: relative; // 👈 スライダーボタンの基準位置にするため追加
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(8.81vw, 169px);
+        }
+
+        &__items {
+            @media screen and (max-width: 1023px) {
+                // スマホの時はSwiperの横並びを無効化して、元の2列のflexを優先させる
+                display: flex;
+                flex-wrap: wrap !important;
+                justify-content: space-between;
+                row-gap: 84px; 
+                transform: translate3d(0, 0, 0) !important; // Swiperの動きを無効化
+            }
+
+            @media screen and (min-width: 1024px) {
+                // PCの時は折り返しを禁止して、一列に並べる（Swiperに任せる）
+                flex-wrap: nowrap !important;
+                justify-content: flex-start !important;
+                row-gap: 0 !important;
+                column-gap: 0 !important; // .flexの隙間を消す
+            }
+        }
+
+        &__box {
+            @media screen and (max-width: 1023px) {
+                width: 46% !important; // スマホでは2列サイズに戻す
+                margin-right: 0 !important; // Swiperが勝手につける右余白を消す
+            }
+        }
+
+        // ▼ ボタン・ページネーションのデザイン設定 ▼
+        .swiper-pagination,
+        .swiper-button-prev,
+        .swiper-button-next {
+            @media screen and (max-width: 1023px) {
+                display: none; // スマホではスライダーボタン類を非表示
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                color: $black;
+                top: min(23vw); // 縦の位置を調整
+                z-index: 10;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 6%; // 左矢印の位置
+        }
+
+        .swiper-button-next {
+            right: 6%; // 右矢印の位置
+        }
+
+        .swiper-pagination {
+            @media screen and (min-width: 1024px) {
+                width: auto;
+                top: auto;
+                bottom: -45px;
+                position: absolute;
+                left: 0;
+                display: flex;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            display: block;
+            margin: 0 4px !important;
+            background: #CED1E0;
+            opacity: 1;
+            width: 24px;
+            height: 4px;
+            border-radius: 2px;
+            transition: .3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #343B4C;
+            width: 32px;
+        }
     }
 
     .picks {

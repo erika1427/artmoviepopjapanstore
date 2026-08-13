@@ -77,4 +77,38 @@ $(function () {
     // 👇 ここを変更：ページが読み込まれたら '待たずに' 即実行させる！
     initLatestSwiper();
     window.addEventListener('resize', initLatestSwiper);
+
+    // 👇 ここから追加：Similar Items のスライダー
+    let similarSwiper;
+
+    const initSimilarSwiper = () => {
+        // 画面幅が1024px以上の場合
+        if (window.innerWidth >= 1024) {
+            if (!similarSwiper) {
+                similarSwiper = new Swiper('.similar-swiper', {
+                    slidesPerView: 3, // 3つ並べる
+                    spaceBetween: 30, // 隙間の広さ
+                    loop: false,
+                    // pagination: {
+                    //     el: '.similar .swiper-pagination', // .similar の中のページネーションを指定
+                    //     clickable: true,
+                    // },
+                    navigation: {
+                        nextEl: '.similar .swiper-button-next', // .similar の中の矢印を指定
+                        prevEl: '.similar .swiper-button-prev',
+                    },
+                });
+            }
+        } else {
+            // 1024px未満の場合、Swiperを破壊してただのHTML（2カラム）に戻す
+            if (similarSwiper) {
+                similarSwiper.destroy(true, true);
+                similarSwiper = undefined;
+            }
+        }
+    };
+
+    // 読み込み時とリサイズ時に実行
+    initSimilarSwiper();
+    window.addEventListener('resize', initSimilarSwiper);
 })
