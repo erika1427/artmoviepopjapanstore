@@ -2709,6 +2709,12 @@ body:not(#home) .main {
   padding-left: 5%;
   padding-right: 5%;
 }
+@media screen and (min-width: 1024px) {
+  #ligal .main > :not(.contact) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 #ligal .ttl {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
@@ -2721,8 +2727,19 @@ body:not(#home) .main {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .ttl {
+    margin-bottom: min(7.71vw, 148px);
+    font-size: min(2.61vw, 50px);
+  }
+}
 #ligal .item {
   margin-bottom: 67px;
+}
+@media screen and (min-width: 1024px) {
+  #ligal .item {
+    margin-bottom: min(6.25vw, 120px);
+  }
 }
 #ligal .item__ttl {
   margin-bottom: 38px;
@@ -2735,6 +2752,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .item__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #ligal .item__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2745,11 +2768,22 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .item__box {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #ligal .item__box:last-child {
   margin-bottom: 0;
 }
 #ligal .packaging {
   margin-bottom: 67px;
+}
+@media screen and (min-width: 1024px) {
+  #ligal .packaging {
+    margin-bottom: min(6.25vw, 120px);
+  }
 }
 #ligal .packaging__ttl {
   margin-bottom: 38px;
@@ -2762,6 +2796,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .packaging__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #ligal .packaging__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2772,11 +2812,22 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .packaging__box {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #ligal .packaging__box:last-child {
   margin-bottom: 0;
 }
 #ligal .orders {
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1024px) {
+  #ligal .orders {
+    margin-bottom: min(7.09vw, 136px);
+  }
 }
 #ligal .orders__ttl {
   margin-bottom: 38px;
@@ -2789,6 +2840,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .orders__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #ligal .orders__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2799,11 +2856,22 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #ligal .orders__box {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #ligal .orders__box:last-child {
   margin-bottom: 0;
 }
 #ligal .underlink {
   margin-bottom: 90px;
+}
+@media screen and (min-width: 1024px) {
+  #ligal .underlink {
+    margin-bottom: min(6.41vw, 123px);
+  }
 }
 
 .rotateTop {
