@@ -18,7 +18,6 @@ body {
 }
 
 body:not(#home) {
-
     .main {
         padding-top: 100px;
         background-image: url('data:image/svg+xml;utf8,<svg width="375" height="1072" viewBox="0 0 375 1072" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M375 469L0 596.5V952L375 1071.5V469Z" fill="%23F6F7F8"/><path d="M375 119.5L0 0V596.501L375 469V119.5Z" fill="%23EDEEF0"/></svg>');
@@ -30,12 +29,10 @@ body:not(#home) {
             padding-top: 120px;
         }
 
-        // 👇 PC（1024px以上）の時に新しいSVGに切り替える
+        // PC（1024px以上）の時に新しいSVGに切り替える
         @media screen and (min-width: 1024px) {
             padding-top: min(12.24vw, 235px);
             background-image: url('data:image/svg+xml;utf8,<svg width="1920" height="7531" viewBox="0 0 1920 7531" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 731.5V0H1920V326L0 731.5Z" fill="%23EDEEF0"/><path d="M1920 2734.5L0 3048V3767L1920 4239.5V2734.5Z" fill="%23F6F7F8"/><path d="M0 5376.5V3767L1920 4239.5V5113L0 5376.5Z" fill="%23EDEEF0"/><path d="M0 7530.5V5921L1920 6393.5V7267L0 7530.5Z" fill="%23EDEEF0"/><path d="M1920 326L0 731.5V1450.5L1920 1880V326Z" fill="%23F6F7F8"/><path d="M1920 5113L0 5376.5V5935.5L1920 6480V5113Z" fill="%23F6F7F8"/><path d="M1920 1880L0 1450.5V3048L1920 2734V1880Z" fill="%23EDEEF0"/></svg>');
-
-            // 💡 もしPC版で背景の縦位置がおかしいと感じた場合は、以下のコメントアウトを外して位置をリセットしてください
             background-position: 0 0;
         }
     }
@@ -53,140 +50,14 @@ body:not(#home) {
     }
 
     .br-pc {
-        display: inline; // PC用の改行を有効にする（blockにすると余計な余白ができることがあるためinlineにします）
-    }
-
-    .box {
-        @media screen and (max-width: 1023px) {
-            &:nth-child(n+5) {
-                display: none !important;
-            }
-        }
-
-        // ホバーした時の魔法
-        &:hover {
-            .image img {
-                transform: scale(1.1);
-                filter: blur(5px);
-            }
-
-            .image::before {
-                opacity: 1;
-            }
-
-            // 👇 修正：::after の代わりに .image__overlay を出現させる！
-            .image__overlay {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    }
-
-    .image {
-        margin-bottom: 10px;
-        position: relative;
-        overflow: hidden;
-
-        @media screen and (min-width: 1024px) {
-            margin-bottom: min(1.72vw, 33px);
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: all .1s ease;
-        }
-
-        // ふわっと色味をつけるフィルター
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            // 👇 修正：右から左へ流れるグラデーションと暗いフィルターを重ねる
-            background:
-                // 1枚目：ご指定の色のグラデーション（透明度0.4で重ねる）
-                linear-gradient(to left, rgba(206, 209, 224, 0.4), rgba(207, 201, 224, 0.4)),
-                // 2枚目：暗さをキープするための黒っぽい色
-                rgba(30, 35, 45, 0.7);
-
-            background-blend-mode: multiply; // 👈 2つを馴染ませるためのブレンドモード
-            opacity: 0;
-            transition: opacity .4s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        // 👇 修正：::afterを削除し、代わりに .image__overlay の設定を追加！
-        &__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2; // フィルターの上に文字を乗せる
-
-            // 文字を縦並びにして、ど真ん中に配置
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 15px; // 項目どうしの隙間
-            padding: 20px;
-
-            opacity: 0;
-            transform: translateY(-10%);
-            transition: all 0.2s ease;
-
-            color: $white;
-            text-align: center;
-            pointer-events: none; // クリックの邪魔をしない
-        }
-    }
-
-    // 👇 追加：オーバーレイの中のテキストのデザイン
-    .overlay {
-        &__text {
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 1.4;
-
-            @media screen and (min-width: 1024px) {
-                font-size: 1.125rem;
-            }
-        }
-
-        &__label {
-            font-size: .65rem;
-            font-weight: 400;
-            letter-spacing: .1em;
-            opacity: .8; // 小見出しっぽく少し薄くする
-
-            @media screen and (min-width: 1024px) {
-                font-size: .75rem;
-            }
-        }
-    }
-
-    // 👇 画像が滑らかに拡大するように、img に transition を追加
-    .image {
-        margin-bottom: .625rem; // 10px
-
-        @media screen and (min-width: 1024px) {
-            margin-bottom: min(1.72vw, 2.0625rem); // 33px
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            display: block; // 画像の下にできる隙間を消す
-            transition: transform .4s ease; // 👈 追加：滑らかに拡大させる
-        }
+        display: inline; // PC用の改行を有効にする
     }
 }
+
+
+/* ===============================================
+   コンポーネント（どの画面サイズでもベースとなる設定）
+=============================================== */
 
 .totop {
     position: fixed;
@@ -233,21 +104,121 @@ body:not(#home) {
     }
 }
 
+/* --- 画像カード (.box / .image / .overlay) --- */
+
 .box {
     width: 46%;
     color: $black;
     text-decoration: none;
 
+    @media screen and (max-width: 1023px) {
+        &:nth-child(n+5) {
+            display: none !important;
+        }
+    }
+
     @media screen and (min-width: 1024px) {
         width: min(20.8vw, 24.9375rem); // 399px
+
+        // 👇 ホバーアクションはPC（1024px以上）の時だけ発動させる
+        &:hover {
+            .image img {
+                transform: scale(1.1);
+                filter: blur(5px);
+            }
+            .image::before {
+                opacity: 1;
+            }
+            .image__overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 }
 
 .image {
-    margin-bottom: 10px;
+    margin-bottom: .625rem; // 10px
+    position: relative;
+    overflow: hidden;
 
     @media screen and (min-width: 1024px) {
         margin-bottom: min(1.72vw, 2.0625rem); // 33px
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: all 0.4s ease;
+    }
+
+    // ふわっと色味をつけるフィルター
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // 右から左へ流れるグラデーションと暗いフィルターを重ねる
+        background:
+            linear-gradient(to left, rgba(206, 209, 224, 0.4), rgba(207, 201, 224, 0.4)),
+            rgba(30, 35, 45, 0.7);
+
+        background-blend-mode: multiply; // 2つを馴染ませるためのブレンドモード
+        opacity: 0;
+        transition: opacity .4s ease;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    // スッと降りてくる文字の枠
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; // 項目どうしの隙間
+        padding: 20px;
+
+        opacity: 0;
+        transform: translateY(-10%); // 👈 上に隠しておく
+        transition: all 0.2s ease;
+
+        color: $white;
+        text-align: center;
+        pointer-events: none;
+    }
+}
+
+.overlay {
+    &__text {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.4;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__label {
+        font-size: .65rem;
+        font-weight: 400;
+        letter-spacing: .1em;
+        opacity: .8;
+
+        @media screen and (min-width: 1024px) {
+            font-size: .75rem;
+        }
     }
 }
 
