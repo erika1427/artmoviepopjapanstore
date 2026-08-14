@@ -154,6 +154,10 @@
     .return {
         margin-bottom: 60px;
 
+        @media screen and (min-width: 1024px) {
+                margin-bottom: min(7.09vw, 136px);
+            }
+
         &__ttl {
             margin-bottom: 38px;
             font-weight: 700;
