@@ -307,6 +307,39 @@ body:not(#home) {
         width: fit-content;
         margin: 0 auto;
         border: 3px solid $black;
+
+        // 👇 追加：背景を重ねる基準と、はみ出しを隠す設定
+        position: relative;
+        overflow: hidden;
+
+        // 👇 追加：左から流れてくる黒い背景
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            
+            // 最初は左に「自分の幅分」だけ隠しておく
+            transform: translateX(-100%);
+            // 「シュッ！」と勢いよく出て、ピタッと止まる魔法のイージング
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); 
+            z-index: 1; // 文字の「下」に配置する
+        }
+
+        // 👇 追加：ホバーした時の動き（PC表示の時のみ発動）
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                &::before {
+                    transform: translateX(0); // 背景を右へスライドさせる
+                }
+                .contact__link {
+                    color: $white; // 背景が黒になるので、文字を白に反転させる
+                }
+            }
+        }
     }
 
     &__link {
@@ -316,6 +349,11 @@ body:not(#home) {
         font-size: 1.5rem;
         color: $black;
         text-decoration: none;
+
+        // 👇 追加：文字を黒背景より手前（上）に出して隠れないようにする
+        position: relative;
+        z-index: 2; 
+        transition: color 0.4s ease; // 文字色がフワッと反転するようにする
 
         @media screen and (min-width: 1024px) {
             padding: min(1.05vw, 1.25rem) min(3.13vw, 3.75rem); // 20px 60px

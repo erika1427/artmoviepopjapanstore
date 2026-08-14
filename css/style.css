@@ -358,6 +358,28 @@ body:not(#home) .main {
   width: fit-content;
   margin: 0 auto;
   border: 3px solid #343B4C;
+  position: relative;
+  overflow: hidden;
+}
+.contact__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #343B4C;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+}
+@media screen and (min-width: 1024px) {
+  .contact__btn:hover::before {
+    transform: translateX(0);
+  }
+  .contact__btn:hover .contact__link {
+    color: #F6F7F8;
+  }
 }
 .contact__link {
   display: block;
@@ -366,6 +388,9 @@ body:not(#home) .main {
   font-size: 1.5rem;
   color: #343B4C;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s ease;
 }
 @media screen and (min-width: 1024px) {
   .contact__link {
@@ -687,6 +712,7 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 .footer {
   padding: 2.875rem 10% 1.5rem 5%;
   background: #EDEEF0;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
 }
 @media screen and (min-width: 1024px) {
   .footer {

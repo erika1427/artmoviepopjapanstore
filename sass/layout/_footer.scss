@@ -5,6 +5,7 @@
 .footer {
     padding: 2.875rem 10% 1.5rem 5%; // 46px 24px
     background: #EDEEF0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
 
     @media screen and (min-width: 1024px) {
         padding: min(7.09vw, 8.5rem) min(38.03vw, 45.6875rem) min(2.4vw, 2.875rem) min(14.9vw, 17.8125rem);
