@@ -55,6 +55,137 @@ body:not(#home) {
     .br-pc {
         display: inline; // PC用の改行を有効にする（blockにすると余計な余白ができることがあるためinlineにします）
     }
+
+    .box {
+        @media screen and (max-width: 1023px) {
+            &:nth-child(n+5) {
+                display: none !important;
+            }
+        }
+
+        // ホバーした時の魔法
+        &:hover {
+            .image img {
+                transform: scale(1.1);
+                filter: blur(5px);
+            }
+
+            .image::before {
+                opacity: 1;
+            }
+
+            // 👇 修正：::after の代わりに .image__overlay を出現させる！
+            .image__overlay {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .image {
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.72vw, 33px);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all .1s ease;
+        }
+
+        // ふわっと色味をつけるフィルター
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // 👇 修正：右から左へ流れるグラデーションと暗いフィルターを重ねる
+            background:
+                // 1枚目：ご指定の色のグラデーション（透明度0.4で重ねる）
+                linear-gradient(to left, rgba(206, 209, 224, 0.4), rgba(207, 201, 224, 0.4)),
+                // 2枚目：暗さをキープするための黒っぽい色
+                rgba(30, 35, 45, 0.7);
+
+            background-blend-mode: multiply; // 👈 2つを馴染ませるためのブレンドモード
+            opacity: 0;
+            transition: opacity .4s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        // 👇 修正：::afterを削除し、代わりに .image__overlay の設定を追加！
+        &__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2; // フィルターの上に文字を乗せる
+
+            // 文字を縦並びにして、ど真ん中に配置
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; // 項目どうしの隙間
+            padding: 20px;
+
+            opacity: 0;
+            transform: translateY(-10%);
+            transition: all 0.2s ease;
+
+            color: $white;
+            text-align: center;
+            pointer-events: none; // クリックの邪魔をしない
+        }
+    }
+
+    // 👇 追加：オーバーレイの中のテキストのデザイン
+    .overlay {
+        &__text {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.4;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 1.125rem;
+            }
+        }
+
+        &__label {
+            font-size: .65rem;
+            font-weight: 400;
+            letter-spacing: .1em;
+            opacity: .8; // 小見出しっぽく少し薄くする
+
+            @media screen and (min-width: 1024px) {
+                font-size: .75rem;
+            }
+        }
+    }
+
+    // 👇 画像が滑らかに拡大するように、img に transition を追加
+    .image {
+        margin-bottom: .625rem; // 10px
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.72vw, 2.0625rem); // 33px
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block; // 画像の下にできる隙間を消す
+            transition: transform .4s ease; // 👈 追加：滑らかに拡大させる
+        }
+    }
 }
 
 .totop {

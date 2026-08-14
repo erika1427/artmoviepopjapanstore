@@ -52,9 +52,18 @@
                 gap: min(.73vw, 14px);
             }
 
+            &:hover {
+                @media screen and (min-width: 1024px) {
+                    svg {
+                        transform: translateX(10px);
+                    }
+                }
+            }
+
             svg {
                 width: 0.375rem; // 6px
                 height: auto;
+                transition: .1s;
 
                 @media screen and (min-width: 630px) {
                     width: 0.5rem; // 8px
@@ -90,7 +99,7 @@
             @media screen and (min-width: 1024px) {
                 padding-left: 15%;
                 padding-right: 15%;
-                overflow: hidden; 
+                overflow: hidden;
             }
         }
 
@@ -102,7 +111,7 @@
                 margin-left: 15%;
                 margin-right: 15%;
                 padding: 0;
-                overflow: hidden; 
+                overflow: hidden;
             }
         }
 
@@ -116,7 +125,7 @@
             }
 
             @media screen and (min-width: 1024px) {
-                flex-wrap: nowrap !important; 
+                flex-wrap: nowrap !important;
                 justify-content: flex-start !important;
                 row-gap: 0 !important;
 
@@ -158,12 +167,12 @@
 
         .swiper-button-prev,
         .swiper-button-next {
-            display: none; 
+            display: none;
 
             @media screen and (min-width: 1024px) {
                 display: flex;
                 color: $black;
-                top: 32%; 
+                top: 32%;
                 z-index: 10;
             }
         }
