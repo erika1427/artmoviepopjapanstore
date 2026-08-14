@@ -17,8 +17,13 @@ body {
     }
 }
 
+// .wrapper {
+//     overflow-x: hidden;
+// }
+
+// 👇 修正後
 .wrapper {
-    overflow-x: hidden;
+    overflow-x: clip; // hidden の代わりに clip を使う！
 }
 
 body:not(#home) {

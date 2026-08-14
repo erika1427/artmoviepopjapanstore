@@ -16,6 +16,7 @@
         @media screen and (min-width: 1024px) {
             display: flex;
             gap: min(8.7vw, 167px);
+            align-items: flex-start; // stickyを効かせるために必須
         }
     }
 
@@ -29,6 +30,18 @@
         @media screen and (min-width: 1024px) {
             width: min(28.29vw, 543px);
             height: fit-content;
+            position: sticky;
+            align-self: flex-start; // 必須（Flexによる縦伸び防止）
+
+            // ▼ デフォルト（画面の高さが低い場合）：画面の中央で固定
+            top: 50vh;
+            transform: translateY(-50%);
+
+            // ▼ 画面の高さが十分に大きい場合（850px以上）：中央に押し下げず、上の方で自然に固定
+            @media (min-height: 850px) {
+                top: 5vw; // 👈 ここで固定したい上からの位置を調整できます（例: 40px や 100px など）
+                transform: none; // 中央移動の計算を解除
+            }
         }
 
         .swiper-button-next,
@@ -83,25 +96,22 @@
         .swiper-slide {
             display: flex;
             justify-content: center;
-            overflow: hidden; // 👈 必須：拡大した画像がはみ出さないようにする
-            cursor: zoom-in; // マウスカーソルを「虫眼鏡（＋）」にする小技
+            overflow: hidden;
+            cursor: zoom-in;
 
             img {
                 width: 100%;
                 height: auto;
-                // object-fit: cover;
                 display: block;
-                transform-origin: 50% 50%; // ズームの基準点を真ん中にしておく
-                // transform（拡大・縮小）だけを滑らかにし、マウス追従は瞬時に反応させる
+                transform-origin: 50% 50%;
                 transition: transform 0.3s ease;
             }
 
-            // 👇 修正：hoverではなく「is-zoomed」クラスが付いた時に拡大！
             &.is-zoomed {
-                cursor: zoom-out; // 拡大中は虫眼鏡（ー）にする
+                cursor: zoom-out;
 
                 img {
-                    transform: scale(2); // 拡大率
+                    transform: scale(2);
                 }
             }
         }
@@ -138,11 +148,6 @@
         }
     }
 
-    // .buy,
-    // .add {
-    //     margin-left: 5%;
-    // }
-
     .price {
         margin-bottom: 23px;
         font-weight: 700;
@@ -158,6 +163,7 @@
         }
     }
 
+    // 購入ボタン（Buy It Now）：HTML変更なし・ふんわりフェード
     .buy {
         margin-bottom: 19px;
         width: 241px;
@@ -169,15 +175,38 @@
         background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
         text-decoration: none;
         text-align: center;
+        border: 3px solid #E74D69;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: $white;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            z-index: -1;
+        }
 
         @media screen and (min-width: 1024px) {
             margin-bottom: min(1.1vw, 21px);
             width: min(15.16vw, 291px);
             padding: min(1.05vw, 20px) 0;
             font-size: min(1.57vw, 30px);
+            transition: color 0.2s ease, border-color 0.2s ease;
+
+            &:hover {
+                color: #E74D69;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
         }
     }
 
+    // カートに追加ボタン（Add to cart）：HTML変更なし・左からシュッとスライド
     .add {
         margin-bottom: 47px;
         width: 241px;
@@ -189,12 +218,24 @@
         text-decoration: none;
         text-align: center;
         border: 3px solid $black;
+        background-color: $white;
 
         @media screen and (min-width: 1024px) {
             margin-bottom: min(3.23vw, 62px);
             width: min(15.16vw, 291px);
             padding: min(1.05vw, 20px) 0;
             font-size: min(1.57vw, 30px);
+
+            background-image: linear-gradient(to right, $black 0%, $black 100%);
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            background-position: left center;
+            transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s ease, border-color 0.4s ease;
+
+            &:hover {
+                color: $white;
+                background-size: 100% 100%;
+            }
         }
     }
 
@@ -215,8 +256,6 @@
 
     .shipping {
         margin-bottom: 38px;
-        // margin-left: 5%;
-        // margin-right: 5%;
         padding: 29px 5% 22px 5%;
         line-height: 1.9;
         background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
@@ -335,7 +374,7 @@
     .similar,
     .picks {
         margin-bottom: 90px;
-        position: relative; // 👈 スライダーボタンの基準位置にするため追加
+        position: relative;
         z-index: 0;
 
         @media screen and (min-width: 1024px) {
@@ -344,36 +383,33 @@
 
         &__items {
             @media screen and (max-width: 1023px) {
-                // スマホの時はSwiperの横並びを無効化して、元の2列のflexを優先させる
                 display: flex;
                 flex-wrap: wrap !important;
                 justify-content: space-between;
                 row-gap: 84px;
-                transform: translate3d(0, 0, 0) !important; // Swiperの動きを無効化
+                transform: translate3d(0, 0, 0) !important;
             }
 
             @media screen and (min-width: 1024px) {
-                // PCの時は折り返しを禁止して、一列に並べる（Swiperに任せる）
                 flex-wrap: nowrap !important;
                 justify-content: flex-start !important;
                 row-gap: 0 !important;
-                column-gap: 0 !important; // .flexの隙間を消す
+                column-gap: 0 !important;
             }
         }
 
         &__box {
             @media screen and (max-width: 1023px) {
-                width: 46% !important; // スマホでは2列サイズに戻す
-                margin-right: 0 !important; // Swiperが勝手につける右余白を消す
+                width: 46% !important;
+                margin-right: 0 !important;
             }
         }
 
-        // ▼ ボタン・ページネーションのデザイン設定 ▼
         .swiper-pagination,
         .swiper-button-prev,
         .swiper-button-next {
             @media screen and (max-width: 1023px) {
-                display: none; // スマホではスライダーボタン類を非表示
+                display: none;
             }
         }
 
@@ -382,17 +418,16 @@
             @media screen and (min-width: 1024px) {
                 display: flex;
                 color: $black;
-                top: min(23vw); // 縦の位置を調整
-                // z-index: 0;
+                top: min(23vw);
             }
         }
 
         .swiper-button-prev {
-            left: 6%; // 左矢印の位置
+            left: 6%;
         }
 
         .swiper-button-next {
-            right: 6%; // 右矢印の位置
+            right: 6%;
         }
 
         .swiper-pagination {
@@ -422,10 +457,6 @@
             width: 32px;
         }
     }
-
-    // .picks {
-    //     margin-bottom: 90px;
-    // }
 
     .viewed {
         margin-bottom: 60px;

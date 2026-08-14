@@ -83,7 +83,7 @@ body.no-scroll {
 }
 
 .wrapper {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body:not(#home) .main {
@@ -1538,6 +1538,7 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   #details .product__wrapper {
     display: flex;
     gap: min(8.7vw, 167px);
+    align-items: flex-start;
   }
 }
 #details .slider-wrapper {
@@ -1552,6 +1553,16 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     width: min(28.29vw, 543px);
     height: -moz-fit-content;
     height: fit-content;
+    position: sticky;
+    align-self: flex-start;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 850px) {
+  #details .slider-wrapper {
+    top: 5vw;
+    transform: none;
   }
 }
 #details .slider-wrapper .swiper-button-next,
@@ -1677,6 +1688,18 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
   text-decoration: none;
   text-align: center;
+  border: 3px solid #E74D69;
+  position: relative;
+  z-index: 1;
+}
+#details .buy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #F6F7F8;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
 }
 @media screen and (min-width: 1024px) {
   #details .buy {
@@ -1684,6 +1707,13 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     width: min(15.16vw, 291px);
     padding: min(1.05vw, 20px) 0;
     font-size: min(1.57vw, 30px);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  #details .buy:hover {
+    color: #E74D69;
+  }
+  #details .buy:hover::before {
+    opacity: 1;
   }
 }
 #details .add {
@@ -1697,6 +1727,7 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   text-decoration: none;
   text-align: center;
   border: 3px solid #343B4C;
+  background-color: #F6F7F8;
 }
 @media screen and (min-width: 1024px) {
   #details .add {
@@ -1704,6 +1735,15 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     width: min(15.16vw, 291px);
     padding: min(1.05vw, 20px) 0;
     font-size: min(1.57vw, 30px);
+    background-image: linear-gradient(to right, #343B4C 0%, #343B4C 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s ease, border-color 0.4s ease;
+  }
+  #details .add:hover {
+    color: #F6F7F8;
+    background-size: 100% 100%;
   }
 }
 #details .text {
