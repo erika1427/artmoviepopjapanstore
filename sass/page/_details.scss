@@ -83,11 +83,26 @@
         .swiper-slide {
             display: flex;
             justify-content: center;
+            overflow: hidden; // 👈 必須：拡大した画像がはみ出さないようにする
+            cursor: zoom-in; // マウスカーソルを「虫眼鏡（＋）」にする小技
 
             img {
                 width: 100%;
                 height: auto;
-                object-fit: cover;
+                // object-fit: cover;
+                display: block;
+                transform-origin: 50% 50%; // ズームの基準点を真ん中にしておく
+                // transform（拡大・縮小）だけを滑らかにし、マウス追従は瞬時に反応させる
+                transition: transform 0.3s ease;
+            }
+
+            // 👇 修正：hoverではなく「is-zoomed」クラスが付いた時に拡大！
+            &.is-zoomed {
+                cursor: zoom-out; // 拡大中は虫眼鏡（ー）にする
+
+                img {
+                    transform: scale(2); // 拡大率
+                }
             }
         }
     }

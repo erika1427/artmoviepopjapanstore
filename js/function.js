@@ -1,12 +1,11 @@
 $(function () {
-    //スライドメニュー -----------------------------------------------------------
+    // スライドメニュー -----------------------------------------------------------
 
-    $('#btn__burger').on('click', function () { // 👈 修正1: #btn を #btn__burger に変更
-        $('#btn__top').toggleClass('rotateTop'); // 👈 修正2: #btn__burger を #btn__top に変更
+    $('#btn__burger').on('click', function () {
+        $('#btn__top').toggleClass('rotateTop');
         $('#btn__middle').toggleClass('hideMiddle');
         $('#btn__bottom').toggleClass('rotateBottom');
         $('#gnav').toggleClass('translateNav');
-        // bodyタグに 'no-scroll' クラスを付け外しする
         $('body').toggleClass('no-scroll');
     });
 
@@ -19,7 +18,6 @@ $(function () {
         }
     });
 
-
     // filters
     $('.filters__btn').on('click', function () {
         $('#filters').addClass('translateNav');
@@ -31,11 +29,11 @@ $(function () {
 
     // 商品画像のSwiper初期化
     var productSlider = new Swiper('.product-slider', {
-        loop: false, // 最後までいったら最初に戻る
+        loop: false,
         allowTouchMove: true,
         pagination: {
             el: '.swiper-pagination',
-            clickable: true, // ドットをクリック可能にする
+            clickable: true,
         },
         navigation: {
             nextEl: '.swiper-button-next',
@@ -47,7 +45,6 @@ $(function () {
     let latestSwiper;
 
     const initLatestSwiper = () => {
-        // 画面幅が1024px以上の場合
         if (window.innerWidth >= 1024) {
             if (!latestSwiper) {
                 latestSwiper = new Swiper('.latest-swiper', {
@@ -56,17 +53,15 @@ $(function () {
                     loop: false,
                     pagination: {
                         el: '.swiper-pagination',
-                        clickable: true, // ドットをクリック可能にする
+                        clickable: true,
                     },
                     navigation: {
-                        // 👇 『 .latest-swiper 』という文字を消して、親枠である『 .latest__slider-wrapper 』にする
                         nextEl: '.latest__slider-wrapper .swiper-button-next',
                         prevEl: '.latest__slider-wrapper .swiper-button-prev',
                     },
                 });
             }
         } else {
-            // 1024px未満の場合、Swiperを破壊してただのHTMLに戻す
             if (latestSwiper) {
                 latestSwiper.destroy(true, true);
                 latestSwiper = undefined;
@@ -74,33 +69,26 @@ $(function () {
         }
     };
 
-    // 👇 ここを変更：ページが読み込まれたら '待たずに' 即実行させる！
     initLatestSwiper();
     window.addEventListener('resize', initLatestSwiper);
 
-    // 👇 ここから追加：Similar Items のスライダー
+    // Similar Items のスライダー
     let similarSwiper;
 
     const initSimilarSwiper = () => {
-        // 画面幅が1024px以上の場合
         if (window.innerWidth >= 1024) {
             if (!similarSwiper) {
                 similarSwiper = new Swiper('.similar-swiper', {
-                    slidesPerView: 3, // 3つ並べる
-                    spaceBetween: 30, // 隙間の広さ
+                    slidesPerView: 3,
+                    spaceBetween: 30,
                     loop: false,
-                    // pagination: {
-                    //     el: '.similar .swiper-pagination', // .similar の中のページネーションを指定
-                    //     clickable: true,
-                    // },
                     navigation: {
-                        nextEl: '.similar .swiper-button-next', // .similar の中の矢印を指定
+                        nextEl: '.similar .swiper-button-next',
                         prevEl: '.similar .swiper-button-prev',
                     },
                 });
             }
         } else {
-            // 1024px未満の場合、Swiperを破壊してただのHTML（2カラム）に戻す
             if (similarSwiper) {
                 similarSwiper.destroy(true, true);
                 similarSwiper = undefined;
@@ -108,33 +96,26 @@ $(function () {
         }
     };
 
-    // 読み込み時とリサイズ時に実行
     initSimilarSwiper();
     window.addEventListener('resize', initSimilarSwiper);
 
-    // 👇 ここから追加：Pick Items のスライダー
-    let picksSwiper; // 👈 修正1：similarSwiper ではなく picksSwiper に変更！
+    // Pick Items のスライダー
+    let picksSwiper;
 
     const initPicksSwiper = () => {
-        // 画面幅が1024px以上の場合
         if (window.innerWidth >= 1024) {
             if (!picksSwiper) {
                 picksSwiper = new Swiper('.picks-swiper', {
-                    slidesPerView: 3, // 3つ並べる
-                    spaceBetween: 30, // 隙間の広さ
+                    slidesPerView: 3,
+                    spaceBetween: 30,
                     loop: false,
-                    // pagination: {
-                    //     el: '.picks .swiper-pagination', // ページネーションを使う場合はここも .picks に！
-                    //     clickable: true,
-                    // },
                     navigation: {
-                        nextEl: '.picks .swiper-button-next', // .picks の中の矢印を指定
+                        nextEl: '.picks .swiper-button-next',
                         prevEl: '.picks .swiper-button-prev',
                     },
                 });
             }
         } else {
-            // 1024px未満の場合、Swiperを破壊してただのHTML（2カラム）に戻す
             if (picksSwiper) {
                 picksSwiper.destroy(true, true);
                 picksSwiper = undefined;
@@ -142,7 +123,79 @@ $(function () {
         }
     };
 
-    // 👇 修正2：読み込み時とリサイズ時に実行する関数を initPicksSwiper に変更！
     initPicksSwiper();
     window.addEventListener('resize', initPicksSwiper);
-})
+
+
+    // --- 商品画像の虫眼鏡ズーム機能（バッファ100px版） --------------------------------
+
+    // ① クリックでON/OFF切り替え
+    $('.product-slider .swiper-slide').on('click', function (e) {
+        var $slide = $(this);
+        var $img = $slide.find('img');
+
+        $slide.toggleClass('is-zoomed');
+
+        if ($slide.hasClass('is-zoomed')) {
+            updateOrigin(e, $slide, $img);
+        } else {
+            $img.css({ 'transform-origin': '50% 50%' });
+        }
+    });
+
+    // ② 画面全体（document）でマウスの動きを監視し、100pxのバッファ内なら追従・外なら終了する
+    $(document).on('mousemove', function (e) {
+        $('.product-slider .swiper-slide.is-zoomed').each(function () {
+            var $slide = $(this);
+            var $img = $slide.find('img');
+            var offset = $slide.offset();
+            var width = $slide.width();
+            var height = $slide.height();
+            var buffer = 100; // 👈 100pxのバッファエリア
+
+            var mouseX = e.pageX;
+            var mouseY = e.pageY;
+
+            // 画像の枠 ＋ 100px の範囲内にマウスがいるかどうかを判定
+            var isInsideWithBuffer = (
+                mouseX >= offset.left - buffer &&
+                mouseX <= offset.left + width + buffer &&
+                mouseY >= offset.top - buffer &&
+                mouseY <= offset.top + height + buffer
+            );
+
+            if (isInsideWithBuffer) {
+                // バッファエリア内なら、拡大しながらマウスに追従させる
+                updateOrigin(e, $slide, $img);
+            } else {
+                // 100pxを超えて完全に外に出たら、拡大モードを終了
+                $slide.removeClass('is-zoomed');
+                $img.css({ 'transform-origin': '50% 50%' });
+            }
+        });
+    });
+
+    // ③ 100pxのバッファも含めて全域を滑らかにマッピングする座標計算
+    function updateOrigin(e, $slide, $img) {
+        var offset = $slide.offset();
+        var width = $slide.width();
+        var height = $slide.height();
+        var buffer = 100; // 👈 バッファの幅を統一
+
+        // バッファを含めた全体の幅・高さを計算
+        var totalWidth = width + (buffer * 2);
+        var totalHeight = height + (buffer * 2);
+
+        // バッファの左上端を基準（0,0）としたマウスの位置
+        var mouseX = e.pageX - (offset.left - buffer);
+        var mouseY = e.pageY - (offset.top - buffer);
+
+        // バッファを含めたエリア全体を 0% 〜 100% に割り当てる
+        var originX = Math.max(0, Math.min(100, (mouseX / totalWidth) * 100));
+        var originY = Math.max(0, Math.min(100, (mouseY / totalHeight) * 100));
+
+        $img.css({
+            'transform-origin': originX + '% ' + originY + '%'
+        });
+    }
+});

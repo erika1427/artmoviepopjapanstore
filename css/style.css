@@ -1601,12 +1601,21 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 #details .product-slider .swiper-slide {
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  cursor: zoom-in;
 }
 #details .product-slider .swiper-slide img {
   width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: block;
+  transform-origin: 50% 50%;
+  transition: transform 0.3s ease;
+}
+#details .product-slider .swiper-slide.is-zoomed {
+  cursor: zoom-out;
+}
+#details .product-slider .swiper-slide.is-zoomed img {
+  transform: scale(2);
 }
 #details .title {
   margin-bottom: 23px;
