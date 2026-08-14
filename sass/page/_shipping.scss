@@ -6,6 +6,11 @@
     .main> :not(.contact) {
         padding-left: 5%;
         padding-right: 5%;
+
+        @media screen and (min-width: 1024px) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
     }
 
     .ttl {
@@ -18,10 +23,19 @@
         @media screen and (min-width: 630px) {
             font-size: 2rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(7.71vw, 148px);
+            font-size: min(2.61vw, 50px);
+        }
     }
 
     .shipping {
         margin-bottom: 67px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.25vw, 120px);
+        }
 
         &__ttl {
             margin-bottom: 38px;
@@ -31,6 +45,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1.3rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(3.13vw, 60px);
+                font-size: min(1.57vw, 30px);
             }
         }
 
@@ -42,6 +61,11 @@
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
+            }
         }
 
         &__options {
@@ -51,6 +75,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
             }
 
             &-ttl {
@@ -64,6 +93,10 @@
             &-list {
                 margin-bottom: 27px;
                 padding-left: 5%;
+
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: min(1.98vw, 38px);
+                }
             }
 
             &-item {
@@ -83,12 +116,20 @@
                 font-size: 1rem;
             }
 
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.05vw, 20px);
+            }
+
             &-ttl {
                 font-weight: 700;
             }
 
             &-txt {
                 margin-bottom: 27px;
+
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: min(1.98vw, 38px);
+                }
             }
         }
 
@@ -98,6 +139,10 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.05vw, 20px);
             }
 
             &-ttl {
@@ -118,6 +163,11 @@
             @media screen and (min-width: 630px) {
                 font-size: 1.3rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(3.13vw, 60px);
+                font-size: min(1.57vw, 30px);
+            }
         }
 
         &__txt {
@@ -128,6 +178,11 @@
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
+            }
         }
 
         &__confitions {
@@ -137,6 +192,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
             }
 
             &-ttl {
@@ -169,6 +229,11 @@
                 font-size: 1rem;
             }
 
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
+            }
+
             &-ttl {
                 font-weight: 700;
             }
@@ -184,6 +249,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
             }
 
             &-ttl {
@@ -203,6 +273,10 @@
                 font-size: 1rem;
             }
 
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.05vw, 20px);
+            }
+
             &-ttl {
                 font-weight: 700;
             }
@@ -211,5 +285,9 @@
 
     .underlink {
         margin-bottom: 90px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.41vw, 123px);
+        }
     }
 }

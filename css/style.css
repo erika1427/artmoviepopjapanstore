@@ -1913,6 +1913,12 @@ body:not(#home) .main {
   padding-left: 5%;
   padding-right: 5%;
 }
+@media screen and (min-width: 1024px) {
+  #shipping .main > :not(.contact) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 #shipping .ttl {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
@@ -1925,8 +1931,19 @@ body:not(#home) .main {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .ttl {
+    margin-bottom: min(7.71vw, 148px);
+    font-size: min(2.61vw, 50px);
+  }
+}
 #shipping .shipping {
   margin-bottom: 67px;
+}
+@media screen and (min-width: 1024px) {
+  #shipping .shipping {
+    margin-bottom: min(6.25vw, 120px);
+  }
 }
 #shipping .shipping__ttl {
   margin-bottom: 38px;
@@ -1939,6 +1956,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #shipping .shipping__txt {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -1947,6 +1970,12 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #shipping .shipping__txt {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__txt {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
   }
 }
 #shipping .shipping__options {
@@ -1959,6 +1988,12 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__options {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #shipping .shipping__options-ttl {
   font-weight: 700;
 }
@@ -1968,6 +2003,11 @@ body:not(#home) .main {
 #shipping .shipping__options-list {
   margin-bottom: 27px;
   padding-left: 5%;
+}
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__options-list {
+    margin-bottom: min(1.98vw, 38px);
+  }
 }
 #shipping .shipping__options-item {
   list-style-type: disc;
@@ -1984,11 +2024,21 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__packaging {
+    font-size: min(1.05vw, 20px);
+  }
+}
 #shipping .shipping__packaging-ttl {
   font-weight: 700;
 }
 #shipping .shipping__packaging-txt {
   margin-bottom: 27px;
+}
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__packaging-txt {
+    margin-bottom: min(1.98vw, 38px);
+  }
 }
 #shipping .shipping__customs {
   font-size: 0.875rem;
@@ -1997,6 +2047,11 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #shipping .shipping__customs {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #shipping .shipping__customs {
+    font-size: min(1.05vw, 20px);
   }
 }
 #shipping .shipping__customs-ttl {
@@ -2016,6 +2071,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .return__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #shipping .return__txt {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2026,6 +2087,12 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .return__txt {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #shipping .return__confitions {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2034,6 +2101,12 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #shipping .return__confitions {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #shipping .return__confitions {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
   }
 }
 #shipping .return__confitions-ttl {
@@ -2061,6 +2134,12 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .return__howto {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #shipping .return__howto-ttl {
   font-weight: 700;
 }
@@ -2074,6 +2153,12 @@ body:not(#home) .main {
 @media screen and (min-width: 630px) {
   #shipping .return__refunds {
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #shipping .return__refunds {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
   }
 }
 #shipping .return__refunds-ttl {
@@ -2091,11 +2176,21 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #shipping .return__rts {
+    font-size: min(1.05vw, 20px);
+  }
+}
 #shipping .return__rts-ttl {
   font-weight: 700;
 }
 #shipping .underlink {
   margin-bottom: 90px;
+}
+@media screen and (min-width: 1024px) {
+  #shipping .underlink {
+    margin-bottom: min(6.41vw, 123px);
+  }
 }
 
 #faq .main > :not(.contact) {
