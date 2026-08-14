@@ -296,7 +296,12 @@ body:not(#home) .main {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 4;
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+body.no-scroll .header {
+  mix-blend-mode: normal;
 }
 @media screen and (min-width: 630px) {
   .header {
@@ -309,19 +314,10 @@ body:not(#home) .main {
     padding-right: min(3.86vw, 4.625rem);
   }
 }
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-}
 .header__logo {
   width: 2.625rem;
   height: auto;
+  pointer-events: auto;
 }
 @media screen and (min-width: 630px) {
   .header__logo {
@@ -336,6 +332,12 @@ body:not(#home) .main {
 .header__logo svg {
   width: 100%;
   height: 100%;
+}
+.header__logo svg path {
+  stroke: #fff;
+}
+.header__box {
+  pointer-events: auto;
 }
 @media screen and (min-width: 1024px) {
   .header__box {
@@ -382,22 +384,21 @@ body:not(#home) .main {
   display: block;
   width: 100%;
   height: 0.125rem;
+  background: #C2BCAC;
+}
+body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bottom {
+  background-color: #343B4C;
 }
 .btn__top {
   transform: translateY(-0.5rem);
-  background: #343B4C;
 }
 @media screen and (min-width: 630px) {
   .btn__top {
     transform: translateY(-0.6875rem);
   }
 }
-.btn__middle {
-  background: #343B4C;
-}
 .btn__bottom {
   transform: translateY(0.5rem);
-  background: #343B4C;
 }
 @media screen and (min-width: 630px) {
   .btn__bottom {
@@ -423,6 +424,9 @@ body:not(#home) .main {
   display: block;
   width: 100%;
   height: 100%;
+}
+.cart__link svg path {
+  fill: #C2BCAC;
 }
 
 .gnav {
@@ -459,6 +463,11 @@ body:not(#home) .main {
   display: block;
   color: #343B4C;
   text-decoration: none;
+}
+@media screen and (min-width: 1024px) {
+  .gnav__link {
+    color: #C2BCAC;
+  }
 }
 .gnav__insta {
   width: 1.5rem;

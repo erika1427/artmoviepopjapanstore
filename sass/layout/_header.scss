@@ -9,7 +9,15 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 4;
+    z-index: 10;
+    
+    pointer-events: none; // すき間をクリック貫通
+    mix-blend-mode: difference; // 👈 ヘッダー全体に魔法をかける！
+
+    // 👇 メニューが開いた時（no-scrollがついた時）はブレンドを解除する
+    body.no-scroll & {
+        mix-blend-mode: normal;
+    }
 
     @media screen and (min-width: 630px) {
         padding: 1.5rem 5%; // 24px
@@ -20,20 +28,10 @@
         padding-right: min(3.86vw, 4.625rem); // 74px
     }
 
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        background-color: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    }
-
     &__logo {
         width: 2.625rem; // 42px
         height: auto;
+        pointer-events: auto; // クリック判定復活
 
         @media screen and (min-width: 630px) {
             width: 3.75rem; // 60px
@@ -46,10 +44,15 @@
         svg {
             width: 100%;
             height: 100%;
+            
+            path {
+                stroke: #fff; // 👈 ロゴは「線」なのでstrokeを白にする
+            }
         }
     }
 
     &__box {
+        pointer-events: auto; // クリック判定復活
         @media screen and (min-width: 1024px) {
             display: flex;
             flex-direction: row-reverse;
@@ -96,24 +99,27 @@
         display: block;
         width: 100%;
         height: 0.125rem; // 2px
+        background: #C2BCAC; // 👈 バーガーボタンの線を白にする
+
+        // 👇 追加：メニューが開いた時（bodyにno-scrollが付いた時）は黒にする！
+        body.no-scroll & {
+            background-color: $black;
+        }
     }
 
     &__top {
         transform: translateY(-0.5rem); // -8px
-        background: $black;
 
         @media screen and (min-width: 630px) {
             transform: translateY(-0.6875rem); // -11px
         }
     }
 
-    &__middle {
-        background: $black;
-    }
+    // &__middle {
+    // }
 
     &__bottom {
         transform: translateY(0.5rem); // 8px
-        background: $black;
 
         @media screen and (min-width: 630px) {
             transform: translateY(0.6875rem); // 11px
@@ -138,6 +144,10 @@
             display: block;
             width: 100%;
             height: 100%;
+            
+            path {
+                fill: #C2BCAC; // 👈 カートは「塗り」なのでfillを白にする！
+            }
         }
     }
 }
