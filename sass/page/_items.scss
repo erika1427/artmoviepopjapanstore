@@ -39,6 +39,21 @@
             margin-bottom: min(7.71vw, 148px); // 28px
             font-size: min(5.21vw, 6.25rem);
         }
+
+        // 👇 ここから追加：文字を1つずつアニメーションさせる設定
+        span {
+            display: inline-block; // 👈 transform（移動）を効かせるために絶対に必要！
+            opacity: 0;
+            transform: translateY(15px);
+            animation: textFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        // 「I T E M S」の5文字なので、1〜5まで0.05秒ずつ遅延させる
+        @for $i from 1 through 5 {
+            span:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.05}s;
+            }
+        }
     }
 
     .filters__txt {
@@ -64,6 +79,12 @@
         gap: 3px;
         background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
         border: 2px solid $black;
+        cursor: pointer;
+        transition: .2s;
+
+        &:hover {
+            border: 2px solid #CFC9E0;
+        }
 
         @media screen and (min-width: 1024px) {
             margin-left: 15%;
@@ -95,9 +116,15 @@
         background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
         top: 0;
         left: 0;
-        opacity: 0;
         pointer-events: none;
-        z-index: 4;
+        z-index: 10;
+
+        // 👇 変更：最初は「透明」かつ「画面の左外（-100%）」に隠しておく
+        // opacity: 0;
+        transform: translateX(-100%); 
+        // 👇 追加：スライドと透明度を滑らかにアニメーションさせる
+        // コンタクトボタンと同じ気持ちいいイージング（cubic-bezier）を使います！
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
 
         @media screen and (min-width: 630px) {
             padding-top: 43px;
@@ -108,8 +135,9 @@
         }
 
         &.translateNav {
-            opacity: 1;
+            // opacity: 1;
             pointer-events: auto;
+            transform: translateX(0);
         }
 
         &__count {
@@ -131,6 +159,7 @@
             margin-bottom: 21px;
             font-weight: 700;
             font-size: 1rem;
+            cursor: pointer;
 
             @media screen and (min-width: 630px) {
                 font-size: 1.25rem;
@@ -143,6 +172,7 @@
             position: absolute;
             top: 25px;
             right: 27px;
+            cursor: pointer;
 
             @media screen and (min-width: 630px) {
                 top: 39px;
@@ -165,5 +195,31 @@
         &__items {
             margin-bottom: 60px;
         }
+    }
+
+    .underlink {
+
+        // 👇 ① 通常時（ベース）のSVGにtransitionを書く！
+        svg {
+            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
+            transition: transform 0.1s ease;
+        }
+
+        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
+        &:hover {
+            svg {
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(-10px); // 左に10px動く
+                }
+            }
+        }
+    }
+}
+
+// #items の外の一番下などに追加してください
+@keyframes textFadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
