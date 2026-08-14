@@ -6,6 +6,11 @@
     .main> :not(.contact) {
         padding-left: 5%;
         padding-right: 5%;
+
+        @media screen and (min-width: 1024px) {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
     }
 
     .ttl {
@@ -18,10 +23,19 @@
         @media screen and (min-width: 630px) {
             font-size: 2rem;
         }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(7.71vw, 148px);
+            font-size: min(2.61vw, 50px);
+        }
     }
 
     .item {
         margin-bottom: 67px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.25vw, 120px);
+        }
 
         &__ttl {
             margin-bottom: 38px;
@@ -32,6 +46,11 @@
             @media screen and (min-width: 630px) {
                 font-size: 1.3rem;
             }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(3.13vw, 60px);
+                font-size: min(1.57vw, 30px);
+            }
         }
 
         &__box {
@@ -41,6 +60,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
             }
 
             &:last-child {
@@ -52,6 +76,10 @@
     .packaging {
         margin-bottom: 67px;
 
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.25vw, 120px);
+        }
+
         &__ttl {
             margin-bottom: 38px;
             font-weight: 700;
@@ -60,6 +88,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1.3rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(3.13vw, 60px);
+                font-size: min(1.57vw, 30px);
             }
         }
 
@@ -70,6 +103,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
             }
 
             &:last-child {
@@ -81,6 +119,10 @@
     .orders {
         margin-bottom: 60px;
 
+        @media screen and (min-width: 1024px) {
+                margin-bottom: min(7.09vw, 136px);
+            }
+
         &__ttl {
             margin-bottom: 38px;
             font-weight: 700;
@@ -89,6 +131,11 @@
 
             @media screen and (min-width: 630px) {
                 font-size: 1.3rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(3.13vw, 60px);
+                font-size: min(1.57vw, 30px);
             }
         }
 
@@ -101,6 +148,11 @@
                 font-size: 1rem;
             }
 
+            @media screen and (min-width: 1024px) {
+                margin-bottom: min(1.98vw, 38px);
+                font-size: min(1.05vw, 20px);
+            }
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -109,5 +161,9 @@
 
     .underlink {
         margin-bottom: 90px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(6.41vw, 123px);
+        }
     }
 }

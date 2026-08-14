@@ -2371,6 +2371,12 @@ body:not(#home) .main {
   padding-left: 5%;
   padding-right: 5%;
 }
+@media screen and (min-width: 1024px) {
+  #policy .main > :not(.contact) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 #policy .ttl {
   margin-bottom: 46px;
   font-family: "Climate Crisis", sans-serif;
@@ -2383,8 +2389,19 @@ body:not(#home) .main {
     font-size: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .ttl {
+    margin-bottom: min(7.71vw, 148px);
+    font-size: min(2.61vw, 50px);
+  }
+}
 #policy .item {
   margin-bottom: 67px;
+}
+@media screen and (min-width: 1024px) {
+  #policy .item {
+    margin-bottom: min(6.25vw, 120px);
+  }
 }
 #policy .item__ttl {
   margin-bottom: 38px;
@@ -2397,6 +2414,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .item__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #policy .item__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2407,11 +2430,22 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .item__box {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #policy .item__box:last-child {
   margin-bottom: 0;
 }
 #policy .packaging {
   margin-bottom: 67px;
+}
+@media screen and (min-width: 1024px) {
+  #policy .packaging {
+    margin-bottom: min(6.25vw, 120px);
+  }
 }
 #policy .packaging__ttl {
   margin-bottom: 38px;
@@ -2424,6 +2458,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .packaging__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #policy .packaging__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2434,11 +2474,22 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .packaging__box {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #policy .packaging__box:last-child {
   margin-bottom: 0;
 }
 #policy .orders {
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1024px) {
+  #policy .orders {
+    margin-bottom: min(7.09vw, 136px);
+  }
 }
 #policy .orders__ttl {
   margin-bottom: 38px;
@@ -2451,6 +2502,12 @@ body:not(#home) .main {
     font-size: 1.3rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .orders__ttl {
+    margin-bottom: min(3.13vw, 60px);
+    font-size: min(1.57vw, 30px);
+  }
+}
 #policy .orders__box {
   margin-bottom: 27px;
   font-size: 0.875rem;
@@ -2461,11 +2518,22 @@ body:not(#home) .main {
     font-size: 1rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  #policy .orders__box {
+    margin-bottom: min(1.98vw, 38px);
+    font-size: min(1.05vw, 20px);
+  }
+}
 #policy .orders__box:last-child {
   margin-bottom: 0;
 }
 #policy .underlink {
   margin-bottom: 90px;
+}
+@media screen and (min-width: 1024px) {
+  #policy .underlink {
+    margin-bottom: min(6.41vw, 123px);
+  }
 }
 
 #terms .main > :not(.contact) {
