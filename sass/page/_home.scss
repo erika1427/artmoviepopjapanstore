@@ -18,6 +18,42 @@
             @media screen and (min-width: 630px) {
                 max-width: 36%;
             }
+
+            // 👇 追加：一文字ずつのアニメーション設定
+            path {
+                opacity: 0; // 最初は見えない状態にする
+                transform: translateY(15px); // 少し下から浮かび上がるようにする
+                animation: mvLogoFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; // 0.6秒かけてアニメーション
+            }
+
+            // 👇 for文の魔法：16個のpathに、0.05秒ずつズレた遅延時間を自動で付与する
+            @for $i from 1 through 16 {
+                path:nth-child(#{$i}) {
+                    animation-delay: #{$i * 0.07}s;
+                }
+            }
+
+            // 「SINCE 2017」（最後から2つのパーツ）だけは、ポンポンポン…と出た後に少し間を置いてフワッと出す
+            path:nth-last-child(1),
+            path:nth-last-child(2),
+            path:nth-last-child(3),
+            path:nth-last-child(4),
+            path:nth-last-child(5),
+            path:nth-last-child(6),
+            path:nth-last-child(7),
+            path:nth-last-child(8),
+            path:nth-last-child(9) {
+                animation-delay: 1.2s; // 1.2秒後に遅らせて発動
+                animation-duration: 1s; // ゆったり1秒かけて出す
+            }
+        }
+    }
+
+    // 👇 追加：アニメーションの動き（透明度0＆下ズレ → 透明度1＆定位置）
+    @keyframes mvLogoFadeIn {
+        100% {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 

@@ -2,6 +2,10 @@
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
 
+html {
+    scroll-behavior: smooth; // 👈 これを追加するだけ！
+}
+
 body {
     background-color: $white;
     font-family: $text;
@@ -75,6 +79,13 @@ body:not(#home) {
         display: block;
         box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
         border-radius: 100%;
+        transition: .2s;
+
+        &:hover {
+            @media screen and (min-width: 1024px) {
+                box-shadow: none;
+            }
+        }
 
         @media screen and (min-width: 360px) {
             bottom: 30px;
@@ -126,9 +137,11 @@ body:not(#home) {
                 transform: scale(1.1);
                 filter: blur(5px);
             }
+
             .image::before {
                 opacity: 1;
             }
+
             .image__overlay {
                 opacity: 1;
                 transform: translateY(0);
@@ -308,35 +321,35 @@ body:not(#home) {
         margin: 0 auto;
         border: 3px solid $black;
 
-        // 👇 追加：背景を重ねる基準と、はみ出しを隠す設定
-        position: relative;
-        overflow: hidden;
-
-        // 👇 追加：左から流れてくる黒い背景
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: $black;
-            
-            // 最初は左に「自分の幅分」だけ隠しておく
-            transform: translateX(-100%);
-            // 「シュッ！」と勢いよく出て、ピタッと止まる魔法のイージング
-            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); 
-            z-index: 1; // 文字の「下」に配置する
-        }
-
-        // 👇 追加：ホバーした時の動き（PC表示の時のみ発動）
+        // 👇 1024px以上（PC）の時だけ、ホバー用の仕掛けを作る
         @media screen and (min-width: 1024px) {
+            position: relative;
+            overflow: hidden;
+
+            // 左から流れてくる黒い背景
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $black;
+
+                // 最初は左に隠しておく
+                transform: translateX(-100%);
+                transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+                z-index: 1; 
+            }
+
+            // ホバーした時の動き
             &:hover {
                 &::before {
-                    transform: translateX(0); // 背景を右へスライドさせる
+                    transform: translateX(0); // 背景を右へスライド
                 }
+
                 .contact__link {
-                    color: $white; // 背景が黒になるので、文字を白に反転させる
+                    color: $white; // 文字を白に反転
                 }
             }
         }
@@ -350,14 +363,14 @@ body:not(#home) {
         color: $black;
         text-decoration: none;
 
-        // 👇 追加：文字を黒背景より手前（上）に出して隠れないようにする
-        position: relative;
-        z-index: 2; 
-        transition: color 0.4s ease; // 文字色がフワッと反転するようにする
-
         @media screen and (min-width: 1024px) {
             padding: min(1.05vw, 1.25rem) min(3.13vw, 3.75rem); // 20px 60px
             font-size: min(1.57vw, 1.875rem); // 30px
+            
+            // 👇 1024px以上の時だけ、文字の手前設定とフワッと変化する設定を付与
+            position: relative;
+            z-index: 2;
+            transition: color 0.4s ease; 
         }
     }
 }

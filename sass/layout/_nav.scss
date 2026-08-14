@@ -165,5 +165,12 @@
     &__link {
         text-decoration: none;
         color: $black;
+        transition: .2s;
+
+        &:hover {
+            @media screen and (min-width: 1024px) {
+                opacity: .7;
+            }
+        }
     }
 }
