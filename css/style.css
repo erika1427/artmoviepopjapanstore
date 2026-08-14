@@ -162,6 +162,12 @@ body:not(#home) .main {
   border-radius: 100%;
 }
 
+@keyframes textFadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -1520,12 +1526,6 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   }
 }
 
-@keyframes textFadeIn {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 #details .main > :not(.contact, .buy, .add, .shipping, .shipping-detail) {
   padding-inline: 5%;
 }
@@ -1987,6 +1987,33 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     font-size: min(5.21vw, 100px);
   }
 }
+#contact .ttl span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: textFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+#contact .ttl span:nth-child(1) {
+  animation-delay: 0.05s;
+}
+#contact .ttl span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+#contact .ttl span:nth-child(3) {
+  animation-delay: 0.15s;
+}
+#contact .ttl span:nth-child(4) {
+  animation-delay: 0.2s;
+}
+#contact .ttl span:nth-child(5) {
+  animation-delay: 0.25s;
+}
+#contact .ttl span:nth-child(6) {
+  animation-delay: 0.3s;
+}
+#contact .ttl span:nth-child(7) {
+  animation-delay: 0.35s;
+}
 #contact .txt {
   margin-bottom: 30px;
   font-size: 0.875rem;
@@ -2141,11 +2168,26 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   color: #343B4C;
   background: #F6F7F8;
   cursor: pointer;
+  border: 2px solid #343B4C;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1024px) {
+  #contact .form__submit:hover {
+    border: 2px solid #F6F7F8;
+  }
 }
 @media screen and (min-width: 1024px) {
   #contact .form__submit {
     padding: min(1.05vw, 20px) min(4.38vw, 84px);
     font-size: min(1.57vw, 30px);
+  }
+}
+#contact .underlink svg {
+  transition: transform 0.1s ease;
+}
+@media screen and (min-width: 1024px) {
+  #contact .underlink:hover svg {
+    transform: translateX(-10px);
   }
 }
 

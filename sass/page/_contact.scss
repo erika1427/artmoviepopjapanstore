@@ -35,6 +35,21 @@
             margin-bottom: min(2.87vw, 55px);
             font-size: min(5.21vw, 100px);
         }
+
+        // 👇 追加：文字を1つずつアニメーションさせる設定
+        span {
+            display: inline-block; // transformを効かせるために必須
+            opacity: 0;
+            transform: translateY(15px);
+            animation: textFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        // 👇 「C O N T A C T」の7文字なので、1〜7まで0.05秒ずつ遅延させる
+        @for $i from 1 through 7 {
+            span:nth-child(#{$i}) {
+                animation-delay: #{$i * 0.05}s;
+            }
+        }
     }
 
     .txt {
@@ -118,8 +133,7 @@
                     bottom: -20px;
                 }
 
-                @media screen and (min-width: 1024px) 
-                {
+                @media screen and (min-width: 1024px) {
                     bottom: -1.8vw;
                 }
             }
@@ -192,10 +206,36 @@
             color: $black;
             background: $white;
             cursor: pointer;
+            border: 2px solid $black;
+            transition: .2s;
+
+            &:hover {
+                @media screen and (min-width: 1024px) {
+                    border: 2px solid $white;
+                }
+            }
 
             @media screen and (min-width: 1024px) {
                 padding: min(1.05vw, 20px) min(4.38vw, 84px);
                 font-size: min(1.57vw, 30px);
+            }
+        }
+    }
+
+    .underlink {
+
+        // 👇 ① 通常時（ベース）のSVGにtransitionを書く！
+        svg {
+            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
+            transition: transform 0.1s ease;
+        }
+
+        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
+        &:hover {
+            svg {
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(-10px); // 左に10px動く
+                }
             }
         }
     }
