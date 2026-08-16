@@ -156,15 +156,13 @@
             }
 
             &.is-active {
-                opacity: .5;
-
                 &::after {
                     display: block;
                 }
             }
 
             &::after {
-                content: "✔";
+                content: "\2714";
                 color: $red;
                 display: none;
             }
