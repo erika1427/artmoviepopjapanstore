@@ -1,6 +1,6 @@
 $(function () {
-    // スライドメニュー -----------------------------------------------------------
 
+    // スライドメニュー
     $('#btn__burger').on('click', function () {
         $('#btn__top').toggleClass('rotateTop');
         $('#btn__middle').toggleClass('hideMiddle');
@@ -22,6 +22,44 @@ $(function () {
     $('.filters__btn').on('click', function () {
         $('#filters').addClass('translateNav');
     })
+
+    $('.filters__item').on('click', function () {
+        $(this).toggleClass('is-active');
+
+        let activeFilters = [];
+        $('.filters__item.is-active').each(function () {
+            activeFilters.push($(this).data('filter'));
+        });
+
+        var count = $('.filters__item.is-active').length;
+        $('.filters__count').text('FILTERS (' + count + ')');
+
+        // 商品の絞り込み
+        if (activeFilters.length === 0) {
+            $('.items__box').fadeIn(300);
+        } else {
+            $('.items__box').each(function () {
+                let categoryAttr = $(this).data('category') || "";
+                let itemCategories = categoryAttr.split(' ');
+
+                let isMatch = activeFilters.some(filter => itemCategories.includes(filter));
+
+                if (isMatch) {
+                    $(this).fadeIn(300);
+                } else {
+                    $(this).fadeOut(300);
+                }
+            });
+        }
+    })
+
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('#filters').length && !$(e.target).closest('.filters__btn').length) {
+            if ($('#filters').hasClass('translateNav')) {
+                $('#filters').removeClass('translateNav');
+            }
+        }
+    });
 
     $('.filters__close').on('click', function () {
         $('#filters').removeClass('translateNav');
@@ -127,9 +165,7 @@ $(function () {
     window.addEventListener('resize', initPicksSwiper);
 
 
-    // --- 商品画像の虫眼鏡ズーム機能（バッファ100px版） --------------------------------
-
-    // ① クリックでON/OFF切り替え
+    // 虫眼鏡
     $('.product-slider .swiper-slide').on('click', function (e) {
         var $slide = $(this);
         var $img = $slide.find('img');
@@ -143,7 +179,6 @@ $(function () {
         }
     });
 
-    // ② 画面全体（document）でマウスの動きを監視し、100pxのバッファ内なら追従・外なら終了する
     $(document).on('mousemove', function (e) {
         $('.product-slider .swiper-slide.is-zoomed').each(function () {
             var $slide = $(this);
@@ -151,12 +186,11 @@ $(function () {
             var offset = $slide.offset();
             var width = $slide.width();
             var height = $slide.height();
-            var buffer = 100; // 👈 100pxのバッファエリア
+            var buffer = 100;
 
             var mouseX = e.pageX;
             var mouseY = e.pageY;
 
-            // 画像の枠 ＋ 100px の範囲内にマウスがいるかどうかを判定
             var isInsideWithBuffer = (
                 mouseX >= offset.left - buffer &&
                 mouseX <= offset.left + width + buffer &&
@@ -165,32 +199,26 @@ $(function () {
             );
 
             if (isInsideWithBuffer) {
-                // バッファエリア内なら、拡大しながらマウスに追従させる
                 updateOrigin(e, $slide, $img);
             } else {
-                // 100pxを超えて完全に外に出たら、拡大モードを終了
                 $slide.removeClass('is-zoomed');
                 $img.css({ 'transform-origin': '50% 50%' });
             }
         });
     });
 
-    // ③ 100pxのバッファも含めて全域を滑らかにマッピングする座標計算
     function updateOrigin(e, $slide, $img) {
         var offset = $slide.offset();
         var width = $slide.width();
         var height = $slide.height();
-        var buffer = 100; // 👈 バッファの幅を統一
+        var buffer = 100;
 
-        // バッファを含めた全体の幅・高さを計算
         var totalWidth = width + (buffer * 2);
         var totalHeight = height + (buffer * 2);
 
-        // バッファの左上端を基準（0,0）としたマウスの位置
         var mouseX = e.pageX - (offset.left - buffer);
         var mouseY = e.pageY - (offset.top - buffer);
 
-        // バッファを含めたエリア全体を 0% 〜 100% に割り当てる
         var originX = Math.max(0, Math.min(100, (mouseX / totalWidth) * 100));
         var originY = Math.max(0, Math.min(100, (mouseY / totalHeight) * 100));
 

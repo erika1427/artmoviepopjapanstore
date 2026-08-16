@@ -143,9 +143,30 @@
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 2vw;
 
             @media screen and (min-width: 630px) {
                 font-size: 1.25rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                gap: .7vw;
+            }
+
+            &.is-active {
+                opacity: .5;
+
+                &::after {
+                    display: block;
+                }
+            }
+
+            &::after {
+                content: "✔";
+                color: $red;
+                display: none;
             }
         }
 
