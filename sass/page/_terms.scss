@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 #terms {
-    .main> :not(.contact) {
+    .main> :not(.contact, .underlink) {
         padding-left: 5%;
         padding-right: 5%;
 
@@ -14,7 +14,7 @@
     }
 
     .ttl {
-        margin-bottom: 46px;
+        margin-bottom: 2.875rem;
         font-family: $head;
         font-weight: 400;
         font-size: 1.875rem;
@@ -25,158 +25,81 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(7.71vw, 148px);
-            font-size: min(2.61vw, 50px);
+            margin-bottom: min(7.71vw, 9.25rem);
+            font-size: min(2.61vw, 3.125rem);
         }
     }
 
-    .item {
-        margin-bottom: 67px;
-
-        @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.25vw, 120px);
-        }
-
-        &__ttl {
-            margin-bottom: 38px;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: $red;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1.3rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(3.13vw, 60px);
-                font-size: min(1.57vw, 30px);
-            }
-        }
-
-        &__box {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-
+    .item,
     .packaging {
-        margin-bottom: 67px;
+        margin-bottom: 4.1875rem;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.25vw, 120px);
-        }
-
-        &__ttl {
-            margin-bottom: 38px;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: $red;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1.3rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(3.13vw, 60px);
-                font-size: min(1.57vw, 30px);
-            }
-        }
-
-        &__box {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
+            margin-bottom: min(6.25vw, 7.5rem);
         }
     }
 
     .orders {
-        margin-bottom: 60px;
+        margin-bottom: 3.75rem;
 
         @media screen and (min-width: 1024px) {
-                margin-bottom: min(7.09vw, 136px);
-            }
+            margin-bottom: min(7.09vw, 8.5rem);
+        }
+    }
 
-        &__ttl {
-            margin-bottom: 38px;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: $red;
+    .item__ttl,
+    .packaging__ttl,
+    .orders__ttl {
+        margin-bottom: 2.375rem;
+        font-weight: 700;
+        font-size: 1.125rem;
+        color: $red;
 
-            @media screen and (min-width: 630px) {
-                font-size: 1.3rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(3.13vw, 60px);
-                font-size: min(1.57vw, 30px);
-            }
+        @media screen and (min-width: 630px) {
+            font-size: 1.3rem;
         }
 
-        &__box {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(3.13vw, 3.75rem);
+            font-size: min(1.57vw, 1.875rem);
+        }
+    }
 
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
+    .item__box,
+    .packaging__box,
+    .orders__box {
+        margin-bottom: 1.6875rem;
+        font-size: .875rem;
+        line-height: 1.9;
 
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
+        @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.98vw, 2.375rem);
+            font-size: min(1.05vw, 1.25rem);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
     .underlink {
-        margin-bottom: 90px;
+        margin-bottom: 5.625rem;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.41vw, 123px);
+            margin-bottom: min(6.41vw, 7.6875rem);
         }
 
         svg {
-            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
-            transition: transform 0.1s ease;
+            transition: transform .1s ease;
         }
 
-        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
-        &:hover {
-            svg {
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(-10px); // 左に10px動く
-                }
+        @media screen and (min-width: 1024px) {
+            &:hover svg {
+                transform: translateX(-.625rem);
             }
         }
     }

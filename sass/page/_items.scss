@@ -4,15 +4,6 @@
 
 #items {
 
-    .flex {
-        justify-content: flex-start;
-        column-gap: 8%;
-
-        @media screen and (min-width: 1024px) {
-            column-gap: calc((100% - (min(20.8vw, 24.9375rem) * 3)) / 2);
-        }
-    }
-
     .items__ttl,
     .filters__btn,
     .items {
@@ -26,7 +17,7 @@
     }
 
     .items__ttl {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
         font-family: $head;
         font-weight: 400;
         font-size: 2.5rem;
@@ -36,22 +27,20 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(7.71vw, 148px); // 28px
+            margin-bottom: min(7.71vw, 9.25rem);
             font-size: min(5.21vw, 6.25rem);
         }
 
-        // 👇 ここから追加：文字を1つずつアニメーションさせる設定
         span {
-            display: inline-block; // 👈 transform（移動）を効かせるために絶対に必要！
+            display: inline-block;
             opacity: 0;
-            transform: translateY(15px);
-            animation: textFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            transform: translateY(.9375rem);
+            animation: textFadeIn .6s cubic-bezier(.22, 1, .36, 1) forwards;
         }
 
-        // 「I T E M S」の5文字なので、1〜5まで0.05秒ずつ遅延させる
         @for $i from 1 through 5 {
             span:nth-child(#{$i}) {
-                animation-delay: #{$i * 0.05}s;
+                animation-delay: #{$i * .05}s;
             }
         }
     }
@@ -65,18 +54,18 @@
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: min(1.25vw, 24px);
+            font-size: min(1.25vw, 1.5rem);
         }
     }
 
     .filters__btn {
-        margin-bottom: 84px;
+        margin-bottom: 5.25rem;
         margin-left: 5%;
         width: fit-content;
-        padding: 9px 13px;
+        padding: .5625rem .8125rem;
         display: flex;
         align-items: center;
-        gap: 3px;
+        gap: .1875rem;
         background: linear-gradient(270deg, #CED1E0 0%, #CFC9E0 100%);
         border: 2px solid $black;
         cursor: pointer;
@@ -88,28 +77,28 @@
 
         @media screen and (min-width: 1024px) {
             margin-left: 15%;
-            padding: min(1.05vw, 20px) min(1.83vw, 35px);
-            gap: min(.94vw, 18px);
+            padding: min(1.05vw, 1.25rem) min(1.83vw, 2.1875rem);
+            gap: min(.94vw, 1.125rem);
         }
 
         svg {
-            width: 13px;
+            width: .8125rem;
             height: auto;
             display: block;
 
             @media screen and (min-width: 630px) {
-                width: 18px;
+                width: 1.125rem;
             }
 
             @media screen and (min-width: 1024px) {
-                width: min(1.36vw, 26px);
+                width: min(1.36vw, 1.625rem);
             }
         }
     }
 
     .filters {
-        padding-top: 31px;
-        padding-left: 36px;
+        padding-top: 1.9375rem;
+        padding-left: 2.25rem;
         width: 100%;
         height: 100dvh;
         position: fixed;
@@ -118,30 +107,24 @@
         left: 0;
         pointer-events: none;
         z-index: 10;
-
-        // 👇 変更：最初は「透明」かつ「画面の左外（-100%）」に隠しておく
-        // opacity: 0;
-        transform: translateX(-100%); 
-        // 👇 追加：スライドと透明度を滑らかにアニメーションさせる
-        // コンタクトボタンと同じ気持ちいいイージング（cubic-bezier）を使います！
-        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+        transform: translateX(-100%);
+        transition: transform .5s cubic-bezier(.22, 1, .36, 1), opacity .5s ease;
 
         @media screen and (min-width: 630px) {
-            padding-top: 43px;
+            padding-top: 2.6875rem;
         }
 
         @media screen and (min-width: 1024px) {
-            width: min(37.19vw, 714px);
+            width: min(37.19vw, 44.625rem);
         }
 
         &.translateNav {
-            // opacity: 1;
             pointer-events: auto;
             transform: translateX(0);
         }
 
         &__count {
-            margin-bottom: 49px;
+            margin-bottom: 3.0625rem;
             font-size: 1.25rem;
             font-weight: 700;
 
@@ -151,12 +134,12 @@
         }
 
         &__list {
-            height: calc(100dvh - 130px);
+            height: calc(100dvh - 8.125rem);
             overflow-y: auto;
         }
 
         &__item {
-            margin-bottom: 21px;
+            margin-bottom: 1.3125rem;
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
@@ -167,15 +150,15 @@
         }
 
         &__close {
-            width: 26px;
-            height: 26px;
+            width: 1.625rem;
+            height: 1.625rem;
             position: absolute;
-            top: 25px;
-            right: 27px;
+            top: 1.5625rem;
+            right: 1.6875rem;
             cursor: pointer;
 
             @media screen and (min-width: 630px) {
-                top: 39px;
+                top: 2.4375rem;
             }
 
             svg {
@@ -186,31 +169,34 @@
     }
 
     .items {
-        margin-bottom: 90px;
+        margin-bottom: 5.625rem;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.41vw, 123px);
+            margin-bottom: min(6.41vw, 7.6875rem);
         }
 
         &__items {
-            margin-bottom: 60px;
+            margin-bottom: 3.75rem;
+        }
+    }
+
+    .flex {
+        justify-content: flex-start;
+        column-gap: 8%;
+
+        @media screen and (min-width: 1024px) {
+            column-gap: calc((100% - (min(20.8vw, 24.9375rem) * 3)) / 2);
         }
     }
 
     .underlink {
-
-        // 👇 ① 通常時（ベース）のSVGにtransitionを書く！
         svg {
-            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
-            transition: transform 0.1s ease;
+            transition: transform .1s ease;
         }
 
-        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
-        &:hover {
-            svg {
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(-10px); // 左に10px動く
-                }
+        @media screen and (min-width: 1024px) {
+            &:hover svg {
+                transform: translateX(-.625rem);
             }
         }
     }

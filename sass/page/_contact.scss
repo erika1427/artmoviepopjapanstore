@@ -14,15 +14,15 @@
     }
 
     .main {
-        padding-bottom: 90px;
+        padding-bottom: 5.625rem;
 
         @media screen and (min-width: 1024px) {
-            padding-bottom: min(6.41vw, 123px);
+            padding-bottom: min(6.41vw, 7.6875rem);
         }
     }
 
     .ttl {
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
         font-family: $head;
         font-weight: 400;
         font-size: 2.5rem;
@@ -32,28 +32,26 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(2.87vw, 55px);
-            font-size: min(5.21vw, 100px);
+            margin-bottom: min(2.87vw, 3.4375rem);
+            font-size: min(5.21vw, 6.25rem);
         }
 
-        // 👇 追加：文字を1つずつアニメーションさせる設定
         span {
-            display: inline-block; // transformを効かせるために必須
+            display: inline-block;
             opacity: 0;
-            transform: translateY(15px);
-            animation: textFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+            transform: translateY(.9375rem);
+            animation: textFadeIn .6s cubic-bezier(.22, 1, .36, 1) forwards;
         }
 
-        // 👇 「C O N T A C T」の7文字なので、1〜7まで0.05秒ずつ遅延させる
         @for $i from 1 through 7 {
             span:nth-child(#{$i}) {
-                animation-delay: #{$i * 0.05}s;
+                animation-delay: #{$i * .05}s;
             }
         }
     }
 
     .txt {
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
         font-size: .875rem;
         line-height: 1.9;
 
@@ -62,30 +60,30 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(7.5vw, 144px);
-            font-size: min(1.57vw, 30px);
+            margin-bottom: min(7.5vw, 9rem);
+            font-size: min(1.57vw, 1.875rem);
             line-height: 1.26;
         }
     }
 
     .form {
-        margin-bottom: 60px;
-        padding: 50px 5%;
+        margin-bottom: 3.75rem;
+        padding: 3.125rem 5%;
         background: linear-gradient(270deg, #CED1E0 0%, #D0CAE1 100%);
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(7.09vw, 136px);
-            padding: min(8.7vw, 167px) min(8.39vw, 161px) min(5.32vw, 102px);
+            margin-bottom: min(7.09vw, 8.5rem);
+            padding: min(8.7vw, 10.4375rem) min(8.39vw, 10.0625rem) min(5.32vw, 6.375rem);
         }
 
         &__box {
-            margin-bottom: 26px;
+            margin-bottom: 1.625rem;
             position: relative;
             display: flex;
             flex-direction: column;
 
             @media screen and (min-width: 630px) {
-                margin-bottom: 36px;
+                margin-bottom: 2.25rem;
             }
 
             @media screen and (min-width: 1024px) {
@@ -94,10 +92,10 @@
             }
 
             &:nth-last-child(2) {
-                margin-bottom: 50px;
+                margin-bottom: 3.125rem;
 
                 @media screen and (min-width: 1024px) {
-                    margin-bottom: min(5.32vw, 102px);
+                    margin-bottom: min(5.32vw, 6.375rem);
                 }
             }
 
@@ -125,12 +123,12 @@
                 height: 1px;
                 display: block;
                 position: absolute;
-                bottom: -13px;
+                bottom: -.8125rem;
                 left: 0;
                 background: #8993aa;
 
                 @media screen and (min-width: 630px) {
-                    bottom: -20px;
+                    bottom: -1.25rem;
                 }
 
                 @media screen and (min-width: 1024px) {
@@ -140,7 +138,7 @@
         }
 
         &__label {
-            margin-bottom: 10px;
+            margin-bottom: .625rem;
             font-weight: 700;
             font-size: .875rem;
 
@@ -149,7 +147,7 @@
             }
 
             @media screen and (min-width: 1024px) {
-                font-size: min(1.46vw, 28px);
+                font-size: min(1.46vw, 1.75rem);
             }
 
             span {
@@ -158,49 +156,48 @@
         }
 
         &__input {
-            padding: 7px 10px;
+            padding: .4375rem .625rem;
             font-size: .875rem;
             color: #6c6c6c;
             border-radius: 5px;
             border: none;
 
             @media screen and (min-width: 630px) {
-                padding: 10px 12px;
+                padding: .625rem .75rem;
                 font-size: 1rem;
             }
 
             @media screen and (min-width: 1024px) {
-                padding: min(.73vw, 14px) min(1.31vw, 25px);
-                width: min(30.42vw, 584px);
-                font-size: min(1.46vw, 28px);
+                padding: min(.73vw, .875rem) min(1.31vw, 1.5625rem);
+                width: min(30.42vw, 36.5rem);
+                font-size: min(1.46vw, 1.75rem);
             }
         }
 
-
         &__message {
-            height: 300px;
-            padding: 10px;
+            height: 18.75rem;
+            padding: .625rem;
             font-size: .875rem;
             color: #6c6c6c;
             border-radius: 5px;
             border: none;
 
             @media screen and (min-width: 630px) {
-                padding: 15px;
+                padding: .9375rem;
                 font-size: 1rem;
             }
 
             @media screen and (min-width: 1024px) {
-                padding: min(.73vw, 14px) min(1.31vw, 25px);
-                width: min(30.42vw, 584px);
-                height: min(10.79vw, 207px);
-                font-size: min(1.46vw, 28px);
+                padding: min(.73vw, .875rem) min(1.31vw, 1.5625rem);
+                width: min(30.42vw, 36.5rem);
+                height: min(10.79vw, 12.9375rem);
+                font-size: min(1.46vw, 1.75rem);
             }
         }
 
         &__submit {
             width: fit-content;
-            padding: 17px 71px;
+            padding: 1.0625rem 4.4375rem;
             font-weight: 700;
             font-size: 1.5rem;
             color: $black;
@@ -216,26 +213,20 @@
             }
 
             @media screen and (min-width: 1024px) {
-                padding: min(1.05vw, 20px) min(4.38vw, 84px);
-                font-size: min(1.57vw, 30px);
+                padding: min(1.05vw, 1.25rem) min(4.38vw, 5.25rem);
+                font-size: min(1.57vw, 1.875rem);
             }
         }
     }
 
     .underlink {
-
-        // 👇 ① 通常時（ベース）のSVGにtransitionを書く！
         svg {
-            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
-            transition: transform 0.1s ease;
+            transition: transform .1s ease;
         }
 
-        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
-        &:hover {
-            svg {
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(-10px); // 左に10px動く
-                }
+        @media screen and (min-width: 1024px) {
+            &:hover svg {
+                transform: translateX(-.625rem);
             }
         }
     }

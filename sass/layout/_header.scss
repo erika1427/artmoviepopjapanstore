@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 .header {
-    padding: 0.9375rem 5%; // 15px
+    padding: .9375rem 5%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -11,30 +11,29 @@
     position: fixed;
     z-index: 10;
     
-    pointer-events: none; // すき間をクリック貫通
-    mix-blend-mode: difference; // 👈 ヘッダー全体に魔法をかける！
+    pointer-events: none;
+    mix-blend-mode: difference;
 
-    // 👇 メニューが開いた時（no-scrollがついた時）はブレンドを解除する
     body.no-scroll & {
         mix-blend-mode: normal;
     }
 
     @media screen and (min-width: 630px) {
-        padding: 1.5rem 5%; // 24px
+        padding: 1.5rem 5%;
     }
 
     @media screen and (min-width: 1024px) {
-        padding-left: min(3.55vw, 4.25rem); // 68px
-        padding-right: min(3.86vw, 4.625rem); // 74px
+        padding-left: min(3.55vw, 4.25rem);
+        padding-right: min(3.86vw, 4.625rem);
     }
 
     &__logo {
-        width: 2.625rem; // 42px
+        width: 2.625rem;
         height: auto;
-        pointer-events: auto; // クリック判定復活
+        pointer-events: auto;
 
         @media screen and (min-width: 630px) {
-            width: 3.75rem; // 60px
+            width: 3.75rem;
         }
 
         @media screen and (min-width: 1024px) {
@@ -46,30 +45,30 @@
             height: 100%;
             
             path {
-                stroke: #fff; // 👈 ロゴは「線」なのでstrokeを白にする
+                stroke: #fff;
             }
         }
     }
 
     &__box {
-        pointer-events: auto; // クリック判定復活
+        pointer-events: auto;
         @media screen and (min-width: 1024px) {
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
-            gap: min(4.0625rem, 3.36vw); // 65px
+            gap: min(3.36vw, 4.0625rem);
         }
     }
 }
 
 .btn {
-    height: 1.25rem; // 20px
+    height: 1.25rem;
     display: flex;
     align-items: center;
-    gap: 1.3125rem; // 21px
+    gap: 1.3125rem;
 
     @media screen and (min-width: 630px) {
-        gap: 1.875rem; // 30px
+        gap: 1.875rem;
     }
 
     &__burger {
@@ -78,18 +77,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1.5625rem; // 25px
+        width: 1.5625rem;
         cursor: pointer;
         z-index: 1;
 
         @media screen and (min-width: 630px) {
-            width: 2.1875rem; // 35px
+            width: 2.1875rem;
         }
 
         @media screen and (min-width: 1024px) {
             display: none;
         }
-
     }
 
     &__top,
@@ -98,41 +96,37 @@
         position: absolute;
         display: block;
         width: 100%;
-        height: 0.125rem; // 2px
-        background: #C2BCAC; // 👈 バーガーボタンの線を白にする
+        height: 2px;
+        background: #C2BCAC;
 
-        // 👇 追加：メニューが開いた時（bodyにno-scrollが付いた時）は黒にする！
         body.no-scroll & {
             background-color: $black;
         }
     }
 
     &__top {
-        transform: translateY(-0.5rem); // -8px
+        transform: translateY(-.5rem);
 
         @media screen and (min-width: 630px) {
-            transform: translateY(-0.6875rem); // -11px
+            transform: translateY(-.6875rem);
         }
     }
 
-    // &__middle {
-    // }
-
     &__bottom {
-        transform: translateY(0.5rem); // 8px
+        transform: translateY(.5rem);
 
         @media screen and (min-width: 630px) {
-            transform: translateY(0.6875rem); // 11px
+            transform: translateY(.6875rem);
         }
     }
 }
 
 .cart {
-    width: 1.3125rem; // 21px
+    width: 1.3125rem;
     height: auto;
 
     @media screen and (min-width: 630px) {
-        width: 1.875rem; // 30px
+        width: 1.875rem;
     }
 
     &__link {
@@ -146,7 +140,7 @@
             height: 100%;
             
             path {
-                fill: #C2BCAC; // 👈 カートは「塗り」なのでfillを白にする！
+                fill: #C2BCAC;
             }
         }
     }

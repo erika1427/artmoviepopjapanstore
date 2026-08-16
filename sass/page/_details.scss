@@ -15,24 +15,23 @@
     .product__wrapper {
         @media screen and (min-width: 1024px) {
             display: flex;
-            gap: min(8.7vw, 167px);
-            align-items: flex-start; // stickyを効かせるために必須
+            gap: min(8.7vw, 10.4375rem);
+            align-items: flex-start;
         }
     }
 
     .slider-wrapper {
-        margin: 0 auto 30px;
+        margin: 0 auto 1.875rem;
         position: relative;
-        padding-bottom: 30px;
+        padding-bottom: 1.875rem;
         width: 80%;
-        max-width: 600px;
+        max-width: 37.5rem;
 
         @media screen and (min-width: 1024px) {
-            width: min(25.29vw, 543px);
+            width: min(25.29vw, 33.9375rem);
             height: fit-content;
             position: sticky;
-            // align-self: flex-start;
-            top: min(12.24vw, 235px);
+            top: min(12.24vw, 14.6875rem);
         }
 
         .swiper-button-next,
@@ -41,22 +40,24 @@
             z-index: 0;
         }
 
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: $black;
+            @media screen and (min-width: 1024px) {
+                top: min(20vw, 22.3125rem);
+            }
+        }
+
         .swiper-button-prev {
             left: -14%;
-            color: $black;
-
             @media screen and (min-width: 1024px) {
-                top: min(20vw, 357px);
                 left: -16%;
             }
         }
 
         .swiper-button-next {
             right: -14%;
-            color: $black;
-
             @media screen and (min-width: 1024px) {
-                top: min(20vw, 357px);
                 right: -16%;
             }
         }
@@ -66,18 +67,18 @@
         }
 
         .swiper-pagination-bullet {
-            width: 24px;
-            height: 4px;
-            border-radius: 2px;
+            width: 1.5rem;
+            height: .25rem;
+            border-radius: .125rem;
             background: #CED1E0;
             opacity: 1;
-            margin: 0 4px !important;
+            margin: 0 .25rem !important;
             transition: .3s;
         }
 
         .swiper-pagination-bullet-active {
             background: #343B4C;
-            width: 32px;
+            width: 2rem;
         }
     }
 
@@ -95,7 +96,7 @@
                 height: auto;
                 display: block;
                 transform-origin: 50% 50%;
-                transition: transform 0.3s ease;
+                transition: transform .3s ease;
             }
 
             &.is-zoomed {
@@ -108,8 +109,13 @@
         }
     }
 
+    .title,
+    .subtitle,
+    .price {
+        margin-bottom: 1.4375rem;
+    }
+
     .title {
-        margin-bottom: 23px;
         font-weight: 700;
         font-size: 1.875rem;
 
@@ -118,13 +124,12 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(1.83vw, 35px);
-            font-size: min(3.34vw, 64px);
+            margin-bottom: min(1.83vw, 2.1875rem);
+            font-size: min(3.34vw, 4rem);
         }
     }
 
     .subtitle {
-        margin-bottom: 23px;
         font-weight: 400;
         font-size: 1.25rem;
         line-height: 1.2;
@@ -134,13 +139,12 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(1.83vw, 35px);
-            font-size: min(2.5vw, 48px);
+            margin-bottom: min(1.83vw, 2.1875rem);
+            font-size: min(2.5vw, 3rem);
         }
     }
 
     .price {
-        margin-bottom: 23px;
         font-weight: 700;
         font-size: 1.25rem;
 
@@ -149,23 +153,32 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(1.1vw, 21px);
-            font-size: min(1.88vw, 36px);
+            margin-bottom: min(1.1vw, 1.3125rem);
+            font-size: min(1.88vw, 2.25rem);
         }
     }
 
-    // 購入ボタン（Buy It Now）：HTML変更なし・ふんわりフェード
-    .buy {
-        margin-bottom: 19px;
-        width: 241px;
-        padding: 18px 0;
+    .buy,
+    .add {
+        width: 15.0625rem;
+        padding: 1.125rem 0;
         display: block;
         font-weight: 700;
         font-size: 1.5rem;
         color: $black;
-        background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
         text-decoration: none;
         text-align: center;
+
+        @media screen and (min-width: 1024px) {
+            width: min(15.16vw, 18.1875rem);
+            padding: min(1.05vw, 1.25rem) 0;
+            font-size: min(1.57vw, 1.875rem);
+        }
+    }
+
+    .buy {
+        margin-bottom: 1.1875rem;
+        background: linear-gradient(90deg, #E74D69 0%, #F36756 100%);
         border: 3px solid #E74D69;
         position: relative;
         z-index: 1;
@@ -176,16 +189,13 @@
             inset: 0;
             background-color: $white;
             opacity: 0;
-            transition: opacity 0.2s ease;
+            transition: opacity .2s ease;
             z-index: -1;
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(1.1vw, 21px);
-            width: min(15.16vw, 291px);
-            padding: min(1.05vw, 20px) 0;
-            font-size: min(1.57vw, 30px);
-            transition: color 0.2s ease, border-color 0.2s ease;
+            margin-bottom: min(1.1vw, 1.3125rem);
+            transition: color .2s ease, border-color .2s ease;
 
             &:hover {
                 color: #E74D69;
@@ -197,31 +207,18 @@
         }
     }
 
-    // カートに追加ボタン（Add to cart）：HTML変更なし・左からシュッとスライド
     .add {
-        margin-bottom: 47px;
-        width: 241px;
-        padding: 18px 0;
-        display: block;
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: $black;
-        text-decoration: none;
-        text-align: center;
+        margin-bottom: 2.9375rem;
         border: 3px solid $black;
         background-color: $white;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(3.23vw, 62px);
-            width: min(15.16vw, 291px);
-            padding: min(1.05vw, 20px) 0;
-            font-size: min(1.57vw, 30px);
-
+            margin-bottom: min(3.23vw, 3.875rem);
             background-image: linear-gradient(to right, $black 0%, $black 100%);
             background-size: 0% 100%;
             background-repeat: no-repeat;
             background-position: left center;
-            transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1), color 0.4s ease, border-color 0.4s ease;
+            transition: background-size .4s cubic-bezier(.22, 1, .36, 1), color .4s ease, border-color .4s ease;
 
             &:hover {
                 color: $white;
@@ -231,7 +228,7 @@
     }
 
     .text {
-        margin-bottom: 38px;
+        margin-bottom: 2.375rem;
         font-size: .875rem;
         line-height: 1.9;
 
@@ -240,24 +237,24 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(2.56vw, 49px);
-            font-size: min(1.05vw, 20px);
+            margin-bottom: min(2.56vw, 3.0625rem);
+            font-size: min(1.05vw, 1.25rem);
         }
     }
 
     .shipping {
-        margin-bottom: 38px;
-        padding: 29px 5% 22px 5%;
+        margin-bottom: 2.375rem;
+        padding: 1.8125rem 5% 1.375rem 5%;
         line-height: 1.9;
         background: linear-gradient(180deg, #CED1E0 0%, #CFC9E0 100%);
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(5.16vw, 99px);
-            padding: min(1.2vw, 23px) min(1.72vw, 33px);
+            margin-bottom: min(5.16vw, 6.1875rem);
+            padding: min(1.2vw, 1.4375rem) min(1.72vw, 2.0625rem);
         }
 
         &__ttl {
-            margin-bottom: 21px;
+            margin-bottom: 1.3125rem;
             font-weight: 700;
             font-size: .875rem;
 
@@ -266,13 +263,13 @@
             }
 
             @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.31vw, 25px);
-                font-size: min(1.05vw, 20px);
+                margin-bottom: min(1.31vw, 1.5625rem);
+                font-size: min(1.05vw, 1.25rem);
             }
         }
 
         &__txt {
-            margin-bottom: 6px;
+            margin-bottom: .375rem;
             font-size: .875rem;
 
             @media screen and (min-width: 630px) {
@@ -280,24 +277,24 @@
             }
 
             @media screen and (min-width: 1024px) {
-                margin-bottom: min(0.42vw, 8px);
-                font-size: min(1.05vw, 20px);
+                margin-bottom: min(.42vw, .5rem);
+                font-size: min(1.05vw, 1.25rem);
             }
         }
 
         &__payments {
             display: flex;
             align-items: start;
-            gap: 10px;
+            gap: .625rem;
 
             svg {
-                width: 50px;
-                height: 32px;
+                width: 3.125rem;
+                height: 2rem;
                 border: 1px solid $black;
             }
 
             @media screen and (min-width: 1024px) {
-                gap: min(1.05vw, 20px);
+                gap: min(1.05vw, 1.25rem);
             }
         }
 
@@ -309,13 +306,13 @@
             }
 
             @media screen and (min-width: 1024px) {
-                font-size: min(1.05vw, 20px);
+                font-size: min(1.05vw, 1.25rem);
             }
         }
 
         &-detail {
-            margin: 0 5% 97px 5%;
-            padding: 29px 5% 23px 5%;
+            margin: 0 5% 6.0625rem 5%;
+            padding: 1.8125rem 5% 1.4375rem 5%;
             font-size: .875rem;
             line-height: 1.9;
             background: $white;
@@ -326,19 +323,19 @@
             }
 
             @media screen and (min-width: 1024px) {
-                margin: 0 15% min(11.57vw, 222px) 15%;
-                padding: min(3.34vw, 64px) min(3.91vw, 75px);
-                font-size: min(1.05vw, 20px);
+                margin: 0 15% min(11.57vw, 13.875rem) 15%;
+                padding: min(3.34vw, 4rem) min(3.91vw, 4.6875rem);
+                font-size: min(1.05vw, 1.25rem);
             }
         }
 
         &-detail__shipping {
-            margin-bottom: 27px;
+            margin-bottom: 1.6875rem;
         }
     }
 
     .secttl {
-        margin-bottom: 50px;
+        margin-bottom: 3.125rem;
         font-family: $head;
         font-weight: 400;
         font-size: 2.5rem;
@@ -349,8 +346,8 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(5.32vw, 102px);
-            font-size: min(3.34vw, 64px);
+            margin-bottom: min(5.32vw, 6.375rem);
+            font-size: min(3.34vw, 4rem);
         }
     }
 
@@ -364,12 +361,12 @@
 
     .similar,
     .picks {
-        margin-bottom: 90px;
+        margin-bottom: 5.625rem;
         position: relative;
         z-index: 0;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(8.81vw, 169px);
+            margin-bottom: min(8.81vw, 10.5625rem);
         }
 
         &__items {
@@ -377,7 +374,7 @@
                 display: flex;
                 flex-wrap: wrap !important;
                 justify-content: space-between;
-                row-gap: 84px;
+                row-gap: 5.25rem;
                 transform: translate3d(0, 0, 0) !important;
             }
 
@@ -425,7 +422,7 @@
             @media screen and (min-width: 1024px) {
                 width: auto;
                 top: auto;
-                bottom: -45px;
+                bottom: -2.8125rem;
                 position: absolute;
                 left: 0;
                 display: flex;
@@ -434,26 +431,26 @@
 
         .swiper-pagination-bullet {
             display: block;
-            margin: 0 4px !important;
+            margin: 0 .25rem !important;
             background: #CED1E0;
             opacity: 1;
-            width: 24px;
-            height: 4px;
-            border-radius: 2px;
+            width: 1.5rem;
+            height: .25rem;
+            border-radius: .125rem;
             transition: .3s;
         }
 
         .swiper-pagination-bullet-active {
             background: #343B4C;
-            width: 32px;
+            width: 2rem;
         }
     }
 
     .viewed {
-        margin-bottom: 60px;
+        margin-bottom: 3.75rem;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.41vw, 123px);
+            margin-bottom: min(6.41vw, 7.6875rem);
         }
     }
 
@@ -467,23 +464,19 @@
     }
 
     .underlink {
-        margin-bottom: 90px;
+        margin-bottom: 5.625rem;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.41vw, 123px);
+            margin-bottom: min(6.41vw, 7.6875rem);
         }
 
         svg {
-            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
-            transition: transform 0.1s ease;
+            transition: transform .1s ease;
         }
 
-        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
-        &:hover {
-            svg {
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(-10px); // 左に10px動く
-                }
+        @media screen and (min-width: 1024px) {
+            &:hover svg {
+                transform: translateX(-.625rem);
             }
         }
     }

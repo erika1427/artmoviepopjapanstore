@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 html {
-    scroll-behavior: smooth; // 👈 これを追加するだけ！
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,88 +17,73 @@ body {
     }
 }
 
-// .wrapper {
-//     overflow-x: hidden;
-// }
-
-// 👇 修正後
-.wrapper {
-    overflow-x: clip; // hidden の代わりに clip を使う！
-}
-
 body:not(#home) {
     .main {
-        padding-top: 100px;
+        padding-top: 6.25rem;
         background-image: url('data:image/svg+xml;utf8,<svg width="375" height="1072" viewBox="0 0 375 1072" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M375 469L0 596.5V952L375 1071.5V469Z" fill="%23F6F7F8"/><path d="M375 119.5L0 0V596.501L375 469V119.5Z" fill="%23EDEEF0"/></svg>');
         background-repeat: repeat-y;
         background-size: 100% auto;
-        background-position: 0 -340px;
+        background-position: 0 -21.25rem;
 
         @media screen and (min-width: 630px) {
-            padding-top: 120px;
+            padding-top: 7.5rem;
         }
 
-        // PC（1024px以上）の時に新しいSVGに切り替える
         @media screen and (min-width: 1024px) {
-            padding-top: min(12.24vw, 235px);
+            padding-top: min(12.24vw, 14.6875rem);
             background-image: url('data:image/svg+xml;utf8,<svg width="1920" height="7531" viewBox="0 0 1920 7531" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 731.5V0H1920V326L0 731.5Z" fill="%23EDEEF0"/><path d="M1920 2734.5L0 3048V3767L1920 4239.5V2734.5Z" fill="%23F6F7F8"/><path d="M0 5376.5V3767L1920 4239.5V5113L0 5376.5Z" fill="%23EDEEF0"/><path d="M0 7530.5V5921L1920 6393.5V7267L0 7530.5Z" fill="%23EDEEF0"/><path d="M1920 326L0 731.5V1450.5L1920 1880V326Z" fill="%23F6F7F8"/><path d="M1920 5113L0 5376.5V5935.5L1920 6480V5113Z" fill="%23F6F7F8"/><path d="M1920 1880L0 1450.5V3048L1920 2734V1880Z" fill="%23EDEEF0"/></svg>');
             background-position: 0 0;
         }
     }
 }
 
-// スマホ（1023px以下）の時の設定
-.br-pc {
-    display: none; // PC用の改行を無効にする
+.wrapper {
+    overflow-x: clip;
 }
 
-// PC（1024px以上）の時の設定
+.br-pc {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
     .br-sp {
-        display: none; // スマホ用の改行を無効にする
+        display: none;
     }
 
     .br-pc {
-        display: inline; // PC用の改行を有効にする
+        display: inline;
     }
 }
 
-
-/* ===============================================
-   コンポーネント（どの画面サイズでもベースとなる設定）
-=============================================== */
-
 .totop {
     position: fixed;
-    bottom: 14px;
+    bottom: .875rem;
     right: 5%;
     z-index: 3;
 
     @media screen and (min-width: 1024px) {
-        bottom: 34px;
+        bottom: 2.125rem;
     }
 
     &__link {
-        width: 64px;
-        height: 64px;
+        width: 4rem;
+        height: 4rem;
         display: block;
-        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 .3125rem .9375rem 0 rgba(0, 0, 0, .35);
         border-radius: 100%;
         transition: .2s;
 
-        &:hover {
-            @media screen and (min-width: 1024px) {
-                box-shadow: none;
-            }
-        }
-
         @media screen and (min-width: 360px) {
-            bottom: 30px;
+            bottom: 1.875rem;
         }
 
         @media screen and (min-width: 1024px) {
-            width: min(6.25vw, 7.5rem); // 120px
-            height: min(6.25vw, 7.5rem); // 120px
+            width: min(6.25vw, 7.5rem);
+            height: min(6.25vw, 7.5rem);
+
+            &:hover {
+                box-shadow: none;
+            }
         }
 
         svg {
@@ -109,7 +94,6 @@ body:not(#home) {
     }
 }
 
-// #items の外の一番下などに追加してください
 @keyframes textFadeIn {
     100% {
         opacity: 1;
@@ -120,15 +104,13 @@ body:not(#home) {
 .flex {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 84px;
+    row-gap: 5.25rem;
     justify-content: space-between;
 
     @media screen and (min-width: 1024px) {
-        row-gap: min(6.83vw, 8.1875rem); // 131px
+        row-gap: min(6.83vw, 8.1875rem);
     }
 }
-
-/* --- 画像カード (.box / .image / .overlay) --- */
 
 .box {
     width: 46%;
@@ -142,16 +124,25 @@ body:not(#home) {
     }
 
     @media screen and (min-width: 1024px) {
-        width: min(20.8vw, 24.9375rem); // 399px
+        width: min(20.8vw, 24.9375rem);
+    }
+}
 
-        // 👇 ホバーアクションはPC（1024px以上）の時だけ発動させる
+.image {
+    margin-bottom: .625rem;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: min(1.72vw, 2.0625rem);
+
         &:hover {
-            .image img {
+            img {
                 transform: scale(1.1);
-                filter: blur(5px);
+                filter: blur(.3125rem);
             }
 
-            .image::before {
+            &::before {
                 opacity: 1;
             }
 
@@ -161,25 +152,14 @@ body:not(#home) {
             }
         }
     }
-}
-
-.image {
-    margin-bottom: .625rem; // 10px
-    position: relative;
-    overflow: hidden;
-
-    @media screen and (min-width: 1024px) {
-        margin-bottom: min(1.72vw, 2.0625rem); // 33px
-    }
 
     img {
         width: 100%;
         height: auto;
         display: block;
-        transition: all 0.4s ease;
+        transition: all .4s ease;
     }
 
-    // ふわっと色味をつけるフィルター
     &::before {
         content: '';
         position: absolute;
@@ -187,19 +167,16 @@ body:not(#home) {
         left: 0;
         width: 100%;
         height: 100%;
-        // 右から左へ流れるグラデーションと暗いフィルターを重ねる
         background:
-            linear-gradient(to left, rgba(206, 209, 224, 0.4), rgba(207, 201, 224, 0.4)),
-            rgba(30, 35, 45, 0.7);
-
-        background-blend-mode: multiply; // 2つを馴染ませるためのブレンドモード
+            linear-gradient(to left, rgba(206, 209, 224, .4), rgba(207, 201, 224, .4)),
+            rgba(30, 35, 45, .7);
+        background-blend-mode: multiply;
         opacity: 0;
         transition: opacity .4s ease;
         z-index: 1;
         pointer-events: none;
     }
 
-    // スッと降りてくる文字の枠
     &__overlay {
         position: absolute;
         top: 0;
@@ -207,18 +184,15 @@ body:not(#home) {
         width: 100%;
         height: 100%;
         z-index: 2;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 15px; // 項目どうしの隙間
-        padding: 20px;
-
+        gap: .9375rem;
+        padding: 1.25rem;
         opacity: 0;
-        transform: translateY(-10%); // 👈 上に隠しておく
-        transition: all 0.2s ease;
-
+        transform: translateY(-10%);
+        transition: all .2s ease;
         color: $white;
         text-align: center;
         pointer-events: none;
@@ -249,7 +223,7 @@ body:not(#home) {
 }
 
 .itemtitle {
-    margin-bottom: 10px;
+    margin-bottom: .625rem;
     font-weight: 700;
     font-size: .9375rem;
 
@@ -258,8 +232,8 @@ body:not(#home) {
     }
 
     @media screen and (min-width: 1024px) {
-        font-size: min(1.46vw, 1.75rem); // 28px
-        margin-bottom: min(.84vw, 1rem); // 16px
+        font-size: min(1.46vw, 1.75rem);
+        margin-bottom: min(.84vw, 1rem);
     }
 }
 
@@ -273,7 +247,7 @@ body:not(#home) {
     }
 
     @media screen and (min-width: 1024px) {
-        font-size: min(.73vw, 0.875rem); // 14px
+        font-size: min(.73vw, .875rem);
     }
 }
 
@@ -287,36 +261,33 @@ body:not(#home) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 13px;
+    gap: .8125rem;
 
     svg {
-        width: 8px;
-        // height: 14px;
-        // height: fit-content;
+        width: .5rem;
 
         @media screen and (min-width: 1024px) {
-            width: min(.79vw, 15px);
-            height: min(1.31vw, 25px);
+            width: min(.79vw, .9375rem);
+            height: min(1.31vw, 1.5625rem);
         }
     }
 
     @media screen and (min-width: 1024px) {
-        // margin-top: min(6.41vw, 123px);
-        font-size: min(1.57vw, 30px);
-        gap: min(1.05vw, 20px);
+        font-size: min(1.57vw, 1.875rem);
+        gap: min(1.05vw, 1.25rem);
     }
 }
 
 .contact {
-    padding: 39px 0;
+    padding: 2.4375rem 0;
     background: linear-gradient(to right, #10EBB4, #17E6D3);
 
     @media screen and (min-width: 1024px) {
-        padding: min(5.27vw, 6.3125rem) 0; // 101px
+        padding: min(5.27vw, 6.3125rem) 0;
     }
 
     &__txt {
-        margin-bottom: 23px;
+        margin-bottom: 1.4375rem;
         font-family: $head;
         font-size: 1.85rem;
         text-align: center;
@@ -326,7 +297,7 @@ body:not(#home) {
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: min(3.65vw, 4.375rem); // 70px
+            font-size: min(3.65vw, 4.375rem);
         }
     }
 
@@ -335,12 +306,10 @@ body:not(#home) {
         margin: 0 auto;
         border: 3px solid $black;
 
-        // 👇 1024px以上（PC）の時だけ、ホバー用の仕掛けを作る
         @media screen and (min-width: 1024px) {
             position: relative;
             overflow: hidden;
 
-            // 左から流れてくる黒い背景
             &::before {
                 content: '';
                 position: absolute;
@@ -349,21 +318,18 @@ body:not(#home) {
                 width: 100%;
                 height: 100%;
                 background-color: $black;
-
-                // 最初は左に隠しておく
                 transform: translateX(-100%);
-                transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+                transition: transform .4s cubic-bezier(.22, 1, .36, 1);
                 z-index: 1; 
             }
 
-            // ホバーした時の動き
             &:hover {
                 &::before {
-                    transform: translateX(0); // 背景を右へスライド
+                    transform: translateX(0); 
                 }
 
                 .contact__link {
-                    color: $white; // 文字を白に反転
+                    color: $white; 
                 }
             }
         }
@@ -371,20 +337,19 @@ body:not(#home) {
 
     &__link {
         display: block;
-        padding: 17px 51px;
+        padding: 1.0625rem 3.1875rem;
         font-weight: 700;
         font-size: 1.5rem;
         color: $black;
         text-decoration: none;
 
         @media screen and (min-width: 1024px) {
-            padding: min(1.05vw, 1.25rem) min(3.13vw, 3.75rem); // 20px 60px
-            font-size: min(1.57vw, 1.875rem); // 30px
+            padding: min(1.05vw, 1.25rem) min(3.13vw, 3.75rem);
+            font-size: min(1.57vw, 1.875rem);
             
-            // 👇 1024px以上の時だけ、文字の手前設定とフワッと変化する設定を付与
             position: relative;
             z-index: 2;
-            transition: color 0.4s ease; 
+            transition: color .4s ease; 
         }
     }
 }

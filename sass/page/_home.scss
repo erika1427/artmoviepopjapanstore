@@ -19,37 +19,25 @@
                 max-width: 36%;
             }
 
-            // 👇 追加：一文字ずつのアニメーション設定
             path {
-                opacity: 0; // 最初は見えない状態にする
-                transform: translateY(15px); // 少し下から浮かび上がるようにする
-                animation: mvLogoFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; // 0.6秒かけてアニメーション
+                opacity: 0;
+                transform: translateY(.9375rem);
+                animation: mvLogoFadeIn .6s cubic-bezier(.22, 1, .36, 1) forwards;
             }
 
-            // 👇 for文の魔法：16個のpathに、0.05秒ずつズレた遅延時間を自動で付与する
             @for $i from 1 through 16 {
                 path:nth-child(#{$i}) {
-                    animation-delay: #{$i * 0.07}s;
+                    animation-delay: #{$i * .07}s;
                 }
             }
 
-            // 「SINCE 2017」（最後から2つのパーツ）だけは、ポンポンポン…と出た後に少し間を置いてフワッと出す
-            path:nth-last-child(1),
-            path:nth-last-child(2),
-            path:nth-last-child(3),
-            path:nth-last-child(4),
-            path:nth-last-child(5),
-            path:nth-last-child(6),
-            path:nth-last-child(7),
-            path:nth-last-child(8),
-            path:nth-last-child(9) {
-                animation-delay: 1.2s; // 1.2秒後に遅らせて発動
-                animation-duration: 1s; // ゆったり1秒かけて出す
+            path:nth-last-child(-n+9) {
+                animation-delay: 1.2s;
+                animation-duration: 1s;
             }
         }
     }
 
-    // 👇 追加：アニメーションの動き（透明度0＆下ズレ → 透明度1＆定位置）
     @keyframes mvLogoFadeIn {
         100% {
             opacity: 1;
@@ -58,7 +46,7 @@
     }
 
     .flex {
-        margin-bottom: 3.75rem; // 60px
+        margin-bottom: 3.75rem;
     }
 
     .all {
@@ -75,7 +63,7 @@
             font-size: .9375rem;
             display: flex;
             align-items: center;
-            gap: 0.4375rem; // 7px
+            gap: .4375rem;
             color: $black;
             text-decoration: none;
 
@@ -85,28 +73,28 @@
 
             @media screen and (min-width: 1024px) {
                 font-size: min(1.46vw, 1.75rem);
-                gap: min(.73vw, 14px);
+                gap: min(.73vw, .875rem);
             }
 
             &:hover {
                 @media screen and (min-width: 1024px) {
                     svg {
-                        transform: translateX(10px);
+                        transform: translateX(.625rem);
                     }
                 }
             }
 
             svg {
-                width: 0.375rem; // 6px
+                width: .375rem;
                 height: auto;
                 transition: .1s;
 
                 @media screen and (min-width: 630px) {
-                    width: 0.5rem; // 8px
+                    width: .5rem;
                 }
 
                 @media screen and (min-width: 1024px) {
-                    width: min(.47vw, 0.5625rem); // 9px
+                    width: min(.47vw, .5625rem);
                 }
             }
         }
@@ -156,7 +144,7 @@
                 display: flex;
                 flex-wrap: wrap !important;
                 justify-content: space-between;
-                row-gap: 5.25rem; // 84px
+                row-gap: 5.25rem;
                 transform: translate3d(0, 0, 0) !important;
             }
 
@@ -165,7 +153,7 @@
                 justify-content: flex-start !important;
                 row-gap: 0 !important;
 
-                margin-bottom: min(14.4vw, 17.3125rem); // 277px
+                margin-bottom: min(14.4vw, 17.3125rem);
             }
         }
 
@@ -180,11 +168,11 @@
         .swiper-pagination {
             width: auto;
             top: auto;
-            bottom: min(6.46vw, 124px); // -45px
+            bottom: min(6.46vw, 7.75rem);
             position: absolute;
             left: 0;
             display: flex;
-            gap: min(.83vw, 16px); // 16px
+            gap: min(.83vw, 1rem);
         }
 
         .swiper-pagination-bullet {
@@ -192,8 +180,8 @@
             margin: 0;
             background: #fff;
             opacity: 1;
-            width: min(1.25rem, 1.04vw); // 20px
-            height: min(1.25rem, 1.04vw); // 20px
+            width: min(1.25rem, 1.04vw);
+            height: min(1.25rem, 1.04vw);
             border-radius: 0;
         }
 
@@ -224,7 +212,7 @@
         &__bg {
             width: 100%;
             position: absolute;
-            top: -1.6875rem; // -27px
+            top: -1.6875rem;
 
             @media screen and (min-width: 1024px) {
                 display: none;
@@ -235,7 +223,7 @@
                 height: auto;
 
                 @media screen and (min-width: 630px) {
-                    height: calc(40rem + 50vw); // 640px
+                    height: calc(40rem + 50vw);
                 }
             }
         }
@@ -244,7 +232,7 @@
             width: 100%;
             height: auto;
             position: absolute;
-            top: min(-14.7vw, 17.6875rem); // 283px
+            top: min(-14.7vw, 17.6875rem);
             display: none;
 
             @media screen and (min-width: 1024px) {
@@ -258,20 +246,20 @@
         }
 
         &__ttl {
-            margin-bottom: 3.125rem; // 50px
-            padding-top: 2rem; // 32px
+            margin-bottom: 3.125rem;
+            padding-top: 2rem;
             font-family: $head;
             font-weight: 400;
             font-size: 2.5rem;
             color: $white;
 
             @media screen and (min-width: 630px) {
-                font-size: min(5.21vw, 6.25rem); // 100px
+                font-size: min(5.21vw, 6.25rem);
             }
 
             @media screen and (min-width: 1024px) {
-                margin-bottom: min(5.47vw, 6.5625rem); // 105px
-                padding-top: min(14.1vw, 16.9375rem); // 271px
+                margin-bottom: min(5.47vw, 6.5625rem);
+                padding-top: min(14.1vw, 16.9375rem);
             }
         }
 
@@ -286,10 +274,11 @@
     }
 
     .moviesection {
-        margin-top: 5.625rem; // 90px
+        margin-top: 5.625rem;
 
         @media screen and (min-width: 1024px) {
             margin-top: 0;
+            margin-bottom: min(6.46vw, 7.75rem);
         }
     }
 
@@ -308,11 +297,11 @@
     .video {
         width: 100%;
         height: 100%;
-        margin-bottom: 5.25rem; // 84px
+        margin-bottom: 5.25rem;
         position: relative;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(5.32vw, 6.375rem); // 102px
+            margin-bottom: min(5.32vw, 6.375rem);
         }
 
         video {
@@ -333,7 +322,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        -webkit-text-stroke: 0.125rem $black; // 2px
+        -webkit-text-stroke: .125rem $black;
         paint-order: stroke;
         white-space: nowrap;
 
@@ -342,69 +331,51 @@
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: min(5.21vw, 6.25rem); // 100px
+            font-size: min(5.21vw, 6.25rem);
         }
     }
 
-    .flyers {
-        position: relative;
-
-        @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.46vw, 7.75rem); // 124px
-        }
-
-        &__bg {
-            width: 100%;
-            position: absolute;
-            top: -1.1875rem; // -19px
-
-            @media screen and (min-width: 1024px) {
-                display: none;
-            }
-
-            svg {
-                width: 100%;
-                height: auto;
-
-                @media screen and (min-width: 630px) {
-                    height: calc(72.8125rem + 50vw); // 1165px
-                }
-            }
-        }
-    }
-
+    .flyers,
     .tickets {
         position: relative;
+    }
+
+    .flyers__bg,
+    .tickets__bg {
+        width: 100%;
+        position: absolute;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.46vw, 7.75rem); // 124px
+            display: none;
         }
 
-        &__bg {
+        svg {
             width: 100%;
-            position: absolute;
-            top: 29.625rem; // 474px
+            height: auto;
+        }
+    }
 
-            @media screen and (min-width: 1024px) {
-                display: none;
+    .flyers__bg {
+        top: -1.1875rem;
+
+        svg {
+            @media screen and (min-width: 630px) {
+                height: calc(72.8125rem + 50vw);
             }
+        }
+    }
 
-            svg {
-                width: 100%;
-                height: auto;
+    .tickets__bg {
+        top: 29.625rem;
 
-                @media screen and (min-width: 630px) {
-                    height: calc(75rem + 50vw); // 1200px
-                }
+        svg {
+            @media screen and (min-width: 630px) {
+                height: calc(75rem + 50vw);
             }
         }
     }
 
     .streetware {
-        margin-bottom: 5.625rem; // 90px
-
-        @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.46vw, 7.75rem); // 124px
-        }
+        margin-bottom: 5.625rem;
     }
 }

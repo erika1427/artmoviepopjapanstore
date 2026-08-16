@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 #shipping {
-    .main> :not(.contact) {
+    .main > :not(.contact, .underlink) {
         padding-left: 5%;
         padding-right: 5%;
 
@@ -14,7 +14,7 @@
     }
 
     .ttl {
-        margin-bottom: 46px;
+        margin-bottom: 2.875rem;
         font-family: $head;
         font-weight: 400;
         font-size: 1.875rem;
@@ -25,273 +25,125 @@
         }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(7.71vw, 148px);
-            font-size: min(2.61vw, 50px);
+            margin-bottom: min(7.71vw, 9.25rem);
+            font-size: min(2.61vw, 3.125rem);
         }
     }
 
     .shipping {
-        margin-bottom: 67px;
+        margin-bottom: 4.1875rem;
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.25vw, 120px);
-        }
-
-        &__ttl {
-            margin-bottom: 38px;
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: $red;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1.3rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(3.13vw, 60px);
-                font-size: min(1.57vw, 30px);
-            }
-        }
-
-        &__txt {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-        }
-
-        &__options {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
-
-            &-txt:nth-of-type(2) {
-                font-style: italic;
-            }
-
-            &-list {
-                margin-bottom: 27px;
-                padding-left: 5%;
-
-                @media screen and (min-width: 1024px) {
-                    margin-bottom: min(1.98vw, 38px);
-                }
-            }
-
-            &-item {
-                list-style-type: disc;
-
-                span {
-                    font-weight: 700;
-                }
-            }
-        }
-
-        &__packaging {
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
-
-            &-txt {
-                margin-bottom: 27px;
-
-                @media screen and (min-width: 1024px) {
-                    margin-bottom: min(1.98vw, 38px);
-                }
-            }
-        }
-
-        &__customs {
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
+            margin-bottom: min(6.25vw, 7.5rem);
         }
     }
 
     .return {
-        margin-bottom: 60px;
+        margin-bottom: 3.75rem;
 
         @media screen and (min-width: 1024px) {
-                margin-bottom: min(7.09vw, 136px);
-            }
+            margin-bottom: min(7.09vw, 8.5rem);
+        }
+    }
 
-        &__ttl {
-            margin-bottom: 38px;
+    .shipping__ttl,
+    .return__ttl {
+        margin-bottom: 2.375rem;
+        font-weight: 700;
+        font-size: 1.125rem;
+        color: $red;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1.3rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(3.13vw, 3.75rem);
+            font-size: min(1.57vw, 1.875rem);
+        }
+    }
+
+    .shipping__txt,
+    .shipping__options,
+    .shipping__packaging,
+    .shipping__customs,
+    .return__txt,
+    .return__confitions,
+    .return__howto,
+    .return__refunds,
+    .return__rts {
+        font-size: .875rem;
+        line-height: 1.9;
+
+        @media screen and (min-width: 630px) {
+            font-size: 1rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            font-size: min(1.05vw, 1.25rem);
+        }
+    }
+
+    .shipping__options-ttl,
+    .shipping__packaging-ttl,
+    .shipping__customs-ttl,
+    .return__confitions-ttl,
+    .return__howto-ttl,
+    .return__refunds-ttl,
+    .return__rts-ttl {
+        font-weight: 700;
+    }
+
+    .shipping__txt,
+    .shipping__options,
+    .shipping__packaging-txt,
+    .return__txt,
+    .return__confitions,
+    .return__howto-txt,
+    .return__refunds-txt {
+        margin-bottom: 1.6875rem;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.98vw, 2.375rem);
+        }
+    }
+
+    .shipping__options-txt:nth-of-type(2) {
+        font-style: italic;
+    }
+
+    .shipping__options-list,
+    .return__confitions-list {
+        margin-bottom: 1.6875rem;
+        padding-left: 5%;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: min(1.98vw, 2.375rem);
+        }
+    }
+
+    .shipping__options-item,
+    .return__confitions-item {
+        list-style-type: disc;
+
+        span {
             font-weight: 700;
-            font-size: 1.125rem;
-            color: $red;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1.3rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(3.13vw, 60px);
-                font-size: min(1.57vw, 30px);
-            }
-        }
-
-        &__txt {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-        }
-
-        &__confitions {
-            margin-bottom: 27px;
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
-
-            &-txt:nth-of-type(2) {
-                font-style: italic;
-            }
-
-            &-list {
-                margin-bottom: 27px;
-                padding-left: 5%;
-            }
-
-            &-item {
-                list-style-type: disc;
-
-                span {
-                    font-weight: 700;
-                }
-            }
-        }
-
-        &__howto {
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
-
-            &-txt {
-                margin-bottom: 27px;
-            }
-        }
-
-        &__refunds {
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                margin-bottom: min(1.98vw, 38px);
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
-
-            &-txt {
-                margin-bottom: 27px;
-            }
-        }
-
-        &__rts {
-            font-size: .875rem;
-            line-height: 1.9;
-
-            @media screen and (min-width: 630px) {
-                font-size: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                font-size: min(1.05vw, 20px);
-            }
-
-            &-ttl {
-                font-weight: 700;
-            }
         }
     }
 
     .underlink {
-        margin-bottom: 90px;
+        margin-bottom: 5.625rem;
+
+        svg {
+            transition: transform .1s ease;
+        }
 
         @media screen and (min-width: 1024px) {
-            margin-bottom: min(6.41vw, 123px);
+            margin-bottom: min(6.41vw, 7.6875rem);
+
+            &:hover svg {
+                transform: translateX(-.625rem);
+            }
         }
     }
 }
