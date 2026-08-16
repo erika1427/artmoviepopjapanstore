@@ -28,20 +28,11 @@
         max-width: 600px;
 
         @media screen and (min-width: 1024px) {
-            width: min(28.29vw, 543px);
+            width: min(25.29vw, 543px);
             height: fit-content;
             position: sticky;
-            align-self: flex-start; // 必須（Flexによる縦伸び防止）
-
-            // ▼ デフォルト（画面の高さが低い場合）：画面の中央で固定
-            top: 50vh;
-            transform: translateY(-50%);
-
-            // ▼ 画面の高さが十分に大きい場合（850px以上）：中央に押し下げず、上の方で自然に固定
-            @media (min-height: 850px) {
-                top: 5vw; // 👈 ここで固定したい上からの位置を調整できます（例: 40px や 100px など）
-                transform: none; // 中央移動の計算を解除
-            }
+            // align-self: flex-start;
+            top: min(12.24vw, 235px);
         }
 
         .swiper-button-next,
@@ -480,6 +471,20 @@
 
         @media screen and (min-width: 1024px) {
             margin-bottom: min(6.41vw, 123px);
+        }
+
+        svg {
+            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
+            transition: transform 0.1s ease;
+        }
+
+        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
+        &:hover {
+            svg {
+                @media screen and (min-width: 1024px) {
+                    transform: translateX(-10px); // 左に10px動く
+                }
+            }
         }
     }
 }

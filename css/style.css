@@ -329,7 +329,6 @@ body:not(#home) .main {
 }
 .underlink svg {
   width: 8px;
-  height: 14px;
 }
 @media screen and (min-width: 1024px) {
   .underlink svg {
@@ -1550,19 +1549,11 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 }
 @media screen and (min-width: 1024px) {
   #details .slider-wrapper {
-    width: min(28.29vw, 543px);
+    width: min(25.29vw, 543px);
     height: -moz-fit-content;
     height: fit-content;
     position: sticky;
-    align-self: flex-start;
-    top: 50vh;
-    transform: translateY(-50%);
-  }
-}
-@media screen and (min-width: 1024px) and (min-height: 850px) {
-  #details .slider-wrapper {
-    top: 5vw;
-    transform: none;
+    top: min(12.24vw, 235px);
   }
 }
 #details .slider-wrapper .swiper-button-next,
@@ -1998,6 +1989,14 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 @media screen and (min-width: 1024px) {
   #details .underlink {
     margin-bottom: min(6.41vw, 123px);
+  }
+}
+#details .underlink svg {
+  transition: transform 0.1s ease;
+}
+@media screen and (min-width: 1024px) {
+  #details .underlink:hover svg {
+    transform: translateX(-10px);
   }
 }
 
