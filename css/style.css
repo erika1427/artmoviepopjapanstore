@@ -2704,6 +2704,14 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     margin-bottom: min(6.41vw, 123px);
   }
 }
+#faq .underlink svg {
+  transition: transform 0.1s ease;
+}
+@media screen and (min-width: 1024px) {
+  #faq .underlink:hover svg {
+    transform: translateX(-10px);
+  }
+}
 
 #policy .main > :not(.contact) {
   padding-left: 5%;
