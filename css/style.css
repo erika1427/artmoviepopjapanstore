@@ -2527,14 +2527,6 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     margin-bottom: min(6.41vw, 123px);
   }
 }
-#shipping .underlink svg {
-  transition: transform 0.1s ease;
-}
-@media screen and (min-width: 1024px) {
-  #shipping .underlink:hover svg {
-    transform: translateX(-10px);
-  }
-}
 
 #faq .main > :not(.contact) {
   padding-left: 5%;
@@ -2879,6 +2871,14 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 @media screen and (min-width: 1024px) {
   #policy .underlink {
     margin-bottom: min(6.41vw, 123px);
+  }
+}
+#policy .underlink svg {
+  transition: transform 0.1s ease;
+}
+@media screen and (min-width: 1024px) {
+  #policy .underlink:hover svg {
+    transform: translateX(-10px);
   }
 }
 

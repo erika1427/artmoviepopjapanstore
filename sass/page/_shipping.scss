@@ -293,19 +293,5 @@
         @media screen and (min-width: 1024px) {
             margin-bottom: min(6.41vw, 123px);
         }
-
-        svg {
-            // transformに対して0.1秒かけると明示すると、より処理が軽く綺麗になります
-            transition: transform 0.1s ease;
-        }
-
-        // 👇 ② ホバー時は「どう変化するか（ゴール地点）」だけを書く
-        &:hover {
-            svg {
-                @media screen and (min-width: 1024px) {
-                    transform: translateX(-10px); // 左に10px動く
-                }
-            }
-        }
     }
 }
