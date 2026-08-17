@@ -12,7 +12,8 @@ body {
     line-height: 1;
     color: $black;
 
-    &.no-scroll {
+    &.no-scroll,
+    &.is-filter-open {
         overflow: hidden;
     }
 }

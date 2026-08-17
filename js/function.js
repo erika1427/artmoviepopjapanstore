@@ -1,12 +1,20 @@
 $(function () {
 
-    // スライドメニュー
+    // スライドメニュー 
     $('#btn__burger').on('click', function () {
         $('#btn__top').toggleClass('rotateTop');
         $('#btn__middle').toggleClass('hideMiddle');
         $('#btn__bottom').toggleClass('rotateBottom');
-        $('#gnav').toggleClass('translateNav');
-        $('body').toggleClass('no-scroll');
+        
+        if ($('#gnav').hasClass('translateNav')) {
+            $('#gnav').removeClass('translateNav');
+            setTimeout(function() {
+                $('body').removeClass('no-scroll');
+            }, 500); 
+        } else {
+            $('#gnav').addClass('translateNav');
+            $('body').addClass('no-scroll');
+        }
     });
 
     $('.gnav__link').on('click', function () {
@@ -15,13 +23,31 @@ $(function () {
             $('#btn__top').removeClass('rotateTop');
             $('#btn__middle').removeClass('hideMiddle');
             $('#btn__bottom').removeClass('rotateBottom');
+            
+            setTimeout(function() {
+                $('body').removeClass('no-scroll');
+            }, 500);
         }
     });
 
     // filters
+    // $('.filters__btn').on('click', function () {
+    //     $('#filters').addClass('translateNav');
+    //     // $('body').toggleClass('no-scroll');
+
+    //     if ($('.filters__btn').hasClass('translateNav')) {
+    //         $('.filters__btn').removeClass('translateNav');
+    //         $('body').removeClass('no-scroll');
+    //     } else {
+    //         $('.filters__btn').addClass('translateNav');
+    //         $('body').addClass('no-scroll');
+    //     }
+    // })
+
     $('.filters__btn').on('click', function () {
         $('#filters').addClass('translateNav');
-    })
+        $('body').addClass('is-filter-open'); // スクロール停止（ブレンドはキープ）
+    });
 
     $('.filters__item').on('click', function () {
         $(this).toggleClass('is-active');
@@ -63,15 +89,16 @@ $(function () {
         if (!$(e.target).closest('#filters').length && !$(e.target).closest('.filters__btn').length) {
             if ($('#filters').hasClass('translateNav')) {
                 $('#filters').removeClass('translateNav');
+                $('body').removeClass('is-filter-open');
             }
         }
     });
 
     $('.filters__close').on('click', function () {
         $('#filters').removeClass('translateNav');
-    })
+        $('body').removeClass('is-filter-open');
+    });
 
-    // 商品画像のSwiper初期化
     var productSlider = new Swiper('.product-slider', {
         loop: false,
         allowTouchMove: true,
@@ -85,7 +112,6 @@ $(function () {
         },
     });
 
-    // 最新商品（Latest）のスライダー
     let latestSwiper;
 
     const initLatestSwiper = () => {
