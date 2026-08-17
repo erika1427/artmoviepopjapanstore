@@ -78,8 +78,13 @@ body {
   line-height: 1;
   color: #343B4C;
 }
-body.no-scroll, body.is-filter-open {
+body.no-scroll {
   overflow: hidden;
+}
+@media screen and (max-width: 1023px) {
+  body.is-filter-open {
+    overflow: hidden;
+  }
 }
 
 body:not(#home) .main {

@@ -12,9 +12,14 @@ body {
     line-height: 1;
     color: $black;
 
-    &.no-scroll,
-    &.is-filter-open {
+    &.no-scroll {
         overflow: hidden;
+    }
+
+    &.is-filter-open {
+        @media screen and (max-width: 1023px) {
+            overflow: hidden;
+        }
     }
 }
 
@@ -321,16 +326,16 @@ body:not(#home) {
                 background-color: $black;
                 transform: translateX(-100%);
                 transition: transform .4s cubic-bezier(.22, 1, .36, 1);
-                z-index: 1; 
+                z-index: 1;
             }
 
             &:hover {
                 &::before {
-                    transform: translateX(0); 
+                    transform: translateX(0);
                 }
 
                 .contact__link {
-                    color: $white; 
+                    color: $white;
                 }
             }
         }
@@ -347,10 +352,10 @@ body:not(#home) {
         @media screen and (min-width: 1024px) {
             padding: min(1.05vw, 1.25rem) min(3.13vw, 3.75rem);
             font-size: min(1.57vw, 1.875rem);
-            
+
             position: relative;
             z-index: 2;
-            transition: color .4s ease; 
+            transition: color .4s ease;
         }
     }
 }

@@ -31,22 +31,9 @@ $(function () {
     });
 
     // filters
-    // $('.filters__btn').on('click', function () {
-    //     $('#filters').addClass('translateNav');
-    //     // $('body').toggleClass('no-scroll');
-
-    //     if ($('.filters__btn').hasClass('translateNav')) {
-    //         $('.filters__btn').removeClass('translateNav');
-    //         $('body').removeClass('no-scroll');
-    //     } else {
-    //         $('.filters__btn').addClass('translateNav');
-    //         $('body').addClass('no-scroll');
-    //     }
-    // })
-
     $('.filters__btn').on('click', function () {
         $('#filters').addClass('translateNav');
-        $('body').addClass('is-filter-open'); // スクロール停止（ブレンドはキープ）
+        $('body').addClass('is-filter-open');
     });
 
     $('.filters__item').on('click', function () {
@@ -60,7 +47,6 @@ $(function () {
         var count = $('.filters__item.is-active').length;
         $('.filters__count').text('FILTERS (' + count + ')');
 
-        // 商品の絞り込み
         if (activeFilters.length === 0) {
             $('.items__box').fadeIn(300);
         } else {
@@ -112,6 +98,7 @@ $(function () {
         },
     });
 
+    // Latest Itemsのスワイパー
     let latestSwiper;
 
     const initLatestSwiper = () => {
