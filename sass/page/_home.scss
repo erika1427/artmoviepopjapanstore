@@ -16,7 +16,11 @@
             transform: translate(-50%, -50%);
 
             @media screen and (min-width: 630px) {
-                max-width: 36%;
+                max-width: 60%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                width: min(36vw, 43.8125rem);
             }
 
             path {

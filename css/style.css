@@ -908,7 +908,12 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 }
 @media screen and (min-width: 630px) {
   #home .mv svg {
-    max-width: 36%;
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #home .mv svg {
+    width: min(36vw, 43.8125rem);
   }
 }
 #home .mv svg path {
