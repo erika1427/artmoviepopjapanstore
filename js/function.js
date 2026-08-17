@@ -53,18 +53,11 @@ $(function () {
         }
     })
 
-    // 👇 ここに追加：クリアボタンを押したときのリセット処理
     $('.filters__clear').on('click', function () {
-        // 1. すべてのフィルターから 'is-active' を外す
         $('.filters__item').removeClass('is-active');
-        
-        // 2. カウントの表示を 0 に戻す
         $('.filters__count').text('FILTERS (0)');
-        
-        // 3. 隠れていたすべての商品を再び表示する
         $('.items__box').fadeIn(300);
     });
-    // 👆 追加ここまで
 
     $(document).on('click', function (e) {
         if (!$(e.target).closest('#filters').length && !$(e.target).closest('.filters__btn').length) {
