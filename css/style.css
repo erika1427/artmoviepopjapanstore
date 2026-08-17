@@ -585,6 +585,7 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
     background: none;
     opacity: 1;
     pointer-events: auto;
+    transform: translateX(0);
   }
 }
 .gnav__list {

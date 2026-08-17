@@ -55,6 +55,7 @@
         @media screen and (min-width: 1024px) {
             display: flex;
             flex-direction: row-reverse;
+            // flex-direction: row;
             align-items: center;
             gap: min(3.36vw, 4.0625rem);
         }
