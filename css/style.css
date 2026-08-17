@@ -1413,14 +1413,40 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   pointer-events: auto;
   transform: translateX(0);
 }
-#items .filters__count {
+#items .filters__box {
   margin-bottom: 3.0625rem;
+  display: flex;
+  align-items: center;
+  gap: min(6.94vw, 1.625rem);
+}
+#items .filters__count {
   font-size: 1.25rem;
   font-weight: 700;
 }
 @media screen and (min-width: 630px) {
   #items .filters__count {
     font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #items .filters__count {
+    font-size: min(1.88vw, 2.25rem);
+  }
+}
+#items .filters__clear {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #343B4C;
+  background: #F6F7F8;
+  border: 2px solid #343B4C;
+  cursor: pointer;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1024px) {
+  #items .filters__clear:hover {
+    opacity: 0.7;
   }
 }
 #items .filters__list {
@@ -1438,7 +1464,7 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
 }
 @media screen and (min-width: 630px) {
   #items .filters__item {
-    font-size: 1.25rem;
+    font-size: min(1.25rem, 24px);
   }
 }
 @media screen and (min-width: 1024px) {

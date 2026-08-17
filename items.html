@@ -142,7 +142,10 @@
 
             <!-- フィルター -->
             <div id="filters" class="filters">
-                <p class="filters__count">FILTERS (0)</p>
+                <div class="filters__box">
+                    <p class="filters__count">FILTERS (0)</p>
+                    <button class="filters__clear">Clear All</button>
+                </div>
                 <div class="filters__list">
                     <p class="filters__item" data-filter="a-bathing-ape">A BATHING APE</p>
                     <p class="filters__item" data-filter="andy-warhol">Andy Warhol</p>
@@ -161,7 +164,8 @@
                     <p class="filters__item" data-filter="madonna">MADONNA</p>
                     <p class="filters__item" data-filter="movie-lobby-cards">Movie Lobby Cards</p>
                     <p class="filters__item" data-filter="movie-memorabilia">Movie Memorabilia</p>
-                    <p class="filters__item" data-filter="movie-mini-posters-and-flyers">Movie Mini Posters &amp; Flyers</p>
+                    <p class="filters__item" data-filter="movie-mini-posters-and-flyers">Movie Mini Posters &amp; Flyers
+                    </p>
                     <p class="filters__item" data-filter="movie-press-sheets">Movie Press Sheets</p>
                     <p class="filters__item" data-filter="movie-preview-invitations">Movie Preview Invitations</p>
                     <p class="filters__item" data-filter="movie-programs">Movie Programs</p>
@@ -204,7 +208,7 @@
                                 <p class="items__year year">1999</p>
                             </div>
                         </a>
-                        <a class="items__box box" href="details.html">
+                        <a class="items__box box" href="details.html" data-category="movie-mini-posters-and-flyers">
                             <div class="items__image image">
                                 <img src="images/product/product01.jpg"
                                     alt="Paulie Gena Rowlands 1999 Movie Flyer Japan Mini Poster 7x10">

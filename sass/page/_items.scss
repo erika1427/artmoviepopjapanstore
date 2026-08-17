@@ -123,13 +123,41 @@
             transform: translateX(0);
         }
 
-        &__count {
+        &__box {
             margin-bottom: 3.0625rem;
+            display: flex;
+            align-items: center;
+            gap: min(6.94vw, 1.625rem);
+        }
+
+        &__count {
             font-size: 1.25rem;
             font-weight: 700;
 
             @media screen and (min-width: 630px) {
                 font-size: 1.75rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                font-size: min(1.88vw, 2.25rem);
+            }
+        }
+
+        &__clear {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: $black;
+            background: $white;
+            border: 2px solid $black;
+            cursor: pointer;
+            transition: .2s;
+
+            @media screen and (min-width: 1024px) {
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
 
@@ -148,7 +176,7 @@
             gap: 2vw;
 
             @media screen and (min-width: 630px) {
-                font-size: 1.25rem;
+                font-size: min(1.25rem, 24px);
             }
 
             @media screen and (min-width: 1024px) {
