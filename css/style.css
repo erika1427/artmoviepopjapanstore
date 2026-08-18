@@ -2770,17 +2770,17 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   }
 }
 
-#ligal .main > :not(.contact, .underlink) {
+#legal .main > :not(.contact, .underlink) {
   padding-left: 5%;
   padding-right: 5%;
 }
 @media screen and (min-width: 1024px) {
-  #ligal .main > :not(.contact, .underlink) {
+  #legal .main > :not(.contact, .underlink) {
     padding-left: 15%;
     padding-right: 15%;
   }
 }
-#ligal .ttl {
+#legal .ttl {
   margin-bottom: 2.875rem;
   font-family: "Climate Crisis", sans-serif;
   font-weight: 400;
@@ -2788,97 +2788,97 @@ body.no-scroll .btn__top, body.no-scroll .btn__middle, body.no-scroll .btn__bott
   text-align: center;
 }
 @media screen and (min-width: 630px) {
-  #ligal .ttl {
+  #legal .ttl {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  #ligal .ttl {
+  #legal .ttl {
     margin-bottom: min(7.71vw, 9.25rem);
     font-size: min(2.61vw, 3.125rem);
   }
 }
-#ligal .item,
-#ligal .packaging {
+#legal .item,
+#legal .packaging {
   margin-bottom: 4.1875rem;
 }
 @media screen and (min-width: 1024px) {
-  #ligal .item,
-  #ligal .packaging {
+  #legal .item,
+  #legal .packaging {
     margin-bottom: min(6.25vw, 7.5rem);
   }
 }
-#ligal .orders {
+#legal .orders {
   margin-bottom: 3.75rem;
 }
 @media screen and (min-width: 1024px) {
-  #ligal .orders {
+  #legal .orders {
     margin-bottom: min(7.09vw, 8.5rem);
   }
 }
-#ligal .item__ttl,
-#ligal .packaging__ttl,
-#ligal .orders__ttl {
+#legal .item__ttl,
+#legal .packaging__ttl,
+#legal .orders__ttl {
   margin-bottom: 2.375rem;
   font-weight: 700;
   font-size: 1.125rem;
   color: #F36658;
 }
 @media screen and (min-width: 630px) {
-  #ligal .item__ttl,
-  #ligal .packaging__ttl,
-  #ligal .orders__ttl {
+  #legal .item__ttl,
+  #legal .packaging__ttl,
+  #legal .orders__ttl {
     font-size: 1.3rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  #ligal .item__ttl,
-  #ligal .packaging__ttl,
-  #ligal .orders__ttl {
+  #legal .item__ttl,
+  #legal .packaging__ttl,
+  #legal .orders__ttl {
     margin-bottom: min(3.13vw, 3.75rem);
     font-size: min(1.57vw, 1.875rem);
   }
 }
-#ligal .item__box,
-#ligal .packaging__box,
-#ligal .orders__box {
+#legal .item__box,
+#legal .packaging__box,
+#legal .orders__box {
   margin-bottom: 1.6875rem;
   font-size: 0.875rem;
   line-height: 1.9;
 }
 @media screen and (min-width: 630px) {
-  #ligal .item__box,
-  #ligal .packaging__box,
-  #ligal .orders__box {
+  #legal .item__box,
+  #legal .packaging__box,
+  #legal .orders__box {
     font-size: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  #ligal .item__box,
-  #ligal .packaging__box,
-  #ligal .orders__box {
+  #legal .item__box,
+  #legal .packaging__box,
+  #legal .orders__box {
     margin-bottom: min(1.98vw, 2.375rem);
     font-size: min(1.05vw, 1.25rem);
   }
 }
-#ligal .item__box:last-child,
-#ligal .packaging__box:last-child,
-#ligal .orders__box:last-child {
+#legal .item__box:last-child,
+#legal .packaging__box:last-child,
+#legal .orders__box:last-child {
   margin-bottom: 0;
 }
-#ligal .underlink {
+#legal .underlink {
   margin-bottom: 5.625rem;
 }
 @media screen and (min-width: 1024px) {
-  #ligal .underlink {
+  #legal .underlink {
     margin-bottom: min(6.41vw, 7.6875rem);
   }
 }
-#ligal .underlink svg {
+#legal .underlink svg {
   transition: transform 0.1s ease;
 }
 @media screen and (min-width: 1024px) {
-  #ligal .underlink:hover svg {
+  #legal .underlink:hover svg {
     transform: translateX(-0.625rem);
   }
 }
